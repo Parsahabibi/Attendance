@@ -1,0 +1,119 @@
+@mixin flex($dir: row, $jus: center, $ali: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $ali;
+}
+
+@mixin Position($pos: absolute, $top: 0, $right: 0, $content: "") {
+  position: $pos;
+  top: $top;
+  right: $right;
+  content: $content;
+}
+
+@mixin Square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin ResetAll {
+    width: 100%;
+    height: 100%;
+  * {
+    backface-visibility: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+   input {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@mixin Placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin Background($img,$repeat: no-repeat,$pos: center,$size: cover,$attach: false) {
+  background-image: url($img);
+  background-repeat: $repeat;
+  background-position: $pos;
+  background-size: $size;
+  @if $attach {
+    background-attachment: $attach;
+  }
+}
+
+@mixin Media($screen) {
+  @if ($screen== "mobile") {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if ($screen== "tablet") {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if ($screen== "laptop") {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if ($screen== "desktop") {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin Center() {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin TextOverflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

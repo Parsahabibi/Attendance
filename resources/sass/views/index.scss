@@ -1,1 +1,15 @@
-@import "./Services/services";
+// Variables
+@import "./variables";
+
+//mixins
+@import "./mixins";
+
+//initialization
+@import "./initialization";
+
+// header
+@import "../layout/header";
+
+//sidebar
+@import "../layout/sidebar";
+

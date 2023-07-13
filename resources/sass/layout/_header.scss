@@ -1,18 +1,33 @@
-.ana-header-container {
-    box-shadow: 2px 4px 24px rgba(0, 0, 0, 0.25);
-    ul.navigation-menu {
-        justify-content: flex-start !important;
-    }
-    .logo-container {
-        width: 75px;
-        height: 75px;
-        a {
-            width: 100%;
-            height: 100%;
-            img {
-                width: 100%;
-                height: 100%;
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $nahira-secondary;
+    min-height: 200px;
+    .field-header {
+        .d-field-header {
+            @include flex();
+            background: #8c8c8c;
+            height: 50px;
+            &.w-54 {
+                width: 54px;
             }
+            img {
+                width: 26.14px;
+            }
+            input {
+                color: #f2ece6a6;
+                &::placeholder {
+                    color: #f2ece6a6;
+                }
+            }
+        }
+    }
+    .navigation-icon {
+        @include Position();
+        display: none;
+        @media (max-width:568px) {
+            display: inline;
         }
     }
 }

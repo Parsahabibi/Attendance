@@ -1,4 +1,4 @@
-$font-size-default:16px;
+$font-size-default: 16px;
 
 $main-menu-item-height: 110px;
 $main-menu-width: 120px;
@@ -26,8 +26,6 @@ $input-menu-width-lg: 22%;
 $input-menu-width-md: 22%;
 $input-menu-width-xs: 22%;
 
-
-
 $navbar-height: 100px;
 $navbar-height-xs: 100px;
 $navbar-height-md: 100px;
@@ -53,32 +51,33 @@ $animation-time-short: 200ms;
 $border-radius: 0.1rem;
 $border-radius-rounded: 0.75rem;
 
+
 // Colors
-$theme-color-1: #fff;
-$theme-color-2: #292D3280;
-$theme-color-3: #A48A3940;
-$theme-color-4: #2f55d4;
+$bs-orange-10: #2b0e00;
+$bs-orange-9: #551c00;
+$bs-orange-8: #802a00;
+$bs-orange-7: #aa3800;
+$bs-orange-6: #d54600;
+$bs-orange-5: #f54000;
+$bs-orange-4: #ff7633;
+$bs-orange-3: #ff9866;
+$bs-orange-2: #ffbb99;
+$bs-orange-1: #ffddcc;
 
-$text-color-1: #000000BF;
-$text-color-2: #fff;
+$nahira-primary: #ff5400;
+$nahira-secondary: #7e7771;
 
-$primary-color: #283066;
-$secondary-color: #A48A39;
-$muted-color: #eaebf0;
+$bg-primary: #f8f9fa;
 
-$border-color: #283066;
+$white: #fff;
+$black: #000;
 
-$color-p:#303030CC;
+$brown: #ff540026;
 
-// $gradient-color-1 : #39addf;
-// $gradient-color-2 : #318CE7;
-// $gradient-color-3 : #2e98c5;
+$pink: #f86068;
 
-// $lp-bg-color-1 : #006894;
-// $lp-bg-color-2 : #007fb6;
-// $lp-bg-color-3 : #37b9f1;
-// $lp-bg-color-4 : #56c4f3;
-
+$gray-800: #505050;
+$gray-900: #2f2942;
 $info-color: #3195a5;
 $success-color: #3e884f;
 $warning-color: #b69329;
