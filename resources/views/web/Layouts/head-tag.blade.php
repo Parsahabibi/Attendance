@@ -7,7 +7,7 @@
 <meta name="email" content="mohammadalikazem98@gmail.com" />
 <meta name="Version" content="v1.0.0" />
 <!-- favicon -->
-<link rel="shortcut icon" href="./images/Nahira-logo.svg">
+<link rel="shortcut icon" href="../images/Nahira-logo.svg">
 <!-- Bootstrap -->
 <link href="{{ asset('web/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
 <!-- Icons -->
