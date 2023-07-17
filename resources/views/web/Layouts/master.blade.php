@@ -8,9 +8,8 @@
 
 <body dir="rtl">
     <div class="bg-dark"></div>
-    {{-- @include('web.layouts.header', ['TitleHeader' => 'حضور و غیاب', 'CaptionHeader' => '']) --}}
     @yield('header')
-    @include('web.layouts.side-bar')
+    @yield('sidebar')
     <section class="col-12 col-sm-10 container-nahira">
         <section id="main-body" class="main-body col-12">
             @yield('content')
