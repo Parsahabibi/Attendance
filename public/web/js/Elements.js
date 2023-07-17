@@ -19,6 +19,7 @@ const DataInputValidation = document.querySelectorAll(
     "[data-input-validation]"
 );
 const ErrFromNewPersonel = document.querySelectorAll(".err-form-new-personel");
+const Inputs = document.querySelectorAll("input");
 export {
     NavIcon,
     ItemSidebar,
@@ -30,5 +31,8 @@ export {
     ItemSidebarImgDark,
     ItemSidebarImgLight,
     DataCheckEmptyTable,
-    DataEmpltyTableMassage,ErrFromNewPersonel,DataInputValidation
+    DataEmpltyTableMassage,
+    ErrFromNewPersonel,
+    DataInputValidation,
+    Inputs,
 };

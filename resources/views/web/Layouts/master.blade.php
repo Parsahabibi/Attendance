@@ -20,7 +20,7 @@
     {{-- @include('web.layouts.script') --}}
     @yield('script')
    
-    <script type="module" src="../web/js/index.js"></script>
+    <script type="module" src="{{asset('web/js/index.js')}}"></script>
 </body>
 
 </html>
