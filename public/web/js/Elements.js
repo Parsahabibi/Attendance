@@ -15,6 +15,10 @@ const DataCheckEmptyTable = document.querySelectorAll(
 const DataEmpltyTableMassage = document.querySelectorAll(
     "[data-emplty-table-massage]"
 );
+const DataInputValidation = document.querySelectorAll(
+    "[data-input-validation]"
+);
+const ErrFromNewPersonel = document.querySelectorAll(".err-form-new-personel");
 export {
     NavIcon,
     ItemSidebar,
@@ -26,5 +30,5 @@ export {
     ItemSidebarImgDark,
     ItemSidebarImgLight,
     DataCheckEmptyTable,
-    DataEmpltyTableMassage,
+    DataEmpltyTableMassage,ErrFromNewPersonel,DataInputValidation
 };
