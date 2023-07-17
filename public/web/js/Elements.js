@@ -20,6 +20,12 @@ const DataInputValidation = document.querySelectorAll(
 );
 const ErrFromNewPersonel = document.querySelectorAll(".err-form-new-personel");
 const Inputs = document.querySelectorAll("input");
+const ErrFormSignin = document.querySelector(".err-form-signin");
+const MatnFormSignin = document.querySelector(".err-form-signin>p");
+const ErrEmailPhone = document.querySelector("#err-input-email_phone");
+const BtnLogin = document.querySelector("#btn-login");
+const CloseErrFormSignIn = document.querySelector("#close-err-form-signin");
+
 export {
     NavIcon,
     ItemSidebar,
@@ -35,4 +41,9 @@ export {
     ErrFromNewPersonel,
     DataInputValidation,
     Inputs,
+    ErrFormSignin,
+    MatnFormSignin,
+    ErrEmailPhone,
+    BtnLogin,
+    CloseErrFormSignIn,
 };

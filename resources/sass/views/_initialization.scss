@@ -183,7 +183,7 @@ img[src="refresh-icon.svg"] {
     left: 0;
     top: 0;
     z-index: 10;
-   
+
     height: 100%;
     margin-top: 350px;
     @media (min-width: 576px) {
@@ -199,6 +199,10 @@ img[src="refresh-icon.svg"] {
     @media (min-width: 1200px) {
         margin-top: 150px;
     }
+}
+.err-input {
+    font-size: 12px;
+    color: $error-color;
 }
 // .fs-lg-1 {
 // }
