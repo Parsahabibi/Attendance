@@ -3,7 +3,7 @@
 <header id="topnav"
     class="col-12 col-sm-11 p-3 d-flex justify-content-between flex-column flex-md-row align-items-sm-start pt-4 pt-lg-5">
     <div class="col-12 col-sm-11 mx-auto d-flex justify-content-between flex-column flex-xl-row align-items-sm-start ">
-        <div class="navigation-icon"><img src="{{asset('')}}../images/icons8-menu.svg" alt=""></div>
+        <div class="navigation-icon"><img src="{{asset('images/icons8-menu.svg')}}" alt=""></div>
         <div class="roadmap-header pb-3 pt-5 pt-sm-0 pb-2 d-flex flex-column align-items-start">
             <h3 class="c-white ps-3 pb-2">{{ $H3Header }}</h3>
             <div class=""><span class="c-gray-200  ps-2">{{ $CaptionHeader }}</span><span
