@@ -23,7 +23,7 @@ html {
 
 input:not([type=checkbox]) {
     padding-right: 10px !important;
-    height: 48px;
+    height: 42px;
 }
 p {
     margin-bottom: 0 !important;
@@ -109,7 +109,7 @@ a {
     background: #fff !important;
 }
 .bg-input {
-    background: #f4f4f4;
+    background: #f9f9f9;
 }
 .border-t-gray {
     border-top: 1px solid #f4f4f4;
@@ -157,12 +157,14 @@ img[src="refresh-icon.svg"] {
     padding: 0.75rem 1.5rem;
     color: #fff;
     border-radius: 1rem;
+    font-size: 12px;
 }
 .btn-secondary-nahira {
     border-radius: 1rem;
     background: rgba(255, 84, 0, 0.15);
     padding: 0.75rem 1.5rem;
     color: $nahira-primary;
+    font-size: 12px;
 }
 .card-container {
     @include Media("laptop") {
@@ -194,7 +196,6 @@ img[src="refresh-icon.svg"] {
     left: 0;
     top: 0;
     z-index: 10;
-
     height: 100%;
     margin-top: 350px;
     @media (min-width: 576px) {
@@ -215,14 +216,9 @@ img[src="refresh-icon.svg"] {
     font-size: 12px;
     color: $error-color;
 }
-// .fs-lg-1 {
-// }
-// .fs-lg-2 {
-// }
-// .fs-lg-3 {
-// }
-// .fs-lg-4 {
-// }
-// .fs-lg-5 {
-// }
+
+#input-search-header{
+    min-width: 250px;
+}
+
 //-----------------------------------------------------------------------------------------------------------//

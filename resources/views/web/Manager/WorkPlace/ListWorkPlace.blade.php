@@ -28,7 +28,7 @@
 @endsection
 <section class="">
     <div class="card-form bg-white rounded-24 p-2 pt-4 pt-lg-5 pe-lg-5 pb-lg-3">
-        <h3 class="fs-5 mb-3">لیست محل کار ها</h3>
+        <h5 class="fw-bold mb-3 ">لیست محل کار ها</h5>
         <div>
             <form class="col-12 col-lg-8 d-flex flex-column flex-lg-row align-items-end" action="">
                 <div class="col-12 col-lg-4 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">

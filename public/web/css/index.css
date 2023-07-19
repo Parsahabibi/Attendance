@@ -54,7 +54,7 @@ html {
 
 input:not([type=checkbox]) {
   padding-right: 10px !important;
-  height: 48px; }
+  height: 42px; }
 
 p {
   margin-bottom: 0 !important; }
@@ -138,7 +138,7 @@ a:hover {
   background: #fff !important; }
 
 .bg-input {
-  background: #f4f4f4; }
+  background: #f9f9f9; }
 
 .border-t-gray {
   border-top: 1px solid #f4f4f4; }
@@ -183,13 +183,15 @@ img[src="refresh-icon.svg"] {
   background: #ff5400;
   padding: 0.75rem 1.5rem;
   color: #fff;
-  border-radius: 1rem; }
+  border-radius: 1rem;
+  font-size: 12px; }
 
 .btn-secondary-nahira {
   border-radius: 1rem;
   background: rgba(255, 84, 0, 0.15);
   padding: 0.75rem 1.5rem;
-  color: #ff5400; }
+  color: #ff5400;
+  font-size: 12px; }
 
 @media (min-width: 992px) {
   .card-container {
@@ -240,6 +242,9 @@ img[src="refresh-icon.svg"] {
 .err-input {
   font-size: 12px;
   color: #c43d4b; }
+
+#input-search-header {
+  min-width: 250px; }
 
 header {
   position: absolute;
@@ -425,8 +430,8 @@ header {
   padding-right: 50px !important; }
 
 .personel-list .icon-serch-input {
-  top: 22px;
-  right: 15px;
+  top: 17px;
+  right: 10px;
   width: 24px; }
 
 .li-reported {
@@ -436,12 +441,51 @@ header {
   white-space: nowrap; }
 
 .active-li {
-  border-bottom: 1px solid #ff5400;
+  border-bottom: 2px solid #ff5400;
   color: #ff5400; }
 
 .select-month {
   outline: none;
   border: none;
   background-color: #f4f4f4;
-  height: 46px;
+  height: 42px;
   border-radius: 8px; }
+
+.modal-shift-manager {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  z-index: 300;
+  max-width: 1000px; }
+  @media (min-width: 768px) {
+    .modal-shift-manager {
+      height: 90%;
+      border-radius: 16px; } }
+
+body .header .items .active,
+html .header .items .active {
+  color: #ff5400;
+  border-bottom: 2px solid #ff5400 !important; }
+
+body .header .items .b-active,
+html .header .items .b-active {
+  border-bottom: 2px solid transparent; }
+
+.positionCostume {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  right: 0;
+  z-index: 10000;
+  display: none;
+  cursor: pointer;
+  border-radius: 16px;
+  background: #FFF;
+  box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.25);
+  color: #7E829C;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal; }

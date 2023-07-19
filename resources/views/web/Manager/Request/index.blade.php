@@ -124,7 +124,7 @@
     <div class="">
         <div class="p-3 p-md-4 pb-0 pb-md-0 bg-white rounded-16 d-flex flex-column justify-content-between mb-3">
             <div class="d-flex flex-column flex-sm-row justify-content-between">
-                <h4 class="mb-3 mb-lg-3">گزارشات پروژه</h4>
+                <h5 class="mb-3 mb-lg-3 fw-bold">گزارشات پروژه</h5>
                 <div class="">
                     <button class="btn-secondary-nahira">اکسل</button>
                     <button class="btn-primary-nahira me-3">دریافت اطلاعات</button>

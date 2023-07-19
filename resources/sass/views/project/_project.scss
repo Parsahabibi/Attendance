@@ -1,0 +1,10 @@
+.modal-shift-manager {
+    @include Center;
+    height: 100%;
+    z-index: 300;
+    max-width: 1000px;
+    @media (min-width: 768px) {
+        height: 90%;
+        border-radius: 16px;
+    }
+}
