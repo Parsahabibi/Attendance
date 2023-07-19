@@ -438,3 +438,10 @@ header {
 .active-li {
   border-bottom: 1px solid #ff5400;
   color: #ff5400; }
+
+.select-month {
+  outline: none;
+  border: none;
+  background-color: #f4f4f4;
+  height: 46px;
+  border-radius: 8px; }

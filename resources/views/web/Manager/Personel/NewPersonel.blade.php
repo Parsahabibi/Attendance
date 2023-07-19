@@ -2,6 +2,10 @@
 
 @section('head-tag')
     <title></title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
+    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+
 @endsection
 
 @section('content')
@@ -125,7 +129,7 @@
                             تاریخ شروع کار
                             <span class="c-pink">*</span>
                         </label>
-                        <input type="date" name="input2" class="bg-input rounded-8 py-md-2">
+                        <input readonly type="text" name="input2" class="bg-input rounded-8 py-md-2" data-jdp>
                         <p class="err-form-new-personel err-input pt-1"></p>
                     </div>
                     <div class="col-12 col-md-4 d-flex flex-column mb-3">
@@ -133,7 +137,7 @@
                             تاریخ پایان کار <span class="c-gray">(اختیاری)</span>
                             <span class="c-pink">*</span>
                         </label>
-                        <input type="date" name="input" class="bg-input rounded-8 py-md-2">
+                        <input readonly type="text" name="input" class="bg-input rounded-8 py-md-2" data-jdp>
                         <!-- <p class="err-form-new-personel err-input pt-1"></p> -->
                     </div>
                     <div class="col-12 col-md-4 d-flex flex-column mb-3">
@@ -188,4 +192,10 @@
     </div>
 </section>
 <!-- Hero End -->
+@endsection
+
+@section('script')
+<script>
+    jalaliDatepicker.startWatch();
+</script>
 @endsection

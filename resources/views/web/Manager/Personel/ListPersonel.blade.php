@@ -2,6 +2,10 @@
 
 @section('head-tag')
     <title></title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
+    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+
 @endsection
 
 @section('content')
@@ -103,7 +107,7 @@
           </thead>
           <tbody id="table-personel">
             <tr class="border-t-gray">
-                <td class="col-1 c-gray-dark3 py-3 px-2">
+                <td class="col-1 c-gray-dark3 py-3 px-2 table-personel">
                     <div class="d-flex align-items-center">
                         <p class="ps-5">1</p>
                     <img src="{{asset('images/Frame 127.svg')}}" alt="" />
@@ -135,7 +139,8 @@
                   </div>
                 </td>
             </tr>
-          </tbody>
+          
+        </tbody>
         </table>
       </div>
     </div>

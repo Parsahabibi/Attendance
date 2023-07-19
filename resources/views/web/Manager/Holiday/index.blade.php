@@ -34,14 +34,15 @@
         <div class="rounded-16 p-3 p-md-4 bg-white">
             <h5 class="mb-3 fw-bold">تعریف تعطیلات</h5>
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-end">
-                <div class="col-md-6 col-12 row">
-                    <div class="col-12 col-md-6 d-flex flex-column mb-3">
+                <div class="col-md-6  col-12 row">
+                    <div class="col-12 col-md-6  d-flex flex-column mb-3">
                         <label for="" class="mb-1 c-gray-900"> از تاریخ</label>
-                        <input type="date" name="input" class="bg-input rounded-8 py-md-2">
+                        <input type="text" readonly name="input" class="bg-input rounded-8 py-md-2" data-jdp>
                     </div>
-                    <div class="col-12 col-md-6 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-6 d-flex flex-column mb-3 mb-lg-0">
                         <label for="" class="mb-1 c-gray-900"> تا تاریخ</label>
-                        <input type="date" name="input" class="bg-input rounded-8 py-md-2">
+
+                        <input type="text" readonly name="input" class="bg-input rounded-8 py-md-2" data-jdp>
                     </div>
                 </div>
                 <button class="btn-primary-nahira">ثبت</button>
@@ -51,11 +52,34 @@
             <h5 class="mb-3 fw-bold">تعطیلات</h5>
             <div class="d-flex flex-md-row flex-column justify-content-between align-items-end">
                 <div class="col-md-6 col-12 row">
-                    <div class="col-12 col-md-6 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-6 d-flex flex-column mb-3 mb-lg-0">
                         <label for="" class="mb-1 c-gray-900">ماه</label>
-                        <input type="month" name="input" class="bg-input rounded-8 py-md-2">
+                        {{-- <input type="month" name="input" class="bg-input rounded-8 py-md-2"> --}}
+                        <select title="" id="" class="select-month">
+                            <option data-option-month="" class="" value="فروردین">
+                                فروردین
+                            </option>
+                            <option data-option-month="" class="" value="اردیبهشت">
+                                اردیبهشت
+                            </option>
+                            <option data-option-month="" class="" value="خرداد">خرداد</option>
+                            <option data-option-month="" class="" value="تیر">تیر</option>
+                            <option data-option-month="" class="" value="مرداد">مرداد</option>
+                            <option data-option-month="" class="" value="شهریور">
+                                شهریور
+                            </option>
+                            <option data-option-month="" class="" value="مهر">مهر</option>
+                            <option data-option-month="" class="" value="آبان">آبان</option>
+                            <option data-option-month="" class="" value="آذر">آذر</option>
+                            <option data-option-month="" class="" value="دی">دی</option>
+                            <option data-option-month="" class="" value="بهمن">بهمن</option>
+                            <option data-option-month="" class="" value="اسفند">
+                                اسفند
+                            </option>
+                        </select>
+                        
                     </div>
-                    <div class="col-12 col-md-6 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-6 d-flex flex-column mb-3 mb-lg-0">
                         <label for="" class="mb-1 c-gray-900">سال</label>
                         <input type="number" min="1402" max="1500" step="1" value="1402" name="input"
                             class="bg-input rounded-8 py-md-2">
@@ -67,15 +91,15 @@
                 <table class="w-100 col-12">
                     <thead>
                         <tr class="justify-content-between">
-                            <th class="col-4 py-4 ">شماره</th>
-                            <th class="col-4 ">نام</th>
-                            <th class="col-4 text-start ps-5">عملیات</th>
+                            <th class="text-nowrap c-gray-dark col-4 py-4 ">تاریخ</th>
+                            <th class="text-nowrap c-gray-dark col-4 ">عنوان تعطیلات</th>
+                            <th class="text-nowrap c-gray-dark col-4 text-start ps-5">عملیات</th>
                         </tr>
                     </thead>
                     <tbody body-table="" class="">
                         <tr class="border-t-gray">
-                            <td class="col-4 py-3 ">1</td>
-                            <td class="col-4  ">ناهیرا</td>
+                            <td class="text-nowrap px-2 c-gray-dark3 col-4 py-3 ">۱۴۰۲/۰۲/۰۵</td>
+                            <td class="text-nowrap px-2 c-gray-dark3 col-4  ">رحلت حضرت امام خمینی</td>
 
                             <td class="data-dropdown col-4 py-3 ">
                                 <div class="m-0 float-start ms-4" data-dropdown="">
@@ -90,8 +114,8 @@
                         </tr>
 
                         <tr class="border-t-gray">
-                            <td class="col-4">2</td>
-                            <td class="col-4">ناهیرا</td>
+                            <td class="text-nowrap px-2 c-gray-dark3 col-4">۱۴۰۲/۰۲/۰۵</td>
+                            <td class="text-nowrap px-2 c-gray-dark3 col-4">قیام 15 خرداد</td>
 
                             <td class="data-dropdown col-4 py-3">
                                 <div class="m-0 float-start ms-4" data-dropdown="">

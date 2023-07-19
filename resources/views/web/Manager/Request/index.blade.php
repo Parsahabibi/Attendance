@@ -2,12 +2,19 @@
 
 @section('head-tag')
     <title></title>
+
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
+    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
 @endsection
 
 @section('content')
     <!-- Hero Start -->
 @section('header')
-    @include('web.Layouts.header', ['H3Header' => 'درخواست ها', 'CaptionHeader' => 'خانه - ', 'TitleHeader' => 'درخواست ها'])
+    @include('web.Layouts.header', [
+        'H3Header' => 'درخواست ها',
+        'CaptionHeader' => 'خانه - ',
+        'TitleHeader' => 'درخواست ها',
+    ])
 @endsection
 
 @section('sidebar')
@@ -114,101 +121,85 @@
         </div>
     </div> --}}
 
-      <div class="">
-        <div
-          class="p-3 p-md-4 pb-0 pb-md-0 bg-white rounded-16 d-flex flex-column justify-content-between mb-3"
-        >
-          <div class="d-flex flex-column flex-sm-row justify-content-between">
-            <h4 class="mb-3 mb-lg-3">گزارشات پروژه</h4>
-            <div class="">
-              <button class="btn-secondary-nahira">اکسل</button>
-              <button class="btn-primary-nahira me-3">دریافت اطلاعات</button>
+    <div class="">
+        <div class="p-3 p-md-4 pb-0 pb-md-0 bg-white rounded-16 d-flex flex-column justify-content-between mb-3">
+            <div class="d-flex flex-column flex-sm-row justify-content-between">
+                <h4 class="mb-3 mb-lg-3">گزارشات پروژه</h4>
+                <div class="">
+                    <button class="btn-secondary-nahira">اکسل</button>
+                    <button class="btn-primary-nahira me-3">دریافت اطلاعات</button>
+                </div>
             </div>
-          </div>
-  
-          <div class="mt-4">
-            <ul class="d-flex">
-              <li class="c-gray-dark me-4 li-reported active-li">در دست بررسی</li>
-              <li class="c-gray-dark me-4 li-reported">تایید شده</li>
-              <li class="c-gray-dark me-4 li-reported">رد شده</li>
-            </ul>
-          </div>
+
+            <div class="mt-4">
+                <ul class="d-flex">
+                    <li class="c-gray-dark me-4 li-reported active-li">در دست بررسی</li>
+                    <li class="c-gray-dark me-4 li-reported">تایید شده</li>
+                    <li class="c-gray-dark me-4 li-reported">رد شده</li>
+                </ul>
+            </div>
         </div>
         <div class="p-3 p-md-4 bg-white rounded-16">
-          <div
-            class="d-flex flex-column flex-lg-row align-items-end justify-content-between mb-3"
-          >
-            <div class="col-lg-10 col-12 d-flex flex-column flex-lg-row row">
-              <div class="col-12 col-lg-3 d-flex flex-column mb-3 mb-lg-0">
-                <label for="" class="mb-1 c-gray-900"> از تاریخ </label>
-                <input
-                  type="text"
-                  name="input2"
-                  class="bg-input rounded-8 py-md-2"
-                />
-              </div>
-              <div class="col-12 col-lg-3 d-flex flex-column mb-3 mb-lg-0">
-                <label for="" class="mb-1 c-gray-900"> تا تاریخ</label>
-                <input
-                  type="text"
-                  name="input2"
-                  class="bg-input rounded-8 py-md-2"
-                />
-              </div>
-              <div class="col-12 col-lg-3 d-flex flex-column mb-3 mb-lg-0">
-                <label for="" class="mb-1 c-gray-900"> نوع</label>
-                <input
-                  type="text"
-                  name="input2"
-                  class="bg-input rounded-8 py-md-2"
-                />
-              </div>
-              <div class="col-12 col-lg-3 d-flex flex-column mb-3 mb-lg-0">
-                <label for="" class="mb-1 c-gray-900"> پرسنل</label>
-                <input
-                  type="text"
-                  name="input2"
-                  class="bg-input rounded-8 py-md-2"
-                />
-              </div>
+            <div class="d-flex flex-column flex-lg-row align-items-end justify-content-between mb-3">
+                <div class="col-lg-10 col-12 d-flex flex-column flex-lg-row row">
+                    <div class="col-12 col-lg-3 d-flex flex-column mb-3 mb-lg-0">
+                        <label for="" class="mb-1 c-gray-900"> از تاریخ </label>
+                        <input readonly type="text" name="input2" class="bg-input rounded-8 py-md-2" data-jdp />
+                    </div>
+                    <div class="col-12 col-lg-3 d-flex flex-column mb-3 mb-lg-0">
+                        <label for="" class="mb-1 c-gray-900"> تا تاریخ</label>
+                        <input readonly type="text" name="input2" class="bg-input rounded-8 py-md-2" data-jdp />
+                    </div>
+                    <div class="col-12 col-lg-3 d-flex flex-column mb-3 mb-lg-0">
+                        <label for="" class="mb-1 c-gray-900"> نوع</label>
+                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2" />
+                    </div>
+                    <div class="col-12 col-lg-3 d-flex flex-column mb-3 mb-lg-0">
+                        <label for="" class="mb-1 c-gray-900"> پرسنل</label>
+                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2" />
+                    </div>
+                </div>
+                <button class="btn-primary-nahira text-nowrap" id="btn-request">
+                    ثبت درخواست جدید
+                </button>
             </div>
-            <button class="btn-primary-nahira text-nowrap" id="btn-request">
-              ثبت درخواست جدید
-            </button>
-          </div>
-          <div class="overflow-x-scroll">
-            <table class="col-12 mt-4 w-100">
-              <thead>
-                <tr>
-                  <th class="c-gray-dark text-center text-nowrap px-2">
-                    نام پرسنل
-                  </th>
-                  <th class="c-gray-dark text-center text-nowrap px-2">
-                    نوع درخواست
-                  </th>
-                  <th class="c-gray-dark text-center text-nowrap px-2">
-                    زمان شروع
-                  </th>
-                  <th class="c-gray-dark text-center text-nowrap px-2">
-                    زمان پایان
-                  </th>
-                  <th class="c-gray-dark text-center text-nowrap px-2">
-                    تاریخ ثبت
-                  </th>
-                  <th class="c-gray-dark text-center text-nowrap px-2">عملیات</th>
-                </tr>
-              </thead>
-              <tbody class=""></tbody>
-            </table>
-          </div>
-          <div
-            class="border-t-gray m-5 mt-4 pt-5 d-flex flex-column align-items-center"
-          >
-            <p class="c-gray-dark2 text-nowrap pb-3">داده‌ای موجود نیست</p>
-            <img src="{{asset('images/Frame 29.svg')}}" alt="" class="no-data"/>
-          </div>
+            <div class="overflow-x-scroll">
+                <table class="col-12 mt-4 w-100">
+                    <thead>
+                        <tr>
+                            <th class="c-gray-dark text-center text-nowrap px-2">
+                                نام پرسنل
+                            </th>
+                            <th class="c-gray-dark text-center text-nowrap px-2">
+                                نوع درخواست
+                            </th>
+                            <th class="c-gray-dark text-center text-nowrap px-2">
+                                زمان شروع
+                            </th>
+                            <th class="c-gray-dark text-center text-nowrap px-2">
+                                زمان پایان
+                            </th>
+                            <th class="c-gray-dark text-center text-nowrap px-2">
+                                تاریخ ثبت
+                            </th>
+                            <th class="c-gray-dark text-center text-nowrap px-2">عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody class=""></tbody>
+                </table>
+            </div>
+            <div class="border-t-gray m-5 mx-0 mt-4 pt-5 d-flex flex-column align-items-center">
+                <p class="c-gray-dark2 text-nowrap pb-3">داده‌ای موجود نیست</p>
+                <img src="{{ asset('images/Frame 29.svg') }}" alt="" class="no-data" />
+            </div>
         </div>
-      </div>
+    </div>
 </section>
 <!-- Hero End -->
+@endsection
+
+@section('script')
+<script>
+    jalaliDatepicker.startWatch();
+</script>
 @endsection
