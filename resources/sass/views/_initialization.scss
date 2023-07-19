@@ -21,8 +21,9 @@ html {
     }
 }
 
-input {
+input:not([type=checkbox]) {
     padding-right: 10px !important;
+    height: 48px;
 }
 p {
     margin-bottom: 0 !important;
@@ -34,6 +35,9 @@ a {
 }
 .fs-small-100{
     font-size: 12px;
+}
+.fs-medium{
+    font-size: 17px;
 }
 .h-100vh {
     height: 100vh;

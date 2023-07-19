@@ -1,0 +1,29 @@
+
+.data-table {
+  .data-dropdown > div {
+    @include flex();
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 16px;
+    background: rgba(255, 84, 0, 0.15);
+    color: #ff5400;
+    width: 100px;
+    padding: 0.5rem 1.5rem;
+  }
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05);
+    color: #7e829b;
+    z-index: 10;
+    div {
+      padding: 1rem;
+    }
+  }
+}

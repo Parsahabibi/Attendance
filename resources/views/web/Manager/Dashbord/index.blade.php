@@ -27,69 +27,69 @@
         <div class="container col-12 col-lg-5 ps-lg-5 ps-3">
           <div class="row g-4">
             <div class="col-6">
-              <div class="item-container col-12 rounded-16 p-xl-5 p-3">
+              <div class="item-container col-12 rounded-16 p-xl-4 p-3">
                 <div class="d-flex justify-content-between">
                   <div class="pb-5">
                     <img src="{{asset('./images/personel-icon.svg')}}" alt="" />
                   </div>
                   <span class="fs-3 c-gray">1</span>
                 </div>
-                <h5 class="text-nowrap">پرسنل</h5>
+                <h5 class="fs-medium text-nowrap">پرسنل</h5>
               </div>
             </div>
             <div class="col-6">
-              <div class="item-container col-12 rounded-16 p-xl-5 p-3">
+              <div class="item-container col-12 rounded-16 p-xl-4 p-3">
                 <div class="d-flex justify-content-between">
                   <div class="pb-5">
                     <img src="{{asset('./images/active-personel-icon.svg')}} "alt="" />
                   </div>
                   <span class="fs-3 c-gray">1</span>
                 </div>
-                <h5 class="text-nowrap">پرسنل فعال</h5>
+                <h5 class="fs-medium text-nowrap">پرسنل فعال</h5>
               </div>
             </div>
             <div class="col-6">
-              <div class="item-container col-12 rounded-16 p-xl-5 p-3">
+              <div class="item-container col-12 rounded-16 p-xl-4 p-3">
                 <div class="d-flex justify-content-between">
                   <div class="pb-5">
                     <img src="{{asset('./images/deactive-personel.svg')}}" alt="" />
                   </div>
                   <span class="fs-3 c-gray">2</span>
                 </div>
-                <h5 class="text-nowrap">پرسنل غیرفعال</h5>
+                <h5 class="fs-medium text-nowrap">پرسنل غیرفعال</h5>
               </div>
             </div>
             <div class="col-6">
-              <div class="item-container col-12 rounded-16 p-xl-5 p-3">
+              <div class="item-container col-12 rounded-16 p-xl-4 p-3">
                 <div class="d-flex justify-content-between">
                   <div class="pb-5">
                     <img src="{{asset('./images/Frame 22.svg')}}" alt="" />
                   </div>
                   <span class="fs-3 c-gray">2</span>
                 </div>
-                <h5 class="text-nowrap">حاضرین</h5>
+                <h5 class="fs-medium text-nowrap">حاضرین</h5>
               </div>
             </div>
             <div class="col-6">
-              <div class="item-container col-12 rounded-16 p-xl-5 p-3">
+              <div class="item-container col-12 rounded-16 p-xl-4 p-3">
                 <div class="d-flex justify-content-between">
                   <div class="pb-5">
                     <img src="{{asset('./images/absent-icon.svg')}}" alt="" />
                   </div>
                   <span class="fs-3 c-gray">3</span>
                 </div>
-                <h5 class="text-nowrap">غایبین</h5>
+                <h5 class="fs-medium text-nowrap">غایبین</h5>
               </div>
             </div>
             <div class="col-6">
-              <div class="item-container col-12 rounded-16 p-xl-5 p-3">
+              <div class="item-container col-12 rounded-16 p-xl-4 p-3">
                 <div class="d-flex justify-content-between">
                   <div class="pb-5">
                     <img src="{{asset('./images/count-vacation-icon.svg')}}" alt="" />
                   </div>
                   <span class="fs-3 c-gray">3</span>
                 </div>
-                <h5 class="text-nowrap">تعداد مرخصی</h5>
+                <h5 class="fs-medium text-nowrap">تعداد مرخصی</h5>
               </div>
             </div>
           </div>

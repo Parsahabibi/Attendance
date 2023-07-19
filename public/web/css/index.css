@@ -52,8 +52,9 @@ html {
   html::-webkit-scrollbar-track {
     width: 0; }
 
-input {
-  padding-right: 10px !important; }
+input:not([type=checkbox]) {
+  padding-right: 10px !important;
+  height: 48px; }
 
 p {
   margin-bottom: 0 !important; }
@@ -63,6 +64,9 @@ a:hover {
 
 .fs-small-100 {
   font-size: 12px; }
+
+.fs-medium {
+  font-size: 17px; }
 
 .h-100vh {
   height: 100vh; }
@@ -384,3 +388,43 @@ header {
     left: 0; } }
   .err-form-signin img {
     cursor: pointer; }
+
+.data-table .data-dropdown > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: rgba(255, 84, 0, 0.15);
+  color: #ff5400;
+  width: 100px;
+  padding: 0.5rem 1.5rem; }
+
+.data-table .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05);
+  color: #7e829b;
+  z-index: 10; }
+  .data-table .dropdown div {
+    padding: 1rem; }
+
+.personel-list .table-personel img {
+  width: 62px;
+  height: 64px; }
+
+.personel-list #input-search-personel {
+  padding-right: 50px !important; }
+
+.personel-list .icon-serch-input {
+  top: 22px;
+  right: 15px;
+  width: 24px; }
