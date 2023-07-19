@@ -32,6 +32,9 @@ a {
         color: inherit !important;
     }
 }
+.fs-small-100{
+    font-size: 12px;
+}
 .h-100vh {
     height: 100vh;
 }
@@ -43,6 +46,9 @@ a {
     @media (min-width: 768px) {
         height: auto !important;
     }
+}
+.no-data{
+    width: 46px;
 }
 .rounded-8 {
     border-radius: 8px;
@@ -130,14 +136,15 @@ img[src="refresh-icon.svg"] {
 .overflow-x-scroll {
     overflow-x: scroll;
     overflow-y: visible;
-    @media (min-width: 992px) {
+    
+    @media (min-width: 1200px) {
         overflow-x: visible;
     }
 }
 .overflow-y-scroll {
     overflow-y: scroll;
     overflow-x: visible;
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
         overflow-y: visible;
     }
 }
