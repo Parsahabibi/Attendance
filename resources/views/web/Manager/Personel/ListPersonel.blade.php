@@ -142,6 +142,12 @@
           
         </tbody>
         </table>
+        <div class="d-none m-5 mb-3 d-flex flex-column align-items-center" data-emplty-table-massage>
+          <p class="c-gray-dark2 text-nowrap pb-3">
+              داده‌ای موجود نیست
+          </p>
+          <img src="{{ asset('images/Frame 29.svg') }}" alt="" class="no-data" style="width:auto">
+      </div>
       </div>
     </div>
 </section>
