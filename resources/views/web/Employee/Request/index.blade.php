@@ -26,7 +26,7 @@
 @endsection
 <section class="">
     <div class="bg-white p-3 p-lg-4 rounded-16 mb-3">
-        <h6>درخواست های جدید</h6>
+        <h6 class="fw-bold mb-3">درخواست های جدید</h6>
         <form action="" data-form-validation
             class="col-12 col-lg-10 d-flex flex-column flex-lg-row align-items-lg-end align-items-start mt-3 mt-lg-4">
             <div class="col-12 col-lg-3 d-flex flex-column mx-lg-2 mb-3 mb-lg-0 position-relative">
@@ -90,7 +90,7 @@
         </div>
     </div>
     <div class="bg-white p-3 p-lg-4 rounded-16">
-        <h6>بایگانی درخواست ها</h6>
+        <h6 class="fw-bold mb-3">بایگانی درخواست ها</h6>
         <form action=""
             class="col-12 col-lg-10 d-flex flex-column flex-lg-row align-items-lg-end align-items-start mt-3 mt-lg-4">
             <div class="col-12 col-lg-3 d-flex flex-column mx-lg-2 mb-3 mb-lg-0 position-relative">

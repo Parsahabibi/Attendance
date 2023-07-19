@@ -246,6 +246,11 @@ img[src="refresh-icon.svg"] {
 #input-search-header {
   min-width: 250px; }
 
+.btn-toggle-down {
+  left: 10px;
+  top: 45px;
+  width: 17px; }
+
 header {
   position: absolute;
   top: 0;
@@ -504,3 +509,29 @@ html .header .items .b-active {
 
 .shift-information [data-value-month] {
   width: 80px; }
+
+.data-dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  border-radius: 16px;
+  background: rgba(255, 84, 0, 0.15);
+  color: #ff5400;
+  width: 100px;
+  padding: 0.5rem 1.5rem; }
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05);
+  color: #7e829b;
+  z-index: 10; }
+  .dropdown div {
+    padding: 1rem; }
