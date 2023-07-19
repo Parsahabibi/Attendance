@@ -428,3 +428,13 @@ header {
   top: 22px;
   right: 15px;
   width: 24px; }
+
+.li-reported {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.75rem;
+  cursor: pointer;
+  white-space: nowrap; }
+
+.active-li {
+  border-bottom: 1px solid #ff5400;
+  color: #ff5400; }

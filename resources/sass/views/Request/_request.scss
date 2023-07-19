@@ -1,0 +1,10 @@
+.li-reported {
+    border-bottom: 1px solid transparent;
+    padding-bottom: 0.75rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.active-li {
+    border-bottom: 1px solid $nahira-primary;
+    color: $nahira-primary;
+}
