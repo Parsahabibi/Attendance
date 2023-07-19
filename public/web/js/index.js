@@ -6,3 +6,5 @@ import "./component/Window.js";
 import "./Validations/Forms.js";
 import "./Validations/Table.js";
 import "./Customize.js";
+import "./component/DropDown.js";
+import "./component/PushData.js";
