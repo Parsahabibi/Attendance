@@ -12,7 +12,7 @@ import {
 } from "../Elements.js";
 
 window.onclick = (e) => {
-    if (DropdownItemSidebar) {
+    if (DropdownItemSidebar !== undefined) {
         for (let i = 0; i < ItemSidebar.length; i++) {
             if (
                 e.target !== ItemSidebarImgLight[i] &&
@@ -23,7 +23,7 @@ window.onclick = (e) => {
             }
         }
     }
-    if (DataDropdownInput) {
+    if (DataDropdownInput !== undefined) {
         for (let i = 0; i < DataDropdownInput.length; i++) {
             if (e.target !== DataDropdownInput[i]) {
                 DataDropdownDiv[i].classList.add("d-none");
@@ -31,7 +31,7 @@ window.onclick = (e) => {
         }
     }
 
-    if (DataBtnDropDownOperation) {
+    if (DataBtnDropDownOperation !== undefined) {
         for (let i = 0; i < DataBtnDropDownOperation.length; i++) {
             if (
                 e.target !== DataBtnDropDownOperation[i] &&
