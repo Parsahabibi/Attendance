@@ -2,12 +2,15 @@ import {
     BodyTable,
     BtnSearch,
     BtnSearchPersonel,
+    BtnSearchProject,
     CompanyCity,
     ComponyName,
     DataBtnPushRequest,
     DataValueRequest,
     InputSerch,
+    InputSerchProject,
     TablePersonel,
+    TableProject,
     TableRequest,
 } from "../Elements.js";
 import { ValidateForm } from "../Validations/Forms.js";
@@ -285,7 +288,7 @@ if (TablePersonel !== null) {
     );
 }
 let SearchPersonel = [];
-if (BtnSearchPersonel !== null) {
+if (BtnSearchPersonel !== null &&TablePersonel!==null) {
     BtnSearchPersonel.addEventListener("click", (e) => {
         e.preventDefault();
         let SearchPersonel = [];
@@ -341,3 +344,106 @@ if (BtnSearchPersonel !== null) {
 
 
 // project
+
+const DataProject = [
+    {
+        id: "1",
+        name: "نیار",
+        company:'پژمان'
+    },
+    {
+        id: "2",
+        name: "فینتو",
+        company:'امیررضا'
+    },
+    {
+        id: "3",
+        name: "آهنا",
+        company:'پارسا'
+    },
+    {
+        id: "4",
+        name: "آقای ملک",
+        company:'پژمان'
+    },
+    
+];
+if (TableProject !== null) {
+    DataProject.map(
+        (item) =>
+            (TableProject.innerHTML += `
+            <tr class="border-t-gray">
+            <td class=" fs-small-100 text-end c-gray-dark3 px-2">${item.id}</td>
+            <td class=" fs-small-100 c-gray-dark3 px-2">${item.name}</td>
+            <td class=" fs-small-100 text-end c-gray-dark3 px-2">${item.company}</td>
+            <td class=" fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
+              <div class="" data-dropdown>
+                عملیات
+                <img src="../../images/Frame 134.svg" alt="" />
+                <div class="dropdown dropdown-operation">
+                  <div>ویرایش</div>
+                  <div delete-row>حذف</div>
+                </div>
+              </div>
+            </td>
+            <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
+              <div class="text-nowrap" data-dropdown-state>
+                <p>وضعیت</p>
+                <img src="../../images/Frame 134.svg" alt="" />
+                <div class="dropdown dropdown-state">
+                  <div item-dropdown-state>فعال</div>
+                  <div delete-row2 class="text-nowrap" item-dropdown-state>غیر فعال</div>
+                </div>
+              </div>
+            </td>
+        </tr>
+           
+
+        `)
+    );
+}
+if (BtnSearchProject !== null) {
+    BtnSearchProject.addEventListener("click", (e) => {
+        e.preventDefault();
+        let SearchProject = [];
+        TableProject.innerHTML = "";
+        DataProject.forEach((item) => {
+            if (item.name.includes(InputSerchProject.value)) {
+                SearchProject.push(item);
+            }
+        });
+
+        SearchProject.map((item) => {
+            TableProject.innerHTML += `
+            <tr class="border-t-gray">
+            <td class=" fs-small-100 text-end c-gray-dark3 px-2">${item.id}</td>
+            <td class=" fs-small-100 c-gray-dark3 px-2">${item.name}</td>
+            <td class=" fs-small-100 text-end c-gray-dark3 px-2">${item.company}</td>
+            <td class=" fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
+              <div class="" data-dropdown>
+                عملیات
+                <img src="../../images/Frame 134.svg" alt="" />
+                <div class="dropdown dropdown-operation">
+                  <div>ویرایش</div>
+                  <div delete-row>حذف</div>
+                </div>
+              </div>
+            </td>
+            <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
+              <div class="text-nowrap" data-dropdown-state>
+                <p>وضعیت</p>
+                <img src="../../images/Frame 134.svg" alt="" />
+                <div class="dropdown dropdown-state">
+                  <div item-dropdown-state>فعال</div>
+                  <div delete-row2 class="text-nowrap" item-dropdown-state>غیر فعال</div>
+                </div>
+              </div>
+            </td>
+        </tr>
+           
+`;
+        });
+        CheckEmptyTable();
+    });
+}
+//***********************************************************************************************************

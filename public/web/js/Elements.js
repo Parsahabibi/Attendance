@@ -68,6 +68,12 @@ const InputSerch = document.getElementById("input-search-personel");
 const TablePersonel = document.getElementById("table-personel");
 const BtnSearchPersonel = document.querySelector("[btn-search-personel]");
 const BtnExcel = document.querySelector(".export-excel");
+const BtnSearchProject = document.querySelector("[btn-search-project]");
+const TableProject = document.getElementById("table-project");
+const InputSerchProject = document.getElementById("input-search-project");
+const InputEmailLogin = document.querySelector("[input-email-login]");
+const InputPasswordLogin = document.querySelector("[password-email-login]");
+
 export {
     NavIcon,
     ItemSidebar,
@@ -121,4 +127,9 @@ export {
     TablePersonel,
     BtnSearchPersonel,
     BtnExcel,
+    TableProject,
+    InputSerchProject,
+    BtnSearchProject,
+    InputEmailLogin,
+    InputPasswordLogin,
 };

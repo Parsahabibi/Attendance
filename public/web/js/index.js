@@ -11,3 +11,4 @@ import "./component/PushData.js";
 import "./persiandate/PersianDatePicker.js";
 import "./Modal/Modal.js";
 import "./Excel/ExportExcel.js";
+import "./Validations/Login.js";

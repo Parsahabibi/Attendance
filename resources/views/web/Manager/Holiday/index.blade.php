@@ -96,7 +96,7 @@
                             <th class="text-nowrap c-gray-dark col-4 text-start ps-5">عملیات</th>
                         </tr>
                     </thead>
-                    <tbody body-table="" class="">
+                    <tbody body-table-holiday="" class="">
                         <tr class="border-t-gray">
                             <td class="text-nowrap px-2 c-gray-dark3 col-4 py-3 ">۱۴۰۲/۰۲/۰۵</td>
                             <td class="text-nowrap px-2 c-gray-dark3 col-4  ">رحلت حضرت امام خمینی</td>

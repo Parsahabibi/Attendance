@@ -3,8 +3,10 @@ import {
     CloseErrFormSignIn,
     ErrEmailPhone,
     ErrFormSignin,
+    InputEmailLogin,
+    InputPasswordLogin,
     MatnFormSignin,
-} from "../Elements";
+} from "../Elements.js";
 
 function ValidateEmail(inputText) {
     var mailformat = /^\w+([\.-]?\w+)*@[a-z]\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -21,34 +23,39 @@ function ValidateEmail(inputText) {
         return false;
     }
 }
-document.Login.input1.addEventListener("blur", () => {
-    ValidateEmail(document.Login.input1);
-});
+if (InputEmailLogin !== null) {
+    InputEmailLogin.addEventListener("blur", () => {
+        ValidateEmail(InputEmailLogin);
+    });
+}
 
-BtnLogin.addEventListener("click", (e) => {
-    e.preventDefault();
+if (BtnLogin !== null) {
+    BtnLogin.addEventListener("click", (e) => {
+        e.preventDefault();
 
-    if (
-        document.Login.input1.value === "" ||
-        document.Login.input2.value === ""
-    ) {
-        MatnFormSignin.innerHTML = "لطفا ورودی ها را پرکنید";
-        if (window.innerWidth > 768) {
-            ErrFormSignin.style.animation = " err-card-desktop .5s";
-            setTimeout(() => {
-                ErrFormSignin.style.left = "10px";
-            }, 400);
+        if (
+            InputEmailLogin.value === "" ||
+            InputPasswordLogin.value === ""
+        ) {
+            MatnFormSignin.innerHTML = "لطفا ورودی ها را پرکنید";
+            if (window.innerWidth > 768) {
+                ErrFormSignin.style.animation = " err-card-desktop .5s";
+                setTimeout(() => {
+                    ErrFormSignin.style.left = "10px";
+                }, 400);
+            } else {
+                ErrFormSignin.style.animation = " err-card-mobile .3s";
+                setTimeout(() => {
+                    ErrFormSignin.style.left = "0";
+                }, 200);
+            }
         } else {
-            ErrFormSignin.style.animation = " err-card-mobile .3s";
-            setTimeout(() => {
-                ErrFormSignin.style.left = "0";
-            }, 200);
+            ErrFormSignin.style.left = "110%";
         }
-    } else {
+    });
+}
+if (CloseErrFormSignIn !== null) {
+    CloseErrFormSignIn.addEventListener("click", () => {
         ErrFormSignin.style.left = "110%";
-    }
-});
-
-CloseErrFormSignIn.addEventListener("click", () => {
-    ErrFormSignin.style.left = "110%";
-});
+    });
+}

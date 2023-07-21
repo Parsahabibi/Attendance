@@ -1,6 +1,8 @@
-import { NavIcon ,SideBar,BgDark} from "../Elements.js";
+import { NavIcon, SideBar, BgDark } from "../Elements.js";
 
-NavIcon.addEventListener("click", () => {
-    SideBar.style.right = "0";
-    BgDark.style.visibility = "visible";
-});
+if (NavIcon !== null) {
+    NavIcon.addEventListener("click", () => {
+        SideBar.style.right = "0";
+        BgDark.style.visibility = "visible";
+    });
+}
