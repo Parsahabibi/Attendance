@@ -34,24 +34,25 @@ const PushRequest = () => {
         );
     }
 };
+if (DataBtnPushRequest) {
+    DataBtnPushRequest.onclick = (e) => {
+        ValidateForm(e);
 
-DataBtnPushRequest.onclick = (e) => {
-    ValidateForm(e);
-
-    if (
-        DataValueRequest[0].value !== "" &&
-        DataValueRequest[1].value !== "" &&
-        DataValueRequest[2].value !== ""
-    ) {
-        DataRequest.push({
-            Type: DataValueRequest[0].value,
-            DateStart: DataValueRequest[1].value,
-            DateEnd: DataValueRequest[2].value,
-        });
-        PushRequest();
-        DataValueRequest[1].value = "";
-        DataValueRequest[2].value = "";
-        CheckEmptyTable();
-    } else {
-    }
-};
+        if (
+            DataValueRequest[0].value !== "" &&
+            DataValueRequest[1].value !== "" &&
+            DataValueRequest[2].value !== ""
+        ) {
+            DataRequest.push({
+                Type: DataValueRequest[0].value,
+                DateStart: DataValueRequest[1].value,
+                DateEnd: DataValueRequest[2].value,
+            });
+            PushRequest();
+            DataValueRequest[1].value = "";
+            DataValueRequest[2].value = "";
+            CheckEmptyTable();
+        } else {
+        }
+    };
+}

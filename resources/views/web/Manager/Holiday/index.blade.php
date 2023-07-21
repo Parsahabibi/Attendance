@@ -102,7 +102,7 @@
                             <td class="text-nowrap px-2 c-gray-dark3 col-4  ">رحلت حضرت امام خمینی</td>
 
                             <td class="data-dropdown col-4 py-3 ">
-                                <div class="m-0 float-start ms-4" data-dropdown="">
+                                <div class="m-0 fs-small-100 float-start ms-4" data-dropdown="">
                                     عملیات
                                     <img src="{{ asset('images/Frame 134.svg') }}" alt="">
                                     <div class="dropdown" style="display: none;">
@@ -118,7 +118,7 @@
                             <td class="text-nowrap px-2 c-gray-dark3 col-4">قیام 15 خرداد</td>
 
                             <td class="data-dropdown col-4 py-3">
-                                <div class="m-0 float-start ms-4" data-dropdown="">
+                                <div class="m-0 fs-small-100 float-start ms-4" data-dropdown="">
                                     عملیات
                                     <img src="{{ asset('images/Frame 134.svg') }}" alt="">
                                     <div class="dropdown" style="display: none;">

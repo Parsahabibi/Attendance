@@ -168,10 +168,10 @@
               <td class="py-4 border-0 c-gray-dark col-2">${item.id}</td>
               <td class="py-4 border-0 c-gray-dark text-center col-2 shift">${item.title}</td>
               <td
-                class="float-start py-3 border-0 ps-4 c-gray-200 fs-small data-dropdown p-0 c-gray-dark3"
+                class="float-start ms-4 py-3 border-0 ps-4 c-gray-200 fs-small data-dropdown p-0 c-gray-dark3"
               >
                 <div class="endFlex" data-btn-dropdown-operation data-dropdown>
-                  <p class="textBox">عملیات</p>
+                  <p class="textBox fs-small-100">عملیات</p>
                   <img src="{{asset('images/Frame 134.svg')}}" alt="" class="pe-1 image" />
                   <div class="dropdown" data-dropdown-operation>
                     <div>ویرایش</div>

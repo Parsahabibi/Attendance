@@ -86,7 +86,7 @@
           </form>
         </div>
 
-        <div class="text-center data-dropdown  export-excel">
+        <div class="text-center  export-excel">
           <div class="text-nowrap btn-secondary-nahira py-3" style="width: auto">
             <p>دریافت اکسل</p>
           </div>
@@ -96,7 +96,7 @@
         <table class="w-100" id="myTable">
           <thead>
             <tr>
-              <th class="py-4 c-gray-dark2">#</th>
+              <th class="py-4 col-1 c-gray-dark2">#</th>
               <th class="text-center c-gray-dark2">کد پرسنلی</th>
               <th class="text-center c-gray-dark2">نام</th>
               <th class="text-center c-gray-dark2">نام خانوادگی</th>
@@ -107,18 +107,18 @@
           </thead>
           <tbody id="table-personel">
             <tr class="border-t-gray">
-                <td class="col-1 c-gray-dark3 py-3 px-2 table-personel">
+                <td class="c-gray-dark3 py-3 px-2 table-personel">
                     <div class="d-flex align-items-center">
                         <p class="ps-5">1</p>
                     <img src="{{asset('images/Frame 127.svg')}}" alt="" />
                     </div>
 
                 </td>
-                <td class="fs-small-100 col-1 text-center c-gray-dark3 px-2">۱۲۳۴۵۶۷۸۹</td>
-                <td class="fs-small-100 col-1 text-center c-gray-dark3 px-2">زهرا</td>
-                <td class="fs-small-100 col-1 text-center c-gray-dark3 px-2">مرادی نیا</td>
-                <td class="fs-small-100 col-1 text-center c-gray-dark3 px-2">ساعتی</td>
-                <td class="fs-small-100 col-1 text-center data-dropdown c-gray-dark3 px-2">
+                <td class="fs-small-100 text-center c-gray-dark3 px-2">۱۲۳۴۵۶۷۸۹</td>
+                <td class="fs-small-100 text-center c-gray-dark3 px-2">زهرا</td>
+                <td class="fs-small-100 text-center c-gray-dark3 px-2">مرادی نیا</td>
+                <td class="fs-small-100 text-center c-gray-dark3 px-2">ساعتی</td>
+                <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
                   <div class="" data-dropdown>
                     عملیات
                     <img src="{{asset('images/Frame 134.svg')}}" alt="" />
@@ -128,7 +128,7 @@
                     </div>
                   </div>
                 </td>
-                <td class="fs-small-100 col-1 text-center data-dropdown c-gray-dark3 px-2">
+                <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
                   <div class="text-nowrap" data-dropdown-state>
                     <p>وضعیت</p>
                     <img src="{{asset('images/Frame 134.svg')}}" alt="" />
