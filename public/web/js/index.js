@@ -9,4 +9,5 @@ import "./Customize.js";
 import "./component/DropDown.js";
 import "./component/PushData.js";
 import "./persiandate/PersianDatePicker.js";
-import "./Modal/ShowModal.js";
+import "./Modal/Modal.js";
+import "./Excel/ExportExcel.js";

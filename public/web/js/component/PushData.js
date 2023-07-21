@@ -1,6 +1,13 @@
 import {
+    BodyTable,
+    BtnSearch,
+    BtnSearchPersonel,
+    CompanyCity,
+    ComponyName,
     DataBtnPushRequest,
     DataValueRequest,
+    InputSerch,
+    TablePersonel,
     TableRequest,
 } from "../Elements.js";
 import { ValidateForm } from "../Validations/Forms.js";
@@ -33,7 +40,46 @@ const PushRequest = () => {
         );
     }
 };
+const Data = [
+    {
+        id: "1",
+        name: "ناهیرا",
+        city: "قزوین",
+        location: "قزوین، رستوران آرمان",
+    },
+    {
+        id: "2",
+        name: "ناهیرا",
+        city: "تهران",
+        location: "تهران، رستوران آرمان",
+    },
+    {
+        id: "5",
+        name: "ناهیرا",
+        city: "شیراز",
+        location: "شیراز، رستوران آرمان",
+    },
+    {
+        id: "3",
+        name: "ناهیرا",
+        city: "مشهد",
+        location: "مشهد، رستوران آرمان",
+    },
+    {
+        id: "4",
+        name: "ناهیرا",
+        city: "شیراز",
+        location: "شیراز، رستوران آرمان",
+    },
+    {
+        id: "5",
+        name: "ناهیرا",
+        city: "شیراز",
+        location: "شیراز، رستوران آرمان",
+    },
+];
 
+// Request
 if (DataBtnPushRequest !== null) {
     DataBtnPushRequest.onclick = (e) => {
         ValidateForm(e);
@@ -55,3 +101,243 @@ if (DataBtnPushRequest !== null) {
         }
     };
 }
+//***********************************************************************************************************
+
+// Location
+if (BodyTable !== null) {
+    Data.map(
+        (item) =>
+            (BodyTable.innerHTML += `
+        <tr class="border-t-gray">
+          <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${item.id}</td>
+          <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${item.name}</td>
+          <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${item.city}</td>
+          <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${item.location}</td>
+          <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2 data-dropdown">
+            <div class="" data-dropdown>
+              عملیات
+              <img src="../../images/Frame 134.svg" alt="" />
+              <div class="dropdown">
+                <div>ویرایش</div>
+                <div delete-row>حذف</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      `)
+    );
+}
+if (BtnSearch !== null) {
+    BtnSearch.addEventListener("click", (e) => {
+        e.preventDefault();
+        BodyTable.innerHTML = "";
+        let name, city;
+        for (let i = 0; i < Data.length; i++) {
+            city = Data[i].city.includes(CompanyCity.value.trim());
+            name = Data[i].name.includes(ComponyName.value.trim());
+
+            // console.log(name,city);
+            if (name === true && city === true) {
+                const array = Data.filter((item) => {
+                    return (
+                        item.city.includes(CompanyCity.value.trim()) &&
+                        item.name.includes(ComponyName.value.trim())
+                    );
+                });
+                // console.log(array);
+                BodyTable.innerHTML = "";
+
+                //   console.log(name, city);
+                array.map((item) => {
+                    BodyTable.innerHTML += `
+              <tr class="border-t-gray">
+                <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${item.id}</td>
+                <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${item.name}</td>
+                <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${item.city}</td>
+                <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${item.location}</td>
+                <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2 data-dropdown">
+                  <div class="" data-dropdown>
+                    عملیات
+                    <img src="../../images/Frame 134.svg" alt="" />
+                    <div class="dropdown">
+                      <div>ویرایش</div>
+                      <div delete-row>حذف</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              `;
+                });
+                break;
+            } else if (name === true || city === true) {
+                BodyTable.innerHTML += `
+              <tr class="border-t-gray">
+                <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${Data[i].id}</td>
+                <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${Data[i].name}</td>
+                <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${Data[i].city}</td>
+                <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">${Data[i].location}</td>
+      
+                <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2 data-dropdown">
+                  <div class="" data-dropdown>
+                    عملیات
+                    <img src="../../images/Frame 134.svg" alt="" />
+                    <div class="dropdown">
+                      <div>ویرایش</div>
+                      <div delete-row>حذف</div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              `;
+                // break;
+            }
+        }
+        CheckEmptyTable();
+    });
+}
+//***********************************************************************************************************
+
+
+// Personel
+
+const DataPersonel = [
+    {
+        id: "۱",
+        img: "Frame 127.svg",
+        code: "۱۲۳۴۵۶۷۸۹",
+        name: "امیررضا",
+        family: "کاشی پزها",
+        shift: "ساعتی",
+    },
+    {
+        id: "۲",
+        img: "Frame 127.svg",
+        code: "۱۲۳۴۵۶۷۸۹",
+        name: "پارسا",
+        family: "حبیبی",
+        shift: "ساعتی",
+    },
+    {
+        id: "۳",
+        img: "Frame 127.svg",
+        code: "۱۲۳۴۵۶۷۸۹",
+        name: "پژمان",
+        family: "لطیفی",
+        shift: "ساعتی",
+    },
+    {
+        id: "۴",
+        img: "Frame 127.svg",
+        code: "۱۲۳۴۵۶۷۸۹",
+        name: "امین",
+        family: "غلامی",
+        shift: "ساعتی",
+    },
+    {
+        id: "۵",
+        img: "Frame 127.svg",
+        code: "۱۲۳۴۵۶۷۸۹",
+        name: "هانیه",
+        family: "ضرغامی",
+        shift: "ساعتی",
+    },
+];
+if (TablePersonel !== null) {
+    DataPersonel.map(
+        (item) =>
+            (TablePersonel.innerHTML += `
+    <tr class="border-t-gray">
+    <td class="c-gray-dark3 py-3 px-2 table-personel">
+        <div class="d-flex align-items-center">
+            <p class="ps-5">${item.id}</p>
+        <img src="../../images/${item.img}" alt="" />
+        </div>
+
+    </td>
+    <td class="fs-small-100 text-center c-gray-dark3 px-2">${item.code}</td>
+    <td class="fs-small-100 text-center c-gray-dark3 px-2">${item.name}</td>
+    <td class="fs-small-100 text-center c-gray-dark3 px-2">${item.family}</td>
+    <td class="fs-small-100 text-center c-gray-dark3 px-2">${item.shift}</td>
+    <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
+      <div class="" data-dropdown>
+        عملیات
+        <img src="../../images/Frame 134.svg" alt="" />
+        <div class="dropdown dropdown-operation">
+          <div>ویرایش</div>
+          <div delete-row>حذف</div>
+        </div>
+      </div>
+    </td>
+    <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
+      <div class="text-nowrap" data-dropdown-state>
+        <p>وضعیت</p>
+        <img src="../../images/Frame 134.svg" alt="" />
+        <div class="dropdown dropdown-state">
+          <div item-dropdown-state>فعال</div>
+          <div delete-row2 class="text-nowrap" item-dropdown-state>غیر فعال</div>
+        </div>
+      </div>
+    </td>
+</tr>
+           
+
+        `)
+    );
+}
+let SearchPersonel = [];
+if (BtnSearchPersonel !== null) {
+    BtnSearchPersonel.addEventListener("click", (e) => {
+        e.preventDefault();
+        let SearchPersonel = [];
+        TablePersonel.innerHTML = "";
+        DataPersonel.forEach((item) => {
+            if (item.name.includes(InputSerch.value)) {
+                SearchPersonel.push(item);
+            }
+        });
+
+        SearchPersonel.map((item) => {
+            TablePersonel.innerHTML += `
+    <tr class="border-t-gray">
+    <td class="c-gray-dark3 py-3 px-2 table-personel">
+        <div class="d-flex align-items-center">
+            <p class="ps-5">${item.id}</p>
+        <img src="../../images/${item.img}" alt="" />
+        </div>
+
+    </td>
+    <td class="fs-small-100 text-center c-gray-dark3 px-2">${item.code}</td>
+    <td class="fs-small-100 text-center c-gray-dark3 px-2">${item.name}</td>
+    <td class="fs-small-100 text-center c-gray-dark3 px-2">${item.family}</td>
+    <td class="fs-small-100 text-center c-gray-dark3 px-2">${item.shift}</td>
+    <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
+      <div class="" data-dropdown>
+        عملیات
+        <img src="../../images/Frame 134.svg" alt="" />
+        <div class="dropdown dropdown-operation">
+          <div>ویرایش</div>
+          <div delete-row>حذف</div>
+        </div>
+      </div>
+    </td>
+    <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
+      <div class="text-nowrap" data-dropdown-state>
+        <p>وضعیت</p>
+        <img src="../../images/Frame 134.svg" alt="" />
+        <div class="dropdown dropdown-state">
+          <div item-dropdown-state>فعال</div>
+          <div delete-row2 class="text-nowrap" item-dropdown-state>غیر فعال</div>
+        </div>
+      </div>
+    </td>
+</tr>
+           
+`;
+        });
+        CheckEmptyTable();
+    });
+}
+//***********************************************************************************************************
+
+
+// project

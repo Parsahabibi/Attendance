@@ -73,7 +73,7 @@
                             <th class="text-nowrap ps-5 text-start pb-4 col-8">عملیات</th>
                         </tr>
                     </thead>
-                    <tbody class="col-12" body-table=""></tbody>
+                    <tbody class="col-12" body-table-shift=""data-check-empty-table> </tbody>
                 </table>
                 <div class="d-none m-5 mb-3 d-flex flex-column align-items-center" data-emplty-table-massage>
                     <p class="c-gray-dark2 text-nowrap pb-3">
@@ -92,7 +92,11 @@
 @endsection
 
 @section('script')
-<script>
+<script type="module">
+
+import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
+
+
     const liList = document.querySelectorAll(".li");
 
     for (let i = 0; i < liList.length; i++) {
@@ -129,7 +133,7 @@
     let CloseModal = document.querySelectorAll("[close-modal]");
     let Modal = document.querySelector(".container-modal");
     let DeleteRow = document.querySelector("[ok-delete-row]");
-    let RowTable = document.querySelectorAll("[body-table]>tr");
+    let RowTable = document.querySelectorAll("[body-table-shift]>tr");
     let ComponyName = document.querySelector("[data-input-name]");
     let CompanyCity = document.querySelector("[data-input-city]");
     let text = document.querySelectorAll(".textBox");
@@ -138,7 +142,7 @@
 
     let input = document.getElementById("nameOfShift");
 
-    let row = document.querySelector("[body-table]");
+    let row = document.querySelector("[body-table-shift]");
 
     const data = [{
             id: 1,
@@ -224,6 +228,31 @@
         let arr = data.filter((item) => item.title === search);
         console.log(arr);
         row.innerHTML = "";
+
+        if (search==='') {
+            
+    data.map(
+        (item) =>
+        (row.innerHTML += `
+        <tr class="borderTable border-0">
+              <td class="py-4 border-0 c-gray-dark col-2">${item.id}</td>
+              <td class="py-4 border-0 c-gray-dark text-center col-2 shift">${item.title}</td>
+              <td
+                class="float-start ms-4 py-3 border-0 ps-4 c-gray-200 fs-small data-dropdown p-0 c-gray-dark3"
+              >
+                <div class="endFlex" data-btn-dropdown-operation data-dropdown>
+                  <p class="textBox fs-small-100">عملیات</p>
+                  <img src="{{asset('images/Frame 134.svg')}}" alt="" class="pe-1 image" />
+                  <div class="dropdown" data-dropdown-operation>
+                    <div>ویرایش</div>
+                    <div delete-row>حذف</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+        `)
+    );
+        }
         arr.map(
             (item) =>
             (row.innerHTML += `
@@ -245,6 +274,7 @@
             </tr>
         `)
         );
+        CheckEmptyTable();
     };
 </script>
 @endsection

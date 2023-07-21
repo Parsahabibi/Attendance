@@ -57,113 +57,11 @@
                     <th class="fw-bold px-3 col-2 pb-3 text-center">عملیات</th>
                 </tr>
             </thead>
-            <tbody body-table="">
-                <tr class="border-t-gray">
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">1</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">ناهیرا</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">قزوین</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">قزوین، رستوران آرمان</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2 data-dropdown">
-                        <div class="" data-dropdown="">
-                            عملیات
-                            <img src="{{asset('images/Frame 134.svg')}}" alt="">
-                            <div class="dropdown" style="display: none;">
-                                <div>ویرایش</div>
-                                <div delete-row="">حذف</div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr class="border-t-gray">
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">2</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">ناهیرا</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">تهران</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">تهران، رستوران آرمان</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2 data-dropdown">
-                        <div class="" data-dropdown="">
-                            عملیات
-                            <img src="{{asset('images/Frame 134.svg')}}" alt="">
-                            <div class="dropdown" style="display: none;">
-                                <div>ویرایش</div>
-                                <div delete-row="">حذف</div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr class="border-t-gray">
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">5</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">ناهیرا</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">شیراز</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">شیراز، رستوران آرمان</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2 data-dropdown">
-                        <div class="" data-dropdown="">
-                            عملیات
-                            <img src="{{asset('images/Frame 134.svg')}}" alt="">
-                            <div class="dropdown" style="display: none;">
-                                <div>ویرایش</div>
-                                <div delete-row="">حذف</div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr class="border-t-gray">
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">3</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">ناهیرا</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">مشهد</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">مشهد، رستوران آرمان</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2 data-dropdown">
-                        <div class="" data-dropdown="">
-                            عملیات
-                            <img src="{{asset('images/Frame 134.svg')}}" alt="">
-                            <div class="dropdown" style="display: none;">
-                                <div>ویرایش</div>
-                                <div delete-row="">حذف</div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr class="border-t-gray">
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">4</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">ناهیرا</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">شیراز</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">شیراز، رستوران آرمان</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2 data-dropdown">
-                        <div class="" data-dropdown="">
-                            عملیات
-                            <img src="{{asset('images/Frame 134.svg')}}" alt="">
-                            <div class="dropdown" style="display: none;">
-                                <div>ویرایش</div>
-                                <div delete-row="">حذف</div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr class="border-t-gray">
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">5</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">ناهیرا</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">شیراز</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2">شیراز، رستوران آرمان</td>
-                    <td class="fs-small-100 p-3 text-nowrap  c-gray-dark3 col-2 data-dropdown">
-                        <div class="" data-dropdown="">
-                            عملیات
-                            <img src="{{asset('images/Frame 134.svg')}}" alt="">
-                            <div class="dropdown" style="display: none;">
-                                <div>ویرایش</div>
-                                <div delete-row="">حذف</div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
+            <tbody body-table="" data-check-empty-table> </tbody>
         </table>
-        <div class="d-none border-t-gray py-5 m-5 d-flex flex-column align-items-center">
+        <div class="d-none border-t-gray py-5 m-5 d-flex flex-column align-items-center"data-emplty-table-massage>
             <p class="c-gray-dark2 text-nowrap pb-3">داده‌ای موجود نیست</p>
-            <img src="{{asset('images/Frame 29.svg')}}" alt="">
+            <img src="{{asset('images/Frame 29.svg')}}" alt="" class="no-data">
         </div>
     </div>
 </section>

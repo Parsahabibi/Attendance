@@ -30,12 +30,12 @@
     ])
 @endsection
 <section class="">
-    <div class="container-modal hide-modal">
+    <div class="container-modal hide-modal" container-modal>
         <div class="bg-modal" close-modal></div>
         <div class="col-12 col-md-6 modal-delete rounded-24 p-3 p-md-4 h-md-auto overflow-y-scroll">
           <div class="d-flex justify-content-between col-12">
             <h6>نوع شیفت خود را انتخاب کنید</h6>
-            <img src="{{asset('images/Frame 77.svg')}}" alt="close" role="button" close-modal />
+            <img src="{{asset('images/Frame 77.svg')}}" alt="close" style="width: 12px" role="button" close-modal />
           </div>
           <form action="" name="formShift">
             <div class="d-flex flex-column align-items-end justify-content-start">
@@ -68,10 +68,10 @@
                     <span class="c-pink">*</span>
                   </label>
                   <input
-                    type="date"
+                    type="text"
                     name="inputshift"
                     class="bg-input rounded-8 py-md-2 example1"
-                  />
+                    data-jdp readonly/>
                   <p class="err-form-new-personel err-input pt-1"></p>
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column mb-3 my-md-2">
@@ -127,7 +127,7 @@
                 <h5 class="mb-3 mb-lg-3 fw-bold">گزارشات پروژه</h5>
                 <div class="">
                     <button class="btn-secondary-nahira">اکسل</button>
-                    <button class="btn-primary-nahira me-3" btn-show-modal>دریافت اطلاعات</button>
+                    <button class="btn-primary-nahira me-3" >دریافت اطلاعات</button>
                 </div>
             </div>
 
@@ -159,7 +159,7 @@
                         <input type="text" name="input2" class="bg-input rounded-8 py-md-2" />
                     </div>
                 </div>
-                <button class="btn-primary-nahira text-nowrap" id="btn-request">
+                <button class="btn-primary-nahira text-nowrap" id="btn-request" btn-show-modal>
                     ثبت درخواست جدید
                 </button>
             </div>

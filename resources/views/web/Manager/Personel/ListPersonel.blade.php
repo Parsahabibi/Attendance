@@ -5,6 +5,7 @@
     
     <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
     <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+    <script src="{{asset('web/js/Excel/xlsx.core.min.js')}}"></script>
 
 @endsection
 
@@ -79,7 +80,7 @@
 
             <button
               class="btn-primary-nahira"
-              btn-search
+              btn-search-personel
             >
               جست و جو
             </button>
@@ -105,40 +106,8 @@
               <th class="text-center c-gray-dark2">وضعیت</th>
             </tr>
           </thead>
-          <tbody id="table-personel">
-            <tr class="border-t-gray">
-                <td class="c-gray-dark3 py-3 px-2 table-personel">
-                    <div class="d-flex align-items-center">
-                        <p class="ps-5">1</p>
-                    <img src="{{asset('images/Frame 127.svg')}}" alt="" />
-                    </div>
-
-                </td>
-                <td class="fs-small-100 text-center c-gray-dark3 px-2">۱۲۳۴۵۶۷۸۹</td>
-                <td class="fs-small-100 text-center c-gray-dark3 px-2">زهرا</td>
-                <td class="fs-small-100 text-center c-gray-dark3 px-2">مرادی نیا</td>
-                <td class="fs-small-100 text-center c-gray-dark3 px-2">ساعتی</td>
-                <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
-                  <div class="" data-dropdown>
-                    عملیات
-                    <img src="{{asset('images/Frame 134.svg')}}" alt="" />
-                    <div class="dropdown dropdown-operation">
-                      <div>ویرایش</div>
-                      <div delete-row>حذف</div>
-                    </div>
-                  </div>
-                </td>
-                <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
-                  <div class="text-nowrap" data-dropdown-state>
-                    <p>وضعیت</p>
-                    <img src="{{asset('images/Frame 134.svg')}}" alt="" />
-                    <div class="dropdown dropdown-state">
-                      <div item-dropdown-state>فعال</div>
-                      <div delete-row2 class="text-nowrap" item-dropdown-state>غیر فعال</div>
-                    </div>
-                  </div>
-                </td>
-            </tr>
+          <tbody id="table-personel"data-check-empty-table>
+           
           
         </tbody>
         </table>

@@ -25,11 +25,9 @@ const MatnFormSignin = document.querySelector(".err-form-signin>p");
 const ErrEmailPhone = document.querySelector("#err-input-email_phone");
 const BtnLogin = document.querySelector("#btn-login");
 const CloseErrFormSignIn = document.querySelector("#close-err-form-signin");
-
 const DataDropdownInput = document.querySelectorAll("[data-dropdown-input]");
 const DataDropdownDiv = document.querySelectorAll("[data-dropdown-div]");
 const DataItemDropdown = document.querySelectorAll("[data-item-dropdown]");
-
 const DataBtnDropDownOperation = document.querySelectorAll(
     "[data-btn-dropdown-operation]"
 );
@@ -39,19 +37,37 @@ const DataContentBtnDropDownOperation = document.querySelectorAll(
 const DataImageBtnDropDownOperation = document.querySelectorAll(
     "[data-btn-dropdown-operation]>div>img"
 );
-
 const DataDropDownOperation = document.querySelectorAll(
     "[data-dropdown-operation]"
 );
 const DataBtnPushRequest = document.querySelector("[data-btn-push-request]");
 const DataValueRequest = document.querySelectorAll("[data-value-request]");
 const DataFormValidation = document.querySelectorAll("[data-form-validation]");
-
 const BtnSubmitFormValidation = document.querySelectorAll(
     "[btn-submit-form-validation]"
 );
 const TableRequest = document.querySelectorAll("[table-request]");
 const BtnShowModal = document.querySelector("[btn-show-modal]");
+const ContainerModal = document.querySelector("[container-modal]");
+const CloseModal = document.querySelectorAll("[close-modal]");
+const BtnDropDown = document.querySelectorAll("[data-dropdown]");
+const DropDown = document.querySelectorAll(".dropdown");
+const BtnDeleteRow = document.querySelectorAll("[delete-row]");
+const CloseModalLocation = document.querySelectorAll("[close-modal]");
+const Modal = document.querySelector(".container-modal");
+const DeleteRow = document.querySelector("[ok-delete-row]");
+const RowTable = document.querySelectorAll("[body-table]>tr");
+const ComponyName = document.querySelector("[data-input-name]");
+const CompanyCity = document.querySelector("[data-input-city]");
+const BodyTable = document.querySelector("[body-table]");
+const BtnSearch = document.querySelector("[btn-search]");
+const BtnDropDown2 = document.querySelectorAll("[data-dropdown-state]>p");
+const DropDown2 = document.querySelectorAll(".dropdown-state");
+const ItemDropdownState = document.querySelectorAll("[item-dropdown-state]");
+const InputSerch = document.getElementById("input-search-personel");
+const TablePersonel = document.getElementById("table-personel");
+const BtnSearchPersonel = document.querySelector("[btn-search-personel]");
+const BtnExcel = document.querySelector(".export-excel");
 export {
     NavIcon,
     ItemSidebar,
@@ -85,4 +101,24 @@ export {
     DataImageBtnDropDownOperation,
     DataContentBtnDropDownOperation,
     BtnShowModal,
+    ContainerModal,
+    CloseModal,
+    BtnDropDown,
+    DropDown,
+    BtnDeleteRow,
+    CloseModalLocation,
+    Modal,
+    DeleteRow,
+    RowTable,
+    ComponyName,
+    CompanyCity,
+    BodyTable,
+    BtnSearch,
+    BtnDropDown2,
+    DropDown2,
+    ItemDropdownState,
+    InputSerch,
+    TablePersonel,
+    BtnSearchPersonel,
+    BtnExcel,
 };

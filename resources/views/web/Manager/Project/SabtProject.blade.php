@@ -23,8 +23,8 @@
     ])
 @endsection
 <section class="bg-white rounded-16 p-3 p-md-4 pt-md-5">
-    <div class="data-table d-flex justify-content-between ">
-        <div class="d-flex ">
+    <div class="data-table d-flex flex-column flex-md-row justify-content-between ">
+        <div class=" d-flex flex-column flex-sm-row ">
             <div class="bg-gray ms-2 rounded-16 pe-2 d-field-header mb-2 mb-lg-0 d-flex align-items-center">
                 <label for="input-search-header">
                     <img src="{{ asset('images/search.svg') }}" alt="" style="height:24px">
@@ -34,7 +34,7 @@
             </div>
             <button class="btn-primary-nahira">جست و جو</button>
         </div>
-        <div class=" data-dropdown"data-btn-dropdown-operation>
+        <div class=" data-dropdown ms-4"data-btn-dropdown-operation>
             <div class="text-nowrap" data-dropdown-state="" >
                 <p>وضعیت</p>
                 <img src="{{asset('images/Frame 134.svg')}}" alt="">
