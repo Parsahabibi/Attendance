@@ -30,12 +30,12 @@
     ])
 @endsection
 <section class="">
-    {{-- <div class="container-modal hide">
+    <div class="container-modal hide-modal">
         <div class="bg-modal" close-modal></div>
         <div class="col-12 col-md-6 modal-delete rounded-24 p-3 p-md-4 h-md-auto overflow-y-scroll">
           <div class="d-flex justify-content-between col-12">
             <h6>نوع شیفت خود را انتخاب کنید</h6>
-            <img src="Frame 77.svg" alt="close" role="button" close-modal />
+            <img src="{{asset('images/Frame 77.svg')}}" alt="close" role="button" close-modal />
           </div>
           <form action="" name="formShift">
             <div class="d-flex flex-column align-items-end justify-content-start">
@@ -119,7 +119,7 @@
             </div>
           </form>
         </div>
-    </div> --}}
+    </div>
 
     <div class="">
         <div class="p-3 p-md-4 pb-0 pb-md-0 bg-white rounded-16 d-flex flex-column justify-content-between mb-3">
@@ -127,7 +127,7 @@
                 <h5 class="mb-3 mb-lg-3 fw-bold">گزارشات پروژه</h5>
                 <div class="">
                     <button class="btn-secondary-nahira">اکسل</button>
-                    <button class="btn-primary-nahira me-3">دریافت اطلاعات</button>
+                    <button class="btn-primary-nahira me-3" btn-show-modal>دریافت اطلاعات</button>
                 </div>
             </div>
 
@@ -201,5 +201,53 @@
 @section('script')
 <script>
     jalaliDatepicker.startWatch();
+
+
+      // let Modal = document.querySelector(".container-modal");
+      // let CloseModal = document.querySelectorAll("[close-modal]");
+
+      // document.querySelector("#btn-request").addEventListener("click", () => {
+      //   Modal.classList.remove("hide");
+      //   Modal.classList.add("show");
+      // });
+      // for (let j = 0; j < CloseModal.length; j++) {
+      //   CloseModal[j].addEventListener("click", () => {
+      //     Modal.classList.remove("show");
+      //     Modal.classList.add("hide");
+      //   });
+      // }
+
+      // const ErrFromShift = document.querySelectorAll(".err-form-new-personel");
+
+      // for (let i = 0; i < document.formShift.inputshift.length; i++) {
+      //   document.formShift.inputshift[i].addEventListener("blur", () => {
+      //     if (document.formShift.inputshift[i].value === "") {
+      //       ErrFromShift[i].innerHTML = "لطفا ورودی را پر کنید";
+      //     } else {
+      //       ErrFromShift[i].innerHTML = "";
+      //     }
+      //   });
+      // }
+      // document
+      //   .querySelector("#sumbit-form-shift")
+      //   .addEventListener("click", (e) => {
+      //     for (let i = 0; i < document.formShift.inputshift.length; i++) {
+      //       if (document.formShift.inputshift[i].value === "") {
+      //         ErrFromShift[i].innerHTML = "لطفا ورودی را پر کنید";
+      //         e.preventDefault();
+      //       } else {
+      //         ErrFromShift[i].innerHTML = "";
+      //       }
+      //     }
+      //   });
+      const LiReported = document.querySelectorAll(".li-reported");
+      for (let i = 0; i < LiReported.length; i++) {
+        LiReported[i].onclick = () => {
+          for (let i = 0; i < LiReported.length; i++) {
+            LiReported[i].classList.remove("active-li");
+          }
+          LiReported[i].classList.add("active-li");
+        };
+      }
 </script>
 @endsection

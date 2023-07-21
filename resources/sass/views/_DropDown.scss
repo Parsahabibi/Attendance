@@ -22,3 +22,14 @@
         padding: 1rem;
     }
 }
+.btn-data-dropdown {
+    @include flex();
+    display: flex !important;
+    position: relative;
+    cursor: pointer;
+    border-radius: 16px;
+    background: rgba(255, 84, 0, 0.15);
+    color: #ff5400;
+    width: 100px;
+    padding: 0.5rem 1.5rem;
+}

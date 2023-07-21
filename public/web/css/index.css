@@ -241,7 +241,10 @@ img[src="refresh-icon.svg"] {
 
 .err-input {
   font-size: 12px;
-  color: #c43d4b; }
+  color: #c43d4b;
+  position: absolute;
+  bottom: -20px;
+  right: 0; }
 
 #input-search-header {
   min-width: 250px; }
@@ -530,3 +533,57 @@ html .header .items .b-active {
   z-index: 10; }
   .dropdown div {
     padding: 1rem; }
+
+.btn-data-dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex !important;
+  position: relative;
+  cursor: pointer;
+  border-radius: 16px;
+  background: rgba(255, 84, 0, 0.15);
+  color: #ff5400;
+  width: 100px;
+  padding: 0.5rem 1.5rem; }
+
+.bg-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 50; }
+
+.modal-delete {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  background: #fff;
+  z-index: 51; }
+  .modal-delete .body-modal-delete {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .modal-delete .body-modal-delete .p-modal-delete {
+      border-radius: 16px;
+      border: 1px dashed #ff5400;
+      background: rgba(255, 84, 0, 0.05); }
+    .modal-delete .body-modal-delete button:nth-child(1) {
+      color: #ff5400;
+      background: rgba(255, 84, 0, 0.25); }
+    .modal-delete .body-modal-delete button:nth-child(2) {
+      background: #ff5400;
+      color: #fff; }
+
+.hide-modal {
+  display: none; }
+
+.show-modal {
+  display: inline; }

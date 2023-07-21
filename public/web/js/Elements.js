@@ -51,7 +51,7 @@ const BtnSubmitFormValidation = document.querySelectorAll(
     "[btn-submit-form-validation]"
 );
 const TableRequest = document.querySelectorAll("[table-request]");
-
+const BtnShowModal = document.querySelector("[btn-show-modal]");
 export {
     NavIcon,
     ItemSidebar,
@@ -84,4 +84,5 @@ export {
     DataItemDropdown,
     DataImageBtnDropDownOperation,
     DataContentBtnDropDownOperation,
+    BtnShowModal,
 };

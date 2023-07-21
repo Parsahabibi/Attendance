@@ -142,6 +142,7 @@
 @endsection
 
 @section('script')
+
 <script>
     jalaliDatepicker.startWatch();
 </script>

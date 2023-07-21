@@ -1,0 +1,38 @@
+.bg-modal {
+    @include Position(fixed);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+}
+.modal-delete {
+    @include Center;
+    // width: 50%;
+    height: 60%;
+    background: #fff;
+    z-index: 51;
+    .body-modal-delete {
+        @include Center;
+        .p-modal-delete {
+            border-radius: 16px;
+            border: 1px dashed #ff5400;
+            background: rgba(255, 84, 0, 0.05);
+        }
+        button {
+            &:nth-child(1) {
+                color: #ff5400;
+                background: rgba(255, 84, 0, 0.25);
+            }
+            &:nth-child(2) {
+                background: #ff5400;
+                color: #fff;
+            }
+        }
+    }
+}
+.hide-modal {
+    display: none;
+}
+.show-modal {
+    display: inline;
+}

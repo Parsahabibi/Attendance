@@ -132,6 +132,7 @@ img[src="refresh-icon.svg"] {
     visibility: hidden;
     transition: all 0.4s ease-in-out;
 }
+
 .show {
     opacity: 1;
     visibility: visible;
@@ -215,6 +216,9 @@ img[src="refresh-icon.svg"] {
 .err-input {
     font-size: 12px;
     color: $error-color;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
 }
 
 #input-search-header{
