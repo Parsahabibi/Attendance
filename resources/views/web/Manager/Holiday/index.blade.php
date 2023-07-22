@@ -77,7 +77,7 @@
                                 اسفند
                             </option>
                         </select>
-                        
+
                     </div>
                     <div class="col-12 col-md-6 d-flex flex-column mb-3 mb-lg-0">
                         <label for="" class="mb-1 c-gray-900">سال</label>
@@ -87,7 +87,7 @@
                 </div>
                 <button class="btn-primary-nahira">دریافت لیست تعطیلات</button>
             </div>
-            <div class="bg-white rounded-24 mt-5 data-table col-12 overflow-x-scroll">
+            <div class="bg-white rounded-24 mt-5 col-12 overflow-x-scroll">
                 <table class="w-100 col-12">
                     <thead>
                         <tr class="justify-content-between">
@@ -102,10 +102,11 @@
                             <td class="text-nowrap px-2 c-gray-dark3 col-4  ">رحلت حضرت امام خمینی</td>
 
                             <td class="data-dropdown col-4 py-3 ">
-                                <div class="m-0 fs-small-100 float-start ms-4" data-dropdown="">
-                                    عملیات
+                                <div
+                                    class="m-0 fs-small-100 float-start btn-data-dropdown"data-btn-dropdown-operation-holiday>
+                                    <p> عملیات</p>
                                     <img src="{{ asset('images/Frame 134.svg') }}" alt="">
-                                    <div class="dropdown" style="display: none;">
+                                    <div class="dropdown d-none" data-dropdown-operation-holiday>
                                         <div>ویرایش</div>
                                         <div delete-row="">حذف</div>
                                     </div>
@@ -118,10 +119,11 @@
                             <td class="text-nowrap px-2 c-gray-dark3 col-4">قیام 15 خرداد</td>
 
                             <td class="data-dropdown col-4 py-3">
-                                <div class="m-0 fs-small-100 float-start ms-4" data-dropdown="">
-                                    عملیات
+                                <div
+                                    class="m-0 fs-small-100 float-start btn-data-dropdown"data-btn-dropdown-operation-holiday>
+                                    <p> عملیات</p>
                                     <img src="{{ asset('images/Frame 134.svg') }}" alt="">
-                                    <div class="dropdown" style="display: none;">
+                                    <div class="dropdown d-none"data-dropdown-operation-holiday>
                                         <div>ویرایش</div>
                                         <div delete-row="">حذف</div>
                                     </div>
@@ -142,8 +144,13 @@
 @endsection
 
 @section('script')
-
-<script>
+<script type="module">
     jalaliDatepicker.startWatch();
+
+
+    import WindowCheck from "{{asset('web/js/component/Window.js')}}";
+    window.onclick=(e)=>{
+        WindowCheck(e);
+    }
 </script>
 @endsection

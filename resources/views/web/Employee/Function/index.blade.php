@@ -60,7 +60,7 @@
                             <th class="text-nowrap w-100 text-center pb-4 c-gray-dark2">ماموریت</th>
                         </tr>
                     </thead>
-                    <tbody body-table="">
+                    <tbody body-table-function>
                        
                     </tbody>
                 </table>
@@ -87,7 +87,7 @@
 
     let button = document.getElementById("SearchButton");
 
-    let row = document.querySelector("[body-table]");
+    let row = document.querySelector("[body-table-function]");
 
     let inputTo = document.getElementById("dateTo");
 

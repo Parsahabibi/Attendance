@@ -121,7 +121,7 @@
 @endsection
 
 @section('script')
-<script type="text/javascript">
+<script type="module">
     // window.onload = function () {
     var ddlYears = document.getElementById("Personal");
 
@@ -192,5 +192,11 @@
     };
 
     // };
+    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
+
+    
+    window.onclick=(e)=>{
+        WindowCheck(e);
+    }
 </script>
 @endsection

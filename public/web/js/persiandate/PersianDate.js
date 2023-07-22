@@ -15,6 +15,6 @@ const PersianDateCustome = () => {
     TimeShamsi.innerHTML = `${HourShamsi}:${MinutesShamsi}:${SecoundShamsi}`;
 };
 
-if (DateShamsi && TimeShamsi) {
+if (DateShamsi !== null && TimeShamsi !== null) {
     PersianDateCustome();
 }

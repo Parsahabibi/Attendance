@@ -7,7 +7,11 @@
 @section('content')
     <!-- Hero Start -->
 @section('header')
-    @include('web.Layouts.header', ['H3Header' => 'پروژه', 'CaptionHeader' => 'خانه - پروژه ', 'TitleHeader' => 'ثبت پروژه'])
+    @include('web.Layouts.header', [
+        'H3Header' => 'پروژه',
+        'CaptionHeader' => 'خانه - پروژه ',
+        'TitleHeader' => 'ثبت پروژه',
+    ])
 @endsection
 
 @section('sidebar')
@@ -35,12 +39,13 @@
             <button class="btn-primary-nahira">جست و جو</button>
         </div>
         <div class=" data-dropdown ms-4"data-btn-dropdown-operation>
-            <div class="text-nowrap" data-dropdown-state="" >
+            <div class="text-nowrap" data-dropdown-state="">
                 <p>وضعیت</p>
-                <img src="{{asset('images/Frame 134.svg')}}" alt="">
+                <img src="{{ asset('images/Frame 134.svg') }}" alt="">
                 <div class="dropdown dropdown-state d-none w-100" data-dropdown-operation>
                     <div class="p-2 text-center" item-dropdown-state="">فعال</div>
-                    <div class="p-2 text-center" delete-row2="" class="text-nowrap" item-dropdown-state="">غیر فعال</div>
+                    <div class="p-2 text-center" delete-row2="" class="text-nowrap" item-dropdown-state="">غیر فعال
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,7 +57,7 @@
                     <th class="col-2 c-gray-dark2 p-2 pb-3 text-nowrap">#</th>
                     <th class="col-7 c-gray-dark2 p-2 pb-3 text-nowrap">نام پروژه</th>
                     <th class="col-3 c-gray-dark2 p-2 pb-3 text-nowrap">کد پرسنلی</th>
-                   
+
 
                 </thead>
                 <tbody class="" table-request data-check-empty-table>
@@ -64,7 +69,7 @@
                             زهرا
                         </td>
                         <td class="col-3 c-gray-dark3 px-2">۱۲۳۴۵۶۷۸۹</td>
-                        
+
                     </tr>
                 </tbody>
             </table>
@@ -80,4 +85,12 @@
 </section>
 
 <!-- Hero End -->
+@endsection
+@section('script')
+<script type="module">
+    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
+window.onclick=(e)=>{
+    WindowCheck(e);
+}
+</script>
 @endsection

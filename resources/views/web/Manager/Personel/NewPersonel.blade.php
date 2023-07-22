@@ -2,7 +2,7 @@
 
 @section('head-tag')
     <title></title>
-    
+
     <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
     <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
 
@@ -184,8 +184,7 @@
                     </div>
                 </div>
             </div>
-            <button id="btn-form-new-personel" class="btn-primary-nahira px-5"
-                type="submit">
+            <button id="btn-form-new-personel" class="btn-primary-nahira px-5" type="submit">
                 ثبت
             </button>
         </form>
@@ -195,7 +194,11 @@
 @endsection
 
 @section('script')
-<script>
+<script type="module">
     jalaliDatepicker.startWatch();
+    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
+    window.onclick=(e)=>{
+        WindowCheck(e);
+    }
 </script>
 @endsection

@@ -73,6 +73,30 @@ const TableProject = document.getElementById("table-project");
 const InputSerchProject = document.getElementById("input-search-project");
 const InputEmailLogin = document.querySelector("[input-email-login]");
 const InputPasswordLogin = document.querySelector("[password-email-login]");
+const BtnDropdownOperationHoliday = document.querySelectorAll(
+    "[data-btn-dropdown-operation-holiday]"
+);
+const DropdownOperationHoliday = document.querySelectorAll(
+    "[data-dropdown-operation-holiday]"
+);
+const MatnDropdownOperationHoliday = document.querySelectorAll(
+    "[data-btn-dropdown-operation-holiday]>p"
+);
+const ImgDropdownOperationHoliday = document.querySelectorAll(
+    "[data-btn-dropdown-operation-holiday]>img"
+);
+const DataBtnDropdownOperationRequestEmployee = document.querySelectorAll(
+    "[data-btn-dropdown-operation-request-employee]"
+);
+const DataDropdownOperationRequestEmployee = document.querySelectorAll(
+    "[data-dropdown-operation-request-employee]"
+);
+const CloseModalManagerLocation = document.querySelectorAll(
+    "[close-modal-location]"
+);
+const ContainerModalLocation = document.querySelector(
+    "[container-modal-location]"
+);
 
 export {
     NavIcon,
@@ -132,4 +156,12 @@ export {
     BtnSearchProject,
     InputEmailLogin,
     InputPasswordLogin,
+    BtnDropdownOperationHoliday,
+    DropdownOperationHoliday,
+    MatnDropdownOperationHoliday,
+    ImgDropdownOperationHoliday,
+    DataBtnDropdownOperationRequestEmployee,
+    DataDropdownOperationRequestEmployee,
+    CloseModalManagerLocation,
+    ContainerModalLocation,
 };

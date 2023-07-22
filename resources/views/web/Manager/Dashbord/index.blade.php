@@ -305,7 +305,12 @@
 @endsection
 
 @section('script')
-<script>
+<script type="module">
+    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
+    window.onclick=(e)=>{
+        WindowCheck(e);
+    }
+
     let numrotate = 0;
     const rotate = () => {
       numrotate += 360;

@@ -2,10 +2,9 @@
 
 @section('head-tag')
     <title></title>
-         
+
     <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
     <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
-
 @endsection
 
 @section('content')
@@ -94,9 +93,52 @@
 @section('script')
 <script type="module">
 
-import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
-
-
+    import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
+    import WindowCheck from "{{asset('web/js/component/Window.js')}}"
+    let BtnDropDownShift,DropDownShift, TextDropDownShift ,ImgDropDownShift;
+    const GenerateBtnDropDownOperationShift = () => {
+        setTimeout(() => {
+            BtnDropDownShift = document.querySelectorAll(
+                "[data-btn-dropdown-operation-Shift]"
+            );
+            DropDownShift = document.querySelectorAll(
+                "[data-dropdown-operation-Shift]"
+            );
+            TextDropDownShift = document.querySelectorAll(
+                "[data-btn-dropdown-operation-Shift]>p"
+            );
+            ImgDropDownShift = document.querySelectorAll(
+                "[data-btn-dropdown-operation-Shift]>img"
+            );
+            for (let i = 0; i < BtnDropDownShift.length; i++) {
+                BtnDropDownShift[i].addEventListener("click", () => {
+                    DropDownShift[i].style.display = "inline";
+                });
+            }
+            window.onclick = (e) => {
+                // for (let k = 0; k < BtnDropDown.length; k++) {
+                //     if (
+                //         e.target !== BtnDropDown[k] &&
+                //         e.target !== text[k] &&
+                //         e.target !== img[k]
+                //     ) {
+                //         DropDown[k].style.display = "none";
+                //     }
+                // }
+                for (let i = 0; i < BtnDropDownShift.length; i++) {
+                    if (
+                        e.target !== BtnDropDownShift[i] &&
+                        e.target !== TextDropDownShift[i] &&
+                        e.target !== ImgDropDownShift[i]
+                    ) {
+                        DropDownShift[i].style.display = "none";
+                    }
+                }
+                WindowCheck(e);
+            };
+        }, 500);
+    };
+    
     const liList = document.querySelectorAll(".li");
 
     for (let i = 0; i < liList.length; i++) {
@@ -110,22 +152,22 @@ import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
     }
     jalaliDatepicker.startWatch();
 
-    const DataBtnDropDownOperation = document.querySelectorAll(
-        "[data-btn-dropdown-operation]"
-    );
+    // const DataBtnDropDownOperation = document.querySelectorAll(
+    //     "[data-btn-dropdown-operation]"
+    // );
 
-    const DataDropDownOperation = document.querySelectorAll(
-        "[data-dropdown-operation]"
-    );
-    for (let j = 0; j < DataBtnDropDownOperation.length; j++) {
-        DataBtnDropDownOperation[j].onclick = () => {
-            if (DataDropDownOperation[j].classList.contains("d-none")) {
-                DataDropDownOperation[j].classList.remove("d-none");
-            } else {
-                DataDropDownOperation[j].classList.add("d-none");
-            }
-        };
-    }
+    // const DataDropDownOperation = document.querySelectorAll(
+    //     "[data-dropdown-operation]"
+    // );
+    // for (let j = 0; j < DataBtnDropDownOperation.length; j++) {
+    //     DataBtnDropDownOperation[j].onclick = () => {
+    //         if (DataDropDownOperation[j].classList.contains("d-none")) {
+    //             DataDropDownOperation[j].classList.remove("d-none");
+    //         } else {
+    //             DataDropDownOperation[j].classList.add("d-none");
+    //         }
+    //     };
+    // }
 
     let BtnDropDown = document.querySelectorAll("[data-dropdown]");
     let DropDown = document.querySelectorAll(".dropdown");
@@ -173,11 +215,11 @@ import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
               <td class="py-4 border-0 c-gray-dark text-center col-2 shift">${item.title}</td>
               <td
                 class="float-start ms-4 py-3 border-0 ps-4 c-gray-200 fs-small data-dropdown p-0 c-gray-dark3"
-              >
-                <div class="endFlex" data-btn-dropdown-operation data-dropdown>
+                >
+                <div class="endFlex" data-btn-dropdown-operation-Shift>
                   <p class="textBox fs-small-100">عملیات</p>
-                  <img src="{{asset('images/Frame 134.svg')}}" alt="" class="pe-1 image" />
-                  <div class="dropdown" data-dropdown-operation>
+                  <img src="{{asset('images/Frame 134.svg')}}" alt="" class="pe-1 image"/>
+                  <div class="dropdown" data-dropdown-operation data-dropdown-operation-Shift> 
                     <div>ویرایش</div>
                     <div delete-row>حذف</div>
                   </div>
@@ -186,13 +228,13 @@ import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
             </tr>
         `)
     );
-
+    GenerateBtnDropDownOperationShift();
     for (let i = 0; i < BtnDropDown.length; i++) {
-        BtnDropDown[i].onclick = () => {
-            if (DropDown[i].style.display === "inline")
-                DropDown[i].style.display = "none";
-            else DropDown[i].style.display = "inline";
-        };
+        // BtnDropDown[i].onclick = () => {
+        //     if (DropDown[i].style.display === "inline")
+        //         DropDown[i].style.display = "none";
+        //     else DropDown[i].style.display = "inline";
+        // };
 
         BtnDeleteRow[i].onclick = () => {
             Modal.classList.remove("hide");
@@ -205,33 +247,25 @@ import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
         };
     }
     for (let j = 0; j < CloseModal.length; j++) {
-        CloseModal[j].addEventListener("click", () => {
-            Modal.classList.remove("show");
-            Modal.classList.add("hide");
-        });
+        // CloseModal[j].addEventListener("click", () => {
+        //     Modal.classList.remove("show");
+        //     Modal.classList.add("hide");
+        // });
     }
 
-    window.onclick = (e) => {
-        for (let k = 0; k < BtnDropDown.length; k++) {
-            if (
-                e.target !== BtnDropDown[k] &&
-                e.target !== text[k] &&
-                e.target !== img[k]
-            ) {
-                DropDown[k].style.display = "none";
-            }
-        }
-    };
+    // window.onclick = (e) => {
+       
+    // };
 
     button.onclick = () => {
         let search = document.getElementById("nameOfShift").value;
-        let arr = data.filter((item) => item.title === search);
+        let arr = data.filter((item) => item.title.includes(search));
         console.log(arr);
         row.innerHTML = "";
 
         if (search==='') {
             
-    data.map(
+        data.map(
         (item) =>
         (row.innerHTML += `
         <tr class="borderTable border-0">
@@ -239,11 +273,11 @@ import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
               <td class="py-4 border-0 c-gray-dark text-center col-2 shift">${item.title}</td>
               <td
                 class="float-start ms-4 py-3 border-0 ps-4 c-gray-200 fs-small data-dropdown p-0 c-gray-dark3"
-              >
-                <div class="endFlex" data-btn-dropdown-operation data-dropdown>
+                >
+                <div class="endFlex"data-btn-dropdown-operation-Shift>
                   <p class="textBox fs-small-100">عملیات</p>
                   <img src="{{asset('images/Frame 134.svg')}}" alt="" class="pe-1 image" />
-                  <div class="dropdown" data-dropdown-operation>
+                  <div class="dropdown" data-dropdown-operation data-dropdown-operation-Shift>
                     <div>ویرایش</div>
                     <div delete-row>حذف</div>
                   </div>
@@ -251,7 +285,7 @@ import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
               </td>
             </tr>
         `)
-    );
+        );
         }
         arr.map(
             (item) =>
@@ -261,11 +295,11 @@ import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
               <td class="py-4 border-0 c-gray-dark text-center col-2 shift">${item.title}</td>
               <td
                 class="float-start py-3 border-0 ps-4 c-gray-200 fs-small data-dropdown p-0 c-gray-dark3"
-              >
-                <div class="endFlex" data-btn-dropdown-operation data-dropdown>
+                 >
+                <div class="endFlex" data-btn-dropdown-operation-Shift>
                   <p class="textBox">عملیات</p>
                   <img src="{{asset('images/Frame 134.svg')}}" alt="" class="pe-1 image" />
-                  <div class="dropdown" data-dropdown-operation>
+                  <div class="dropdown" data-dropdown-operation data-dropdown-operation-Shift>
                     <div>ویرایش</div>
                     <div delete-row>حذف</div>
                   </div>
@@ -274,7 +308,9 @@ import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
             </tr>
         `)
         );
+        
         CheckEmptyTable();
+        GenerateBtnDropDownOperationShift();
     };
 </script>
 @endsection

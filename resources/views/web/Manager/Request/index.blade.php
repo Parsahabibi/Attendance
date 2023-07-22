@@ -33,91 +33,65 @@
     <div class="container-modal hide-modal" container-modal>
         <div class="bg-modal" close-modal></div>
         <div class="col-12 col-md-6 modal-delete rounded-24 p-3 p-md-4 h-md-auto overflow-y-scroll">
-          <div class="d-flex justify-content-between col-12">
-            <h6>نوع شیفت خود را انتخاب کنید</h6>
-            <img src="{{asset('images/Frame 77.svg')}}" alt="close" style="width: 12px" role="button" close-modal />
-          </div>
-          <form action="" name="formShift">
-            <div class="d-flex flex-column align-items-end justify-content-start">
-              <div class="col-12 border-t-gray border-b-gray py-2 mt-3">
-                <div class="col-12 col-md-6 d-flex flex-column mb-3">
-                  <label for="" class="mb-1 c-gray-900"> نوع درخواست </label>
-                  <input
-                    type="text"
-                    name="input"
-                    class="bg-input rounded-8 py-md-2"
-                  />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-6 d-flex flex-column mb-3 mt-3 my-md-2">
-                  <label for="" class="mb-1 c-gray-900">
-                    پرسنل
-                    <span class="c-pink">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="inputshift"
-                    class="bg-input rounded-8 py-md-2"
-                  />
-                  <p class="err-form-new-personel err-input pt-1"></p>
-                </div>
-                <div class="col-12 col-md-6 d-flex flex-column mb-3 my-md-2">
-                  <label for="" class="mb-1 c-gray-900">
-                    تاریخ
-                    <span class="c-pink">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="inputshift"
-                    class="bg-input rounded-8 py-md-2 example1"
-                    data-jdp readonly/>
-                  <p class="err-form-new-personel err-input pt-1"></p>
-                </div>
-                <div class="col-12 col-md-6 d-flex flex-column mb-3 my-md-2">
-                  <label for="" class="mb-1 c-gray-900">
-                    از ساعت
-                    <span class="c-pink">*</span>
-                  </label>
-                  <input
-                    type="time"
-                    name="inputshift"
-                    class="bg-input rounded-8 py-md-2"
-                  />
-                  <p class="err-form-new-personel err-input pt-1"></p>
-                </div>
-                <div class="col-12 col-md-6 d-flex flex-column mb-3 my-md-2">
-                  <label for="" class="mb-1 c-gray-900">
-                    تا ساعت
-                    <span class="c-pink">*</span>
-                  </label>
-                  <input
-                    type="time"
-                    name="inputshift"
-                    class="bg-input rounded-8 py-md-2"
-                  />
-                  <p class="err-form-new-personel err-input pt-1"></p>
-                </div>
-              </div>
-              <div class="col-12 py-2 mt-3">
-                <div class="col-12 d-flex flex-column mb-3">
-                  <label for="" class="mb-1 c-gray-900"> توضیح</label>
-                  <input
-                    type="text"
-                    name="input"
-                    class="bg-input rounded-8 py-md-2"
-                  />
-                </div>
-              </div>
-              <button
-                class="btn-primary-nahira"
-                id="sumbit-form-shift"
-                type="submit"
-              >
-                ثبت
-              </button>
+            <div class="d-flex justify-content-between col-12">
+                <h6>نوع شیفت خود را انتخاب کنید</h6>
+                <img src="{{ asset('images/Frame 77.svg') }}" alt="close" style="width: 12px" role="button"
+                    close-modal />
             </div>
-          </form>
+            <form action="" name="formShift">
+                <div class="d-flex flex-column align-items-end justify-content-start">
+                    <div class="col-12 border-t-gray border-b-gray py-2 mt-3">
+                        <div class="col-12 col-md-6 d-flex flex-column mb-3">
+                            <label for="" class="mb-1 c-gray-900"> نوع درخواست </label>
+                            <input type="text" name="input" class="bg-input rounded-8 py-md-2" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 d-flex flex-column mb-3 mt-3 my-md-2">
+                            <label for="" class="mb-1 c-gray-900">
+                                پرسنل
+                                <span class="c-pink">*</span>
+                            </label>
+                            <input type="text" name="inputshift" class="bg-input rounded-8 py-md-2" />
+                            <p class="err-form-new-personel err-input pt-1"></p>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex flex-column mb-3 my-md-2">
+                            <label for="" class="mb-1 c-gray-900">
+                                تاریخ
+                                <span class="c-pink">*</span>
+                            </label>
+                            <input type="text" name="inputshift" class="bg-input rounded-8 py-md-2 example1" data-jdp
+                                readonly />
+                            <p class="err-form-new-personel err-input pt-1"></p>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex flex-column mb-3 my-md-2">
+                            <label for="" class="mb-1 c-gray-900">
+                                از ساعت
+                                <span class="c-pink">*</span>
+                            </label>
+                            <input type="time" name="inputshift" class="bg-input rounded-8 py-md-2" />
+                            <p class="err-form-new-personel err-input pt-1"></p>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex flex-column mb-3 my-md-2">
+                            <label for="" class="mb-1 c-gray-900">
+                                تا ساعت
+                                <span class="c-pink">*</span>
+                            </label>
+                            <input type="time" name="inputshift" class="bg-input rounded-8 py-md-2" />
+                            <p class="err-form-new-personel err-input pt-1"></p>
+                        </div>
+                    </div>
+                    <div class="col-12 py-2 mt-3">
+                        <div class="col-12 d-flex flex-column mb-3">
+                            <label for="" class="mb-1 c-gray-900"> توضیح</label>
+                            <input type="text" name="input" class="bg-input rounded-8 py-md-2" />
+                        </div>
+                    </div>
+                    <button class="btn-primary-nahira" id="sumbit-form-shift" type="submit">
+                        ثبت
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -127,7 +101,7 @@
                 <h5 class="mb-3 mb-lg-3 fw-bold">گزارشات پروژه</h5>
                 <div class="">
                     <button class="btn-secondary-nahira">اکسل</button>
-                    <button class="btn-primary-nahira me-3" >دریافت اطلاعات</button>
+                    <button class="btn-primary-nahira me-3">دریافت اطلاعات</button>
                 </div>
             </div>
 
@@ -199,55 +173,22 @@
 @endsection
 
 @section('script')
-<script>
+<script type="module">
+    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
+
     jalaliDatepicker.startWatch();
-
-
-      // let Modal = document.querySelector(".container-modal");
-      // let CloseModal = document.querySelectorAll("[close-modal]");
-
-      // document.querySelector("#btn-request").addEventListener("click", () => {
-      //   Modal.classList.remove("hide");
-      //   Modal.classList.add("show");
-      // });
-      // for (let j = 0; j < CloseModal.length; j++) {
-      //   CloseModal[j].addEventListener("click", () => {
-      //     Modal.classList.remove("show");
-      //     Modal.classList.add("hide");
-      //   });
-      // }
-
-      // const ErrFromShift = document.querySelectorAll(".err-form-new-personel");
-
-      // for (let i = 0; i < document.formShift.inputshift.length; i++) {
-      //   document.formShift.inputshift[i].addEventListener("blur", () => {
-      //     if (document.formShift.inputshift[i].value === "") {
-      //       ErrFromShift[i].innerHTML = "لطفا ورودی را پر کنید";
-      //     } else {
-      //       ErrFromShift[i].innerHTML = "";
-      //     }
-      //   });
-      // }
-      // document
-      //   .querySelector("#sumbit-form-shift")
-      //   .addEventListener("click", (e) => {
-      //     for (let i = 0; i < document.formShift.inputshift.length; i++) {
-      //       if (document.formShift.inputshift[i].value === "") {
-      //         ErrFromShift[i].innerHTML = "لطفا ورودی را پر کنید";
-      //         e.preventDefault();
-      //       } else {
-      //         ErrFromShift[i].innerHTML = "";
-      //       }
-      //     }
-      //   });
-      const LiReported = document.querySelectorAll(".li-reported");
-      for (let i = 0; i < LiReported.length; i++) {
+    const LiReported = document.querySelectorAll(".li-reported");
+    for (let i = 0; i < LiReported.length; i++) {
         LiReported[i].onclick = () => {
-          for (let i = 0; i < LiReported.length; i++) {
-            LiReported[i].classList.remove("active-li");
-          }
-          LiReported[i].classList.add("active-li");
+            for (let i = 0; i < LiReported.length; i++) {
+                LiReported[i].classList.remove("active-li");
+            }
+            LiReported[i].classList.add("active-li");
         };
-      }
+    }
+
+    window.onclick = (e) => {
+        WindowCheck(e);
+    }
 </script>
 @endsection

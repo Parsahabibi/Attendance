@@ -139,7 +139,7 @@
                     <th class="c-gray-dark2 py-2 pe-5 pb-3 text-nowrap">زمان پایان</th>
                     <th class="c-gray-dark2 py-2 pe-5 pb-3 text-nowrap">عملیات</th>
                 </thead>
-                <tbody class="data-table" table-request data-check-empty-table></tbody>
+                <tbody class="" table-request data-check-empty-table></tbody>
             </table>
         </div>
 
@@ -157,101 +157,8 @@
 @section('script')
 <script type="module" src="{{asset('web/js/component/DropDown.js')}}"></script>
 
-<script type="module">
+<script>
     jalaliDatepicker.startWatch();
-
-
-    import {
-    DataBtnPushRequest,
-    DataValueRequest,
-    TableRequest,
-} from "{{asset('web/js/Elements.js')}}";
-import { ValidateForm } from "{{asset('web/js/Validations/Forms.js')}}";
-import CheckEmptyTable from "{{asset('web/js/Validations/Table.js')}}";
-
-let DataRequest = [];
-const PushRequest = () => {
-    for (let i = 0; i < TableRequest.length; i++) {
-        TableRequest[i].innerHTML = DataRequest.map(
-            item =>
-                `
-    <tr class="border-t-gray">
-    <td class="my-2 c-gray-200 fs-small pe-5 py-2">${item.Type}</td>
-    <td class="my-2 c-gray-200 fs-small pe-5 py-2">${item.DateStart}</td>
-    <td class="my-2 c-gray-200 fs-small pe-5 py-2">${item.DateEnd}</td>
-    <td class="my-2 c-gray-200 fs-small col-1  c-gray-dark3 px-2 me-5 py-2" data-btn-dropdown-operation="">
-        <div class="d-flex btn-data-dropdown" data-dropdown="">
-            <p>
-                عملیات
-
-            </p>
-            <img src="../images/Frame 134.svg" alt="" class="pe-1">
-            <div class="dropdown dropdown-operation d-none" data-dropdown-operation="">
-                <div>ویرایش</div>
-                <div delete-row="">حذف</div>
-            </div>
-        </div>
-    </td>
-</tr>`
-        );
-    }
- 
-};
-
-if (DataBtnPushRequest !== undefined) {
-    DataBtnPushRequest.onclick = (e) => {
-        ValidateForm(e);
-        if (
-            DataValueRequest[0].value !== "" &&
-            DataValueRequest[1].value !== "" &&
-            DataValueRequest[2].value !== ""
-        ) {
-            DataRequest.push({
-                Type: DataValueRequest[0].value,
-                DateStart: DataValueRequest[1].value,
-                DateEnd: DataValueRequest[2].value,
-            });
-            PushRequest();
-            DataValueRequest[1].value = "";
-            DataValueRequest[2].value = "";
-            CheckEmptyTable();
-        } else {
-        }
-    };
-}
-
-import {
-    DataBtnDropDownOperation,
-    DataDropDownOperation,
-    DataDropdownDiv,
-    DataDropdownInput,
-    DataItemDropdown,
-} from "{{asset('web/js/Elements.js')}}";
-
-for (let i = 0; i < DataDropdownInput.length; i++) {
-    DataDropdownInput[i].onclick = () => {
-        if (DataDropdownDiv[i].classList.contains("d-none")) {
-            DataDropdownDiv[i].classList.remove("d-none");
-        } else {
-            DataDropdownDiv[i].classList.add("d-none");
-        }
-
-        for (let j = 0; j < DataItemDropdown.length; j++) {
-            DataItemDropdown[j].onclick = (e) => {
-                DataDropdownInput[i].value = e.target.innerText;
-            };
-        }
-    };
-}
-
-for (let j = 0; j < DataBtnDropDownOperation.length; j++) {
-    DataBtnDropDownOperation[j].onclick = () => {
-        if (DataDropDownOperation[j].classList.contains("d-none")) {
-            DataDropDownOperation[j].classList.remove("d-none");
-        } else {
-            DataDropDownOperation[j].classList.add("d-none");
-        }
-    };
-}
+    // let BtnDropDownRequest,DropDownRequest,TextDropDownRequest,ImgDropDownRequest;
 </script>
 @endsection

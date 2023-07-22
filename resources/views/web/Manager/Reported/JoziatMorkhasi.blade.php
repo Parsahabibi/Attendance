@@ -131,7 +131,9 @@
 
 
 @section('script')
-<script type="text/javascript">
+<script type="module">
+    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
+
     window.onload = function() {
         //Reference the DropDownList.
         var ddlYears = document.getElementById("ddlYears");
@@ -156,6 +158,10 @@
             option.value = i;
             ddlYears.appendChild(option);
         }
+        
     };
+    window.onclick=(e)=>{
+        WindowCheck(e);
+    }
 </script>
 @endsection

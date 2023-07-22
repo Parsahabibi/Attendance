@@ -34,7 +34,8 @@
                 <img src="{{ asset('images/search.svg') }}" alt="" style="height:24px">
 
             </label>
-            <input type="text" name="" id="input-search-project" placeholder="جستجو کاربر" class="h-100 " data-input-search>
+            <input type="text" name="" id="input-search-project" placeholder="جستجو کاربر" class="h-100 "
+                data-input-search>
         </div>
         <button class="btn-primary-nahira" data-btn-search btn-search-project>جست و جو</button>
     </div>
@@ -60,4 +61,10 @@
     </div>
 </section>
 <!-- Hero End -->
+@endsection
+@section('script')
+<script>
+    let BtnDropDown, DropDown, TextDropDown, ImgDropDown, BtnDropDownStatus, DropDownStatus, TextDropDownStatus,
+        ImgDropDownStatus;
+</script>
 @endsection

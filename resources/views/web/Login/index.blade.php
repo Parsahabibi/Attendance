@@ -55,74 +55,74 @@
         <img src="{{ asset('images/Frame 31.svg') }}" alt="" id="close-err-form-signin" style="width: 8px" />
     </div>
 
-    <script type="module" src="{{asset('web/js/index.js')}}"></script>
+    {{-- <script type="module" src="{{asset('web/js/index.js')}}"></script> --}}
 
     <script>
-        // const ManagerData = {
-        //     "email": "amirrezakashipazha@gmail.com",
-        //     "phone": "09901898106",
-        //     "password": "1234"
-        // }
-        // const btnLogin = document.querySelector('#btn-login');
-        // const DataLinkLogin = document.querySelector('[data-link-login]');
+        const ManagerData = {
+            "email": "amirrezakashipazha@gmail.com",
+            "phone": "09901898106",
+            "password": "1234"
+        }
+        const btnLogin = document.querySelector('#btn-login');
+        const DataLinkLogin = document.querySelector('[data-link-login]');
 
-        // function ValidateEmail(inputText) {
-        //     var mailformat = /^\w+([\.-]?\w+)*@[a-z]\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        //     ErrEmailPhone = document.querySelector("#err-input-email_phone");
+        function ValidateEmail(inputText) {
+            var mailformat = /^\w+([\.-]?\w+)*@[a-z]\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            ErrEmailPhone = document.querySelector("#err-input-email_phone");
 
-        //     const RegexNumber = /^\+?([0-9]{3})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+            const RegexNumber = /^\+?([0-9]{3})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
 
-        //     if (inputText.value.match(mailformat) || inputText.value.match(RegexNumber)) {
-        //         ErrEmailPhone.innerHTML = "";
-        //         return true;
-        //     } else {
-        //         ErrEmailPhone.innerHTML = "لطفا یک ایمیل یا شماره موبایل معتبر وارد کنید";
-        //         return false;
-        //     }
-        // }
-        // const ErrFromSignin = document.querySelector(".err-form-signin");
-        // const MatnFromSignin = document.querySelector(".err-form-signin>p");
-        // btnLogin.addEventListener("click", (e) => {
-        //     if (document.Login.input1.value.trim() === ManagerData.email || document.Login.input1.value.trim() ===
-        //         ManagerData
-        //         .phone &&
-        //         document.Login.input2.value.trim() === ManagerData.password) {
-        //         DataLinkLogin.setAttribute('href', '{{ url('/Manager/Dashbord') }}')
-        //         return true;
-        //     } else {
+            if (inputText.value.match(mailformat) || inputText.value.match(RegexNumber)) {
+                ErrEmailPhone.innerHTML = "";
+                return true;
+            } else {
+                ErrEmailPhone.innerHTML = "لطفا یک ایمیل یا شماره موبایل معتبر وارد کنید";
+                return false;
+            }
+        }
+        const ErrFromSignin = document.querySelector(".err-form-signin");
+        const MatnFromSignin = document.querySelector(".err-form-signin>p");
+        btnLogin.addEventListener("click", (e) => {
+            if (document.Login.input1.value.trim() === ManagerData.email || document.Login.input1.value.trim() ===
+                ManagerData
+                .phone &&
+                document.Login.input2.value.trim() === ManagerData.password) {
+                DataLinkLogin.setAttribute('href', '{{ url('/Manager/Dashbord') }}')
+                return true;
+            } else {
 
-        //         e.preventDefault();
-        //         DataLinkLogin.setAttribute('href', '');
-        //         if (
-        //             document.Login.input1.value === "" ||
-        //             document.Login.input2.value === ""
-        //         ) {
+                e.preventDefault();
+                DataLinkLogin.setAttribute('href', '');
+                if (
+                    document.Login.input1.value === "" ||
+                    document.Login.input2.value === ""
+                ) {
 
-        //             MatnFromSignin.innerHTML = "لطفا ورودی ها را پرکنید";
-        //             if (window.innerWidth > 768) {
-        //                 ErrFromSignin.style.animation = " err-card-desktop .5s";
-        //                 setTimeout(() => {
-        //                     ErrFromSignin.style.left = "10px";
-        //                 }, 400);
-        //             } else {
-        //                 ErrFromSignin.style.animation = " err-card-mobile .3s";
-        //                 setTimeout(() => {
-        //                     ErrFromSignin.style.left = "0";
-        //                 }, 200);
-        //             }
-        //         } else {
-        //             ErrFromSignin.style.left = "110%";
-        //         }
-        //         return true;
+                    MatnFromSignin.innerHTML = "لطفا ورودی ها را پرکنید";
+                    if (window.innerWidth > 768) {
+                        ErrFromSignin.style.animation = " err-card-desktop .5s";
+                        setTimeout(() => {
+                            ErrFromSignin.style.left = "10px";
+                        }, 400);
+                    } else {
+                        ErrFromSignin.style.animation = " err-card-mobile .3s";
+                        setTimeout(() => {
+                            ErrFromSignin.style.left = "0";
+                        }, 200);
+                    }
+                } else {
+                    ErrFromSignin.style.left = "110%";
+                }
+                return true;
 
-        //     }
+            }
 
-        // });
-        // document
-        //     .querySelector("#close-err-form-signin")
-        //     .addEventListener("click", () => {
-        //         ErrFromSignin.style.left = "110%";
-        //     });
+        });
+        document
+            .querySelector("#close-err-form-signin")
+            .addEventListener("click", () => {
+                ErrFromSignin.style.left = "110%";
+            });
  
     </script>
 </body>

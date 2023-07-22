@@ -83,7 +83,7 @@
 @endsection
 
 @section('script')
-<script>
+<script type="module">
     const liList = document.querySelectorAll(".li");
 
     for (let i = 0; i < liList.length; i++) {
@@ -104,5 +104,11 @@
     //     jalaliDatepicker.startWatch();
     //   };
     // }
+    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
+
+    
+window.onclick=(e)=>{
+    WindowCheck(e);
+}
 </script>
 @endsection
