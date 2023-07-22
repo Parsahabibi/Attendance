@@ -156,9 +156,5 @@
 
 @section('script')
 <script type="module" src="{{asset('web/js/component/DropDown.js')}}"></script>
-
-<script>
-    jalaliDatepicker.startWatch();
-    // let BtnDropDownRequest,DropDownRequest,TextDropDownRequest,ImgDropDownRequest;
-</script>
+<script src="{{ asset('web/js/Pages/Employee/Request/index.js') }}"></script>
 @endsection

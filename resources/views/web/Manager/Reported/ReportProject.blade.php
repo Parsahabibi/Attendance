@@ -83,32 +83,6 @@
 @endsection
 
 @section('script')
-<script type="module">
-    const liList = document.querySelectorAll(".li");
+<script src="{{asset('web/js/Pages/Manager/Reported/ReportProject.js')}}" type="module"></script>
 
-    for (let i = 0; i < liList.length; i++) {
-        // console.log("knhwhfb");
-        liList[i].onclick = () => {
-            for (let i = 0; i < liList.length; i++) {
-                liList[i].classList.remove("active");
-            }
-            liList[i].classList.add("active");
-        };
-    }
-    jalaliDatepicker.startWatch();
-
-    // const date = document.querySelectorAll("input");
-    // // console.log(date);
-    // for (let i = 0; i < date.length; i++) {
-    //   date.onchange = () => {
-    //     jalaliDatepicker.startWatch();
-    //   };
-    // }
-    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
-
-    
-window.onclick=(e)=>{
-    WindowCheck(e);
-}
-</script>
 @endsection

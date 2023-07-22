@@ -4,7 +4,6 @@
     <title></title>
     <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
     <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
-
 @endsection
 
 @section('content')
@@ -88,13 +87,6 @@
 <!-- Hero End -->
 @endsection
 @section('script')
-<script type="module">
-    jalaliDatepicker.startWatch();
-    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
+<script src="{{asset('web/js/Pages/Manager/Reported/Taradod.js')}}" type="module"></script>
 
-    
-window.onclick=(e)=>{
-    WindowCheck(e);
-}
-</script>
 @endsection

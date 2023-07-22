@@ -2,10 +2,9 @@
 
 @section('head-tag')
     <title></title>
-    
+
     <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
     <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
-
 @endsection
 
 @section('content')
@@ -116,7 +115,5 @@
 @endsection
 
 @section('script')
-<script>
-    jalaliDatepicker.startWatch();
-</script>
+<script src="{{ asset('web/js/Pages/Employee/Reported/index.js') }}"></script>
 @endsection

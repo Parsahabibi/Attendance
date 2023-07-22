@@ -5,7 +5,6 @@
 
     <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css" />
     <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
-
 @endsection
 
 @section('content')
@@ -37,116 +36,118 @@
             <div class="mb-4 col-12">
                 <h4 class="fs-6 fw-bold mb-3">اطلاعات ورود</h4>
                 <div class="row">
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             نام کاربری
                             <span class="c-pink">*</span>
                         </label>
-                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2">
-                        <p class="err-form-new-personel err-input pt-1"></p>
+                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2"data-input-validation>
+                        <p class="err-form-new-personel err-input pt-1 me-3"></p>
                     </div>
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             رمز عبور
                             <span class="c-pink">*</span>
                         </label>
-                        <input type="password" name="input2"
+                        <input type="password" name="input2"data-input-validation
                             class="bg-input rounded-8 py-md-2 password-signin-information password-signin-information1">
-                        <p class="err-form-new-personel err-input pt-1"></p>
-                        <p class="err-password-new-personel err-input pt-1"></p>
+                        <p class="err-form-new-personel err-input pt-1 me-3"></p>
+                        <p class="err-password-new-personel  err-input pt-1 me-3 bg-white"></p>
+                     
                     </div>
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             تکرار رمز عبور
                             <span class="c-pink">*</span>
                         </label>
-                        <input type="password" name="input2"
+                        <input type="password" name="input2"data-input-validation
                             class="bg-input rounded-8 py-md-2 password-signin-information password-signin-information2">
-                        <p class="err-form-new-personel err-input pt-1"></p>
-                        <p class="err-password-new-personel err-input pt-1"></p>
+                        <p class="err-form-new-personel err-input pt-1 me-3"></p>
+                        <p class="err-password-new-personel  err-input pt-1 me-3 bg-white"></p>
+           
                     </div>
                 </div>
             </div>
             <div class="mb-4 col-12">
                 <h4 class="fs-6 fw-bold mb-3">اطلاعات پرسنلی</h4>
                 <div class="row">
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             نام
                             <span class="c-pink">*</span>
                         </label>
-                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2">
-                        <p class="err-form-new-personel err-input pt-1"></p>
+                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2"data-input-validation>
+                        <p class="err-form-new-personel err-input pt-1 me-3"></p>
                     </div>
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             نام خانوادگی
                             <span class="c-pink">*</span>
                         </label>
-                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2">
-                        <p class="err-form-new-personel err-input pt-1"></p>
+                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2"data-input-validation>
+                        <p class="err-form-new-personel err-input pt-1 me-3"></p>
                     </div>
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             کد ملی
                             <span class="c-pink">*</span>
                         </label>
                         <input type="text" name="input2" pattern="\d*" class="bg-input rounded-8 py-md-2"
-                            maxlength="10" id="international-code">
-                        <p class="err-form-new-personel err-input pt-1"></p>
+                            maxlength="10" minlength="10" id="international-code"data-input-validation>
+                        <p class="err-form-new-personel err-input pt-1 me-3"></p>
                     </div>
                 </div>
             </div>
             <div class="mb-4 col-12">
                 <h4 class="fs-6 fw-bold mb-3">اطلاعات شغلی</h4>
                 <div class="row">
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3 mb-md-4">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 mb-md-4 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             محل کار
                             <span class="c-pink">*</span>
                         </label>
-                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2">
-                        <p class="err-form-new-personel err-input pt-1"></p>
+                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2"data-input-validation>
+                        <p class="err-form-new-personel err-input pt-1 me-3"></p>
                     </div>
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3 mb-md-4">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 mb-md-4 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             شیفت
                             <span class="c-pink">*</span>
                         </label>
-                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2">
-                        <p class="err-form-new-personel err-input pt-1"></p>
+                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2"data-input-validation>
+                        <p class="err-form-new-personel err-input pt-1 me-3"></p>
                     </div>
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3 mb-md-4">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 mb-md-4 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             کد پرسنل
                             <span class="c-pink">*</span>
                         </label>
-                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2">
-                        <p class="err-form-new-personel err-input pt-1"></p>
+                        <input type="text" maxlength="8" minlength="8" pattern="\d*" name="input2" class="bg-input rounded-8 py-md-2"data-input-validation>
+                        <p class="err-form-new-personel err-input pt-1 me-3"></p>
                     </div>
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             تاریخ شروع کار
                             <span class="c-pink">*</span>
                         </label>
-                        <input readonly type="text" name="input2" class="bg-input rounded-8 py-md-2" data-jdp>
-                        <p class="err-form-new-personel err-input pt-1"></p>
+                        <input readonly type="text" name="input2" class="bg-input rounded-8 py-md-2"data-input-validation data-jdp>
+                        <p class="err-form-new-personel err-input pt-1 me-3"></p>
                     </div>
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             تاریخ پایان کار <span class="c-gray">(اختیاری)</span>
                             <span class="c-pink">*</span>
                         </label>
                         <input readonly type="text" name="input" class="bg-input rounded-8 py-md-2" data-jdp>
-                        <!-- <p class="err-form-new-personel err-input pt-1"></p> -->
+                        <p class=" err-input pt-1 me-3"></p>
                     </div>
-                    <div class="col-12 col-md-4 d-flex flex-column mb-3">
+                    <div class="col-12 col-md-4 d-flex flex-column mb-3 position-relative mt-3 mt-lg-0">
                         <label for="" class="mb-1 c-gray-900">
                             سیاست کاری
                             <span class="c-pink">*</span>
                         </label>
-                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2">
-                        <p class="err-form-new-personel err-input pt-1"></p>
+                        <input type="text" name="input2" class="bg-input rounded-8 py-md-2"data-input-validation>
+                        <p class="err-form-new-personel err-input pt-1 me-3"></p>
                     </div>
                 </div>
             </div>
@@ -194,11 +195,5 @@
 @endsection
 
 @section('script')
-<script type="module">
-    jalaliDatepicker.startWatch();
-    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
-    window.onclick=(e)=>{
-        WindowCheck(e);
-    }
-</script>
+<script src="{{ asset('web/js/Pages/Manager/Personel/NewPrsonel.js') }}" type="module"></script>
 @endsection

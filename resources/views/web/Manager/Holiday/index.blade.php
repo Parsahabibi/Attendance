@@ -31,6 +31,25 @@
 @endsection
 <section class="">
     <div class="">
+        <div class="container-modal hide" modal-delete-holiday>
+            <div class="bg-modal" close-modal-holiday></div>
+            <div class="col-12 col-sm-10 col-md-7 modal-delete rounded-24 p-4">
+                <div class="d-flex justify-content-between">
+                    <h6>حذف محل کار</h6>
+                    <img src="{{ asset('images/Frame 77.svg') }}" alt="close" style="width: 12px" role="button"
+                        close-modal-holiday />
+                </div>
+                <div class="body-modal-delete d-flex flex-column justify-content-center align-items-center py-5">
+                    <div class="p-modal-delete px-5 py-4 text-nowrap mb-5">
+                        <h6>آیا می‌خواهید محل کار انتخابی حذف شود؟</h6>
+                    </div>
+                    <div>
+                        <button class="mx-3 py-2 px-4 rounded-24" ok-delete-row-holiday>بله</button>
+                        <button class="mx-3 py-2 px-4 rounded-24" close-modal-holiday>خیر</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="rounded-16 p-3 p-md-4 bg-white">
             <h5 class="mb-3 fw-bold">تعریف تعطیلات</h5>
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-end">
@@ -54,8 +73,7 @@
                 <div class="col-md-6 col-12 row">
                     <div class="col-12 col-md-6 d-flex flex-column mb-3 mb-lg-0">
                         <label for="" class="mb-1 c-gray-900">ماه</label>
-                        {{-- <input type="month" name="input" class="bg-input rounded-8 py-md-2"> --}}
-                        <select title="" id="" class="select-month">
+                        <select title="" id="" class="select-month pe-2">
                             <option data-option-month="" class="" value="فروردین">
                                 فروردین
                             </option>
@@ -96,7 +114,7 @@
                             <th class="text-nowrap c-gray-dark col-4 text-start ps-5">عملیات</th>
                         </tr>
                     </thead>
-                    <tbody body-table-holiday="" class="">
+                    <tbody body-table-holiday class="">
                         <tr class="border-t-gray">
                             <td class="text-nowrap px-2 c-gray-dark3 col-4 py-3 ">۱۴۰۲/۰۲/۰۵</td>
                             <td class="text-nowrap px-2 c-gray-dark3 col-4  ">رحلت حضرت امام خمینی</td>
@@ -108,7 +126,7 @@
                                     <img src="{{ asset('images/Frame 134.svg') }}" alt="">
                                     <div class="dropdown d-none" data-dropdown-operation-holiday>
                                         <div>ویرایش</div>
-                                        <div delete-row="">حذف</div>
+                                        <div delete-row-holiday>حذف</div>
                                     </div>
                                 </div>
                             </td>
@@ -125,7 +143,7 @@
                                     <img src="{{ asset('images/Frame 134.svg') }}" alt="">
                                     <div class="dropdown d-none"data-dropdown-operation-holiday>
                                         <div>ویرایش</div>
-                                        <div delete-row="">حذف</div>
+                                        <div delete-row-holiday>حذف</div>
                                     </div>
                                 </div>
                             </td>
@@ -144,13 +162,5 @@
 @endsection
 
 @section('script')
-<script type="module">
-    jalaliDatepicker.startWatch();
-
-
-    import WindowCheck from "{{asset('web/js/component/Window.js')}}";
-    window.onclick=(e)=>{
-        WindowCheck(e);
-    }
-</script>
+<script src="{{asset('web/js/Pages/Manager/Holiday/index.js')}}" type="module"></script>
 @endsection

@@ -87,13 +87,6 @@
 <!-- Hero End -->
 @endsection
 @section('script')
-<script type="module">
-    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
+<script src="{{asset('web/js/Pages/Manager/Reported/karkard.js')}}" type="module"></script>
 
-    jalaliDatepicker.startWatch();
-    
-    window.onclick=(e)=>{
-        WindowCheck(e);
-    }
-</script>
 @endsection

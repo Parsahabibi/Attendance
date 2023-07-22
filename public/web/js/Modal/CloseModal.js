@@ -1,4 +1,13 @@
-import { CloseModal, CloseModalManagerLocation, ContainerModal, ContainerModalLocation } from "../Elements.js";
+import {
+    CloseModal,
+    CloseModalManagerLocation,
+    CloseModalManagerPersonel,
+    CloseModalManagerProject,
+    ContainerModal,
+    ContainerModalLocation,
+    ContainerModalPersonel,
+    ContainerModalProject,
+} from "../Elements.js";
 
 if (CloseModal !== undefined && CloseModal !== null) {
     for (let i = 0; i < CloseModal.length; i++) {
@@ -10,13 +19,42 @@ if (CloseModal !== undefined && CloseModal !== null) {
 
 if (
     CloseModalManagerLocation !== undefined &&
-    CloseModalManagerLocation !== null&&
+    CloseModalManagerLocation !== null &&
     ContainerModalLocation !== undefined &&
     ContainerModalLocation !== null
 ) {
     for (let i = 0; i < CloseModalManagerLocation.length; i++) {
-        CloseModalManagerLocation[i].addEventListener("click", () => {
-            ContainerModalLocation.classList.remove('hide');
-        });
+        CloseModalManagerLocation[i].onclick = () => {
+            ContainerModalLocation.classList.add("hide");
+        };
+    }
+}
+
+
+if (
+    CloseModalManagerPersonel !== undefined &&
+    CloseModalManagerPersonel !== null &&
+    ContainerModalPersonel !== undefined &&
+    ContainerModalPersonel !== null
+) {
+    for (let i = 0; i < CloseModalManagerPersonel.length; i++) {
+        CloseModalManagerPersonel[i].onclick = () => {
+            ContainerModalPersonel.classList.add("hide");
+        };
+    }
+}
+
+
+
+if (
+    CloseModalManagerProject !== undefined &&
+    CloseModalManagerProject !== null &&
+    ContainerModalProject !== undefined &&
+    ContainerModalProject !== null
+) {
+    for (let i = 0; i < CloseModalManagerProject.length; i++) {
+        CloseModalManagerProject[i].onclick = () => {
+            ContainerModalProject.classList.add("hide");
+        };
     }
 }

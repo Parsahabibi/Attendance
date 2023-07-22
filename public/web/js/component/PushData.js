@@ -5,10 +5,15 @@ import {
     BtnSearchProject,
     CompanyCity,
     ComponyName,
+    ContainerModalLocation,
+    ContainerModalPersonel,
     DataBtnPushRequest,
     DataValueRequest,
     InputSerch,
     InputSerchProject,
+    OkDeleteRowLocation,
+    OkDeleteRowPersonel,
+    OkDeleteRowProject,
     TablePersonel,
     TableProject,
     TableRequest,
@@ -17,8 +22,21 @@ import { ValidateForm } from "../Validations/Forms.js";
 import CheckEmptyTable from "../Validations/Table.js";
 import WindowCheck from "./Window.js";
 
-// Request
+const GenereateDeleteRow = (BtnDelete, Modal, OkDelete, RowTable) => {
+    for (let i = 0; i < BtnDelete.length; i++) {
+        BtnDelete[i].onclick = () => {
+            Modal.classList.remove("hide");
+            OkDelete.onclick = () => {
+                Modal.classList.remove("show");
+                Modal.classList.add("hide");
+                RowTable[i].remove();
+            };
+        };
+    }
+};
 try {
+
+    // Request
     (function Request() {
         const GenerateBtnDropDownRequest = () => {
             setTimeout(() => {
@@ -106,7 +124,6 @@ try {
             };
         }
     })();
-
     //***********************************************************************************************************
 
     // Location
@@ -138,7 +155,7 @@ try {
                 };
             }, 500);
         };
-        const GenerateDeleteRow = () => {
+        const GenerateDeleteRowLocation = () => {
             setTimeout(() => {
                 let ModalDeleteLocation = document.querySelector(
                     "[modal-delete-location]"
@@ -146,11 +163,15 @@ try {
                 let DeleteRowLocation = document.querySelectorAll(
                     "[delete-row-location]"
                 );
-                for (let i = 0; i < DeleteRowLocation.length; i++) {
-                    DeleteRowLocation[i].onclick = () => {
-                        ModalDeleteLocation.classList.remove("hide");
-                    };
-                }
+                let RowTableLocation = document.querySelectorAll(
+                    "[table-location]>tr"
+                );
+                GenereateDeleteRow(
+                    DeleteRowLocation,
+                    ModalDeleteLocation,
+                    OkDeleteRowLocation,
+                    RowTableLocation
+                );
             }, 500);
         };
         const Data = [
@@ -214,7 +235,7 @@ try {
           `)
             );
             GenerateBtnDropDownLocation();
-            GenerateDeleteRow();
+            GenerateDeleteRowLocation();
         }
         if (BtnSearch !== null) {
             BtnSearch.addEventListener("click", (e) => {
@@ -288,11 +309,10 @@ try {
                 }
                 CheckEmptyTable();
                 GenerateBtnDropDownLocation();
-                GenerateDeleteRow();
+                GenerateDeleteRowLocation();
             });
         }
     })();
-
     //***********************************************************************************************************
 
     // Personel
@@ -360,6 +380,25 @@ try {
                 }
             }, 500);
         };
+        const GenerateDeleteRowPersonel = () => {
+            setTimeout(() => {
+                let ModalDeletePersonel = document.querySelector(
+                    "[modal-delete-Personel]"
+                );
+                let DeleteRowPersonel = document.querySelectorAll(
+                    "[delete-row-Personel]"
+                );
+                let RowTablePersonel = document.querySelectorAll(
+                    "[table-Personel]>tr"
+                );
+                GenereateDeleteRow(
+                    DeleteRowPersonel,
+                    ModalDeletePersonel,
+                    OkDeleteRowPersonel,
+                    RowTablePersonel
+                );
+            }, 500);
+        };
         const DataPersonel = [
             {
                 id: "۱",
@@ -424,7 +463,7 @@ try {
             <img src="../../images/Frame 134.svg" alt="" />
             <div class="dropdown dropdown-operation" data-dropdown-operation-personel>
               <div>ویرایش</div>
-              <div delete-row>حذف</div>
+              <div delete-row-Personel >حذف</div>
             </div>
           </div>
         </td>
@@ -445,6 +484,7 @@ try {
             );
             GenerateBtnDropDownOperationPersonel();
             GenerateBtnDropDownStatePersonel();
+            GenerateDeleteRowPersonel();
         }
         let SearchPersonel = [];
         if (BtnSearchPersonel !== null && TablePersonel !== null) {
@@ -477,7 +517,7 @@ try {
             <img src="../../images/Frame 134.svg" alt="" />
             <div class="dropdown dropdown-operation" data-dropdown-operation-personel>
               <div>ویرایش</div>
-              <div delete-row>حذف</div>
+              <div delete-row-Personel>حذف</div>
             </div>
           </div>
         </td>
@@ -498,10 +538,10 @@ try {
                 CheckEmptyTable();
                 GenerateBtnDropDownOperationPersonel();
                 GenerateBtnDropDownStatePersonel();
+                GenerateDeleteRowPersonel();
             });
         }
     })();
-
     //***********************************************************************************************************
 
     // project
@@ -569,6 +609,24 @@ try {
                 }
             }, 500);
         };
+        const GenerateDeleteRowProject = () => {
+            setTimeout(() => {
+                let ModalDeleteProject = document.querySelector(
+                    "[modal-delete-project]"
+                );
+                let DeleteRowProject = document.querySelectorAll(
+                    "[delete-row-project]"
+                );
+                let RowTableProject =
+                    document.querySelectorAll("[table-project]>tr");
+                GenereateDeleteRow(
+                    DeleteRowProject,
+                    ModalDeleteProject,
+                    OkDeleteRowProject,
+                    RowTableProject
+                );
+            }, 500);
+        };
         const DataProject = [
             {
                 id: "1",
@@ -605,7 +663,7 @@ try {
                     <img src="../../images/Frame 134.svg" alt="" />
                     <div class="dropdown dropdown-operation"data-dropdown-operation-project>
                       <div>ویرایش</div>
-                      <div delete-row>حذف</div>
+                      <div delete-row-project>حذف</div>
                     </div>
                   </div>
                 </td>
@@ -626,6 +684,7 @@ try {
             );
             GenerateBtnDropDownOperationProject();
             GenerateBtnDropDownStatusProject();
+            GenerateDeleteRowProject();
         }
         if (BtnSearchProject !== null) {
             BtnSearchProject.addEventListener("click", (e) => {
@@ -650,7 +709,7 @@ try {
                     <img src="../../images/Frame 134.svg" alt="" />
                     <div class="dropdown dropdown-operation" data-dropdown-operation-project>
                       <div>ویرایش</div>
-                      <div delete-row>حذف</div>
+                      <div delete-row-project>حذف</div>
                     </div>
                   </div>
                 </td>
@@ -671,9 +730,13 @@ try {
                 CheckEmptyTable();
                 GenerateBtnDropDownOperationProject();
                 GenerateBtnDropDownStatusProject();
+                GenerateDeleteRowProject();
             });
         }
     })();
-
     //***********************************************************************************************************
-} catch (error) {}
+
+} catch (error) {
+    console.log(error)
+}
+export {GenereateDeleteRow};

@@ -32,28 +32,26 @@
 @endsection
 <section class="">
     <div class="personel-list data-table p-4 rounded-24 bg-white position-relative">
-        {{-- <div class="container-modal hide">
-        <div class="bg-modal" close-modal></div>
-        <div class="modal-delete rounded-24 p-4">
-          <div class="d-flex justify-content-between">
-            <h6>حذف محل کار</h6>
-            <img src="{{asset('images/Frame 77.svg')}}" alt="close" role="button" close-modal />
-          </div>
-          <div
-            class="body-modal-delete d-flex flex-column justify-content-center align-items-center py-5"
-          >
-            <div class="p-modal-delete px-5 py-4 text-nowrap mb-5">
-              <h6>آیا می‌خواهید محل کار انتخابی حذف شود؟</h6>
+        <div class="container-modal hide" modal-delete-personel>
+            <div class="bg-modal" close-modal-personel></div>
+            <div class="col-12 col-sm-10 col-md-7 modal-delete rounded-24 p-4">
+                <div class="d-flex justify-content-between">
+                    <h6>حذف محل کار</h6>
+                    <img src="{{ asset('images/Frame 77.svg') }}" alt="close" style="width: 12px" role="button"
+                        close-modal-personel />
+                </div>
+                <div class="body-modal-delete d-flex flex-column justify-content-center align-items-center py-5">
+                    <div class="p-modal-delete px-5 py-4 text-nowrap mb-5">
+                        <h6>آیا می‌خواهید محل کار انتخابی حذف شود؟</h6>
+                    </div>
+                    <div>
+                        <button class="mx-3 py-2 px-4 rounded-24" ok-delete-row-personel>بله</button>
+                        <button class="mx-3 py-2 px-4 rounded-24" close-modal-personel>خیر</button>
+                    </div>
+                </div>
             </div>
-            <div>
-              <button class="mx-3 py-2 px-4 rounded-24" ok-delete-row>
-                بله
-              </button>
-              <button class="mx-3 py-2 px-4 rounded-24" close-modal>خیر</button>
-            </div>
-          </div>
         </div>
-      </div> --}}
+
         <div class="head-personel-list d-flex flex-column flex-lg-row justify-content-between align-items-end mb-3">
             <div class="col-12 col-lg-10">
                 <form class="col-12 d-flex flex-column flex-lg-row align-items-end" action="">
@@ -89,7 +87,7 @@
                         <th class="text-center c-gray-dark2 text-nowrap px-2">وضعیت</th>
                     </tr>
                 </thead>
-                <tbody id="table-personel"data-check-empty-table>
+                <tbody id="table-personel"data-check-empty-table table-personel>
 
 
                 </tbody>
@@ -106,8 +104,5 @@
 <!-- Hero End -->
 @endsection
 @section('script')
-<script>
-    let BtnDropDown, DropDown, TextDropDown, ImgDropDown, BtnDropDownState, DropDownState, TextDropDownState,
-        ImgDropDownState;
-</script>
+<script src="{{ asset('web/js/Pages/Manager/Personel/ListPersonel.js') }}"></script>
 @endsection

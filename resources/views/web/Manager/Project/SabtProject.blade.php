@@ -87,10 +87,6 @@
 <!-- Hero End -->
 @endsection
 @section('script')
-<script type="module">
-    import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
-window.onclick=(e)=>{
-    WindowCheck(e);
-}
-</script>
+<script src="{{asset('web/js/Pages/Manager/Project/SabtProject.js')}}" type="module"></script>
+
 @endsection

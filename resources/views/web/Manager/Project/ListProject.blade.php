@@ -28,6 +28,26 @@
 @endsection
 
 <section class="bg-white rounded-16 p-3 p-md-4">
+    
+    <div class="container-modal hide" modal-delete-project>
+        <div class="bg-modal" close-modal-project></div>
+        <div class="col-12 col-sm-10 col-md-7 modal-delete rounded-24 p-4">
+            <div class="d-flex justify-content-between">
+                <h6>حذف محل کار</h6>
+                <img src="{{ asset('images/Frame 77.svg') }}" alt="close" style="width: 12px" role="button"
+                    close-modal-project />
+            </div>
+            <div class="body-modal-delete d-flex flex-column justify-content-center align-items-center py-5">
+                <div class="p-modal-delete px-5 py-4 text-nowrap mb-5">
+                    <h6>آیا می‌خواهید محل کار انتخابی حذف شود؟</h6>
+                </div>
+                <div>
+                    <button class="mx-3 py-2 px-4 rounded-24" ok-delete-row-project>بله</button>
+                    <button class="mx-3 py-2 px-4 rounded-24" close-modal-project>خیر</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="d-flex justify-content-between">
         <div class="bg-gray ms-2 rounded-16 pe-2 d-field-header mb-2 mb-lg-0 d-flex align-items-center">
             <label for="input-search-header">
@@ -49,7 +69,7 @@
                     <th class="col-1 c-gray-dark2 p-2 pe-4 pb-3 text-nowrap">عملیات</th>
                     <th class="col-1 c-gray-dark2 p-2 pe-4 pb-3 text-nowrap">وضعیت</th>
                 </thead>
-                <tbody class="" id="table-project" table-Project data-check-empty-table> </tbody>
+                <tbody class="" id="table-project" table-project data-check-empty-table> </tbody>
             </table>
         </div>
         <div class="m-5 mb-3 d-flex flex-column align-items-center" data-emplty-table-massage>
@@ -63,8 +83,5 @@
 <!-- Hero End -->
 @endsection
 @section('script')
-<script>
-    let BtnDropDown, DropDown, TextDropDown, ImgDropDown, BtnDropDownStatus, DropDownStatus, TextDropDownStatus,
-        ImgDropDownStatus;
-</script>
+<script src="{{asset('web/js/Pages/Manager/Project/ListProject.js')}}" ></script>
 @endsection

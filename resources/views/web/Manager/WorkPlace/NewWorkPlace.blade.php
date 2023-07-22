@@ -31,25 +31,29 @@
         <div class="col-12 col-lg-6 ps-lg-5 mb-5 mb-lg-0">
             <h3 class="fs-5 fw-bold mb-3">ثبت محل کار جدید</h3>
             <div class="">
-                <form class="col-12 d-flex flex-column align-items-start" action="" method="post">
+                <form class="col-12 d-flex flex-column align-items-start" action="" method="">
                     <div class="col-12 d-flex mb-3">
-                        <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                        <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-2 position-relative">
                             <label for="">نام محل کار </label>
-                            <input class="bg-gray rounded-16 py-2 mt-2" type="text">
+                            <input class="bg-gray rounded-16 py-2 mt-2" type="text"data-input-validation>
+                            <p id="" class="err-form-new-personel err-input pt-1"></p>
                         </div>
-                        <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                        <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-2 position-relative">
                             <label for="">شهر</label>
-                            <input class="bg-gray rounded-16 py-2 mt-2" type="text">
+                            <input class="bg-gray rounded-16 py-2 mt-2" type="text"data-input-validation>
+                            <p id="" class="err-form-new-personel err-input pt-1"></p>
                         </div>
                     </div>
                     <div class="col-12 d-flex">
-                        <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                        <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-2 position-relative">
                             <label for="">آدرس محل کار</label>
-                            <input class="bg-gray rounded-16 py-2 mt-2" type="text">
+                            <input class="bg-gray rounded-16 py-2 mt-2" type="text"data-input-validation>
+                            <p id="" class="err-form-new-personel err-input pt-1"></p>
                         </div>
-                        <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                        <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-2 position-relative">
                             <label for="">شعاع(متر)</label>
-                            <input class="bg-gray rounded-16 py-2 mt-2" type="text">
+                            <input class="bg-gray rounded-16 py-2 mt-2" type="text"data-input-validation>
+                            <p id="" class="err-form-new-personel err-input pt-1"></p>
                         </div>
                     </div>
                     <div class="mt-2">
@@ -59,7 +63,7 @@
                             سیگنال WiFi هم تعریف کنید یک سیگنال جدید اضافه کنید.
                         </p>
                     </div>
-                    <button class="btn-primary-nahira px-5 mt-5">ثبت</button>
+                    <button class="btn-primary-nahira px-5 mt-5" btn-new-workplace>ثبت</button>
                 </form>
             </div>
         </div>
@@ -74,8 +78,13 @@
 @section('script')
 <script type="module">
     import WindowCheck from "{{ asset('web/js/component/Window.js') }}";
+    import {ValidateForm} from "{{asset('web/js/Validations/Forms.js')}}";
     window.onclick=(e)=>{
         WindowCheck(e);
     }
+    document.querySelector('[btn-new-workplace]').addEventListener('click',(e)=>{
+        
+        ValidateForm(e);
+    })
 </script>
 @endsection

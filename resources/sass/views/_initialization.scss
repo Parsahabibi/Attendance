@@ -24,7 +24,16 @@ html {
 input:not([type=checkbox]) {
     padding-right: 10px !important;
     height: 42px;
+    
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
 p {
     margin-bottom: 0 !important;
 }
@@ -229,4 +238,5 @@ img[src="refresh-icon.svg"] {
     top: 45px;
     width: 17px;
 }
+
 //-----------------------------------------------------------------------------------------------------------//
