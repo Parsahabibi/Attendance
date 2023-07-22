@@ -90,4 +90,5 @@
 <script>
     let BtnDropDown, DropDown, TextDropDown, ImgDropDown;  
 </script>
+<script src="{{asset('web/js/Pages/Manager/WorkPlace/index.js')}}" type="module"></script>
 @endsection

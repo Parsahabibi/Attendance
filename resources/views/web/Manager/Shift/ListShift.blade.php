@@ -32,24 +32,26 @@
 <section class="">
 
     <div class=" d-flex flex-column align-items-center col-12 mx-auto">
-        {{-- <div class="container-modal hide">
-            <div class="bg-modal" close-modal=""></div>
-            <div class="col-12 col-md-6 modal-delete rounded-24 p-4">
+        <div class="container-modal hide"modal-delete-shift>
+            <div class="bg-modal" close-modal-shift></div>
+            <div class="col-12 col-sm-10 col-md-7 modal-delete rounded-24 p-4">
                 <div class="d-flex justify-content-between">
                     <h6>حذف محل کار</h6>
-                    <img src="{{asset('images/Frame 77.svg')}}" alt="close" role="button" close-modal="">
+                    <img src="{{ asset('images/Frame 77.svg') }}" alt="close" style="width: 12px" role="button"
+                    close-modal-shift/>
                 </div>
                 <div class="body-modal-delete d-flex flex-column justify-content-center align-items-center py-5">
                     <div class="p-modal-delete px-5 py-4 text-nowrap mb-5">
-                        <h6>آیا می‌خواهید شیفت انتخابی حذف شود؟</h6>
+                        <h6>آیا می‌خواهید محل کار انتخابی حذف شود؟</h6>
                     </div>
                     <div>
-                        <button class="mx-3 py-2 px-4 rounded-24" ok-delete-row="">بله</button>
-                        <button class="mx-3 py-2 px-4 rounded-24" close-modal="">خیر</button>
+                        <button class="mx-3 py-2 px-4 rounded-24" ok-delete-row-shift>بله</button>
+                        <button class="mx-3 py-2 px-4 rounded-24" close-modal-shift>خیر</button>
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
+      
         <div class="bg-white rounded-16 p-2 p-lg-4 header input col-12">
             <h6 class="fw-bold mb-3">لیست شیفت ها</h6>
             <div class="d-flex flex-column flex-sm-row align-items-sm-end gap-4 gap-sm-4 col-12">
@@ -72,7 +74,7 @@
                             <th class="text-nowrap ps-5 text-start pb-4 col-8">عملیات</th>
                         </tr>
                     </thead>
-                    <tbody class="col-12" body-table-shift=""data-check-empty-table> </tbody>
+                    <tbody class="col-12"table-Shift body-table-shift=""data-check-empty-table> </tbody>
                 </table>
                 <div class="d-none m-5 mb-3 d-flex flex-column align-items-center" data-emplty-table-massage>
                     <p class="c-gray-dark2 text-nowrap pb-3">

@@ -1,8 +1,6 @@
 import {
     ItemSidebar,
     DropdownItemSidebar,
-    ItemSidebarImgDark,
-    ItemSidebarImgLight,
 } from "../Elements.js";
 
 if (ItemSidebar !== null) {
@@ -19,17 +17,3 @@ if (ItemSidebar !== null) {
         };
     }
 }
-
-// window.onclick = (e) => {
-//     if (DropdownItemSidebar.length !== 0) {
-//         for (let i = 0; i < ItemSidebar.length; i++) {
-//             if (
-//                 e.target !== ItemSidebarImgLight[i] &&
-//                 e.target !== ItemSidebarImgDark[i] &&
-//                 e.target !== ItemSidebar[i]
-//             ) {
-//                 DropdownItemSidebar[i].style.display = "none";
-//             }
-//         }
-//     }
-// };

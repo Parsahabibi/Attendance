@@ -98,7 +98,6 @@ const ContainerModalLocation = document.querySelector(
     "[modal-delete-location]"
 );
 const OkDeleteRowLocation = document.querySelector("[ok-delete-row-location]");
-
 const CloseModalManagerPersonel = document.querySelectorAll(
     "[close-modal-personel]"
 );
@@ -107,19 +106,31 @@ const ContainerModalPersonel = document.querySelector(
 );
 const OkDeleteRowPersonel = document.querySelector("[ok-delete-row-personel]");
 const OkDeleteRowProject = document.querySelector("[ok-delete-row-project]");
-
 const CloseModalManagerProject = document.querySelectorAll(
     "[close-modal-project]"
 );
 const ContainerModalProject = document.querySelector("[modal-delete-project]");
-
 const OkDeleteRowHoliday = document.querySelector("[ok-delete-row-holiday]");
-
 const CloseModalManagerHoliday = document.querySelectorAll(
     "[close-modal-holiday]"
 );
 const ContainerModalHoliday = document.querySelector("[modal-delete-holiday]");
 const BodyTableHoliday = document.querySelector("[body-table-holiday]");
+const OkBtnRowRequest = document.querySelector(
+    "[ok-delete-row-request-employee]"
+);
+const CloseModalManagerRequest = document.querySelectorAll(
+    "[close-modal-request-employee]"
+);
+const ContainerModalRequest = document.querySelector(
+    "[modal-delete-request-employee]"
+);
+const OkDeleteRowShift = document.querySelector("[ok-delete-row-shift]");
+
+const CloseModalManagerShift = document.querySelectorAll("[close-modal-Shift]");
+const ContainerModalShift = document.querySelector("[modal-delete-Shift]");
+
+const ItemDropDownState = document.querySelectorAll("[item-dropdown-state]");
 export {
     NavIcon,
     ItemSidebar,
@@ -197,4 +208,11 @@ export {
     CloseModalManagerHoliday,
     ContainerModalHoliday,
     BodyTableHoliday,
+    OkBtnRowRequest,
+    CloseModalManagerRequest,
+    ContainerModalRequest,
+    OkDeleteRowShift,
+    CloseModalManagerShift,
+    ContainerModalShift,
+    ItemDropDownState,
 };

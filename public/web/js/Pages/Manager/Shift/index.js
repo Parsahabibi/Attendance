@@ -1,4 +1,6 @@
+import { OkDeleteRowShift } from "../../../Elements.js";
 import CheckEmptyTable from "../../../Validations/Table.js";
+import { GenereateDeleteRow } from "../../../component/PushData.js";
 import WindowCheck from "../../../component/Window.js";
 
 let BtnDropDownShift, DropDownShift, TextDropDownShift, ImgDropDownShift;
@@ -35,7 +37,25 @@ const GenerateBtnDropDownOperationShift = () => {
         };
     }, 500);
 };
-
+const GenerateDeleteRowShift = () => {
+  setTimeout(() => {
+      let ModalDeleteShift = document.querySelector(
+          "[modal-delete-Shift]"
+      );
+      let DeleteRowShift = document.querySelectorAll(
+          "[btn-show-modal-shift]"
+      );
+      let RowTableShift = document.querySelectorAll(
+          "[table-Shift]>tr"
+      );
+      GenereateDeleteRow(
+          DeleteRowShift,
+          ModalDeleteShift,
+          OkDeleteRowShift,
+          RowTableShift
+      );
+  }, 500);
+};
 const liList = document.querySelectorAll(".li");
 
 for (let i = 0; i < liList.length; i++) {
@@ -100,7 +120,7 @@ data.map(
               <img src="../../images/Frame 134.svg" alt="" class="pe-1 image"/>
               <div class="dropdown" data-dropdown-operation data-dropdown-operation-Shift> 
                 <div>ویرایش</div>
-                <div delete-row>حذف</div>
+                <div btn-show-modal-shift>حذف</div>
               </div>
             </div>
           </td>
@@ -108,6 +128,7 @@ data.map(
     `)
 );
 GenerateBtnDropDownOperationShift();
+GenerateDeleteRowShift();
 for (let i = 0; i < BtnDropDown.length; i++) {
     BtnDeleteRow[i].onclick = () => {
         Modal.classList.remove("hide");
@@ -161,7 +182,7 @@ button.onclick = () => {
               <img src="../../images/Frame 134.svg" alt="" class="pe-1 image">
               <div class="dropdown" data-dropdown-operation="" data-dropdown-operation-shift=""> 
                 <div>ویرایش</div>
-                <div delete-row="">حذف</div>
+                <div btn-show-modal-shift>حذف</div>
               </div>
             </div>
           </td>
@@ -172,4 +193,6 @@ button.onclick = () => {
 
     CheckEmptyTable();
     GenerateBtnDropDownOperationShift();
+GenerateDeleteRowShift();
+
 };

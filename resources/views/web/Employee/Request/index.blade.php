@@ -28,6 +28,25 @@
     ])
 @endsection
 <section class="">
+    <div class="container-modal hide" modal-delete-request-employee>
+        <div class="bg-modal" close-modal-request-employee></div>
+        <div class="col-12 col-sm-10 col-md-7 modal-delete rounded-24 p-4">
+            <div class="d-flex justify-content-between">
+                <h6>حذف محل کار</h6>
+                <img src="{{ asset('images/Frame 77.svg') }}" alt="close" style="width: 12px" role="button"
+                    close-modal-request-employee />
+            </div>
+            <div class="body-modal-delete d-flex flex-column justify-content-center align-items-center py-5">
+                <div class="p-modal-delete px-5 py-4 text-nowrap mb-5">
+                    <h6>آیا می‌خواهید محل کار انتخابی حذف شود؟</h6>
+                </div>
+                <div>
+                    <button class="mx-3 py-2 px-4 rounded-24" ok-delete-row-request-employee>بله</button>
+                    <button class="mx-3 py-2 px-4 rounded-24" close-modal-request-employee>خیر</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="bg-white p-3 p-lg-4 rounded-16 mb-3">
         <h6 class="fw-bold mb-3">درخواست های جدید</h6>
         <form action="" data-form-validation
@@ -157,4 +176,5 @@
 @section('script')
 <script type="module" src="{{asset('web/js/component/DropDown.js')}}"></script>
 <script src="{{ asset('web/js/Pages/Employee/Request/index.js') }}"></script>
+<script src="{{ asset('web/js/Pages/Employee/Request/PushRequest.js') }}" type="module"></script>
 @endsection

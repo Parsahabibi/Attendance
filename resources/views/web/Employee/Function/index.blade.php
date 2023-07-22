@@ -60,9 +60,7 @@
                             <th class="text-nowrap w-100 text-center pb-4 c-gray-dark2">ماموریت</th>
                         </tr>
                     </thead>
-                    <tbody body-table-function>
-
-                    </tbody>
+                    <tbody data-check-empty-table body-table-function> </tbody>
                 </table>
                 <div class="d-none m-5 mb-3 d-flex flex-column align-items-center" data-emplty-table-massage>
                     <p class="c-gray-dark2 text-nowrap pb-3">
@@ -82,5 +80,5 @@
 
 
 @section('script')
-<script src="{{ asset('web/js/Pages/Employee/Function/index.js') }}"></script>
+<script src="{{ asset('web/js/Pages/Employee/Function/index.js') }}" type="module"></script>
 @endsection

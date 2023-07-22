@@ -23,7 +23,7 @@
                         موبایل یا ایمیل
                         <span class="c-pink">*</span>
                     </label>
-                    <input type="text" name="input1"  class="bg-input rounded-8 email-input py-md-2"
+                    <input type="text" name="input1" onblur="ValidateEmail(document.Login.input1)" class="bg-input rounded-8 email-input py-md-2"
                         onblur="" input-email-login/>
                     <p id="err-input-email_phone" class="err-input pt-1"></p>
                 </div>

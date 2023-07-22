@@ -42,13 +42,15 @@
             <div class="text-nowrap" data-dropdown-state="">
                 <p>وضعیت</p>
                 <img src="{{ asset('images/Frame 134.svg') }}" alt="">
-                <div class="dropdown dropdown-state d-none w-100" data-dropdown-operation>
+                <div class="dropdown dropdown-state d-flex flex-column d-none w-100" data-dropdown-operation>
                     <div class="p-2 text-center" item-dropdown-state="">فعال</div>
                     <div class="p-2 text-center" delete-row2="" class="text-nowrap" item-dropdown-state="">غیر فعال
                     </div>
                 </div>
             </div>
+            
         </div>
+        
     </div>
     <div class="data-table">
         <div class="overflow-x-scroll">

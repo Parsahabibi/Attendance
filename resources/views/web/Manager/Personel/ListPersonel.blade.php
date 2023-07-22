@@ -69,7 +69,7 @@
             </div>
 
             <div class="text-center  export-excel">
-                <div class="text-nowrap btn-secondary-nahira py-3" style="width: auto">
+                <div class="text-nowrap btn-secondary-nahira py-3" style="width: auto" role="button">
                     <p>دریافت اکسل</p>
                 </div>
             </div>
@@ -105,4 +105,6 @@
 @endsection
 @section('script')
 <script src="{{ asset('web/js/Pages/Manager/Personel/ListPersonel.js') }}"></script>
+<script src="{{ asset('web/js/Pages/Manager/Personel/PushPersonel.js') }}"type="module"></script>
+
 @endsection

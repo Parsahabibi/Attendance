@@ -84,4 +84,6 @@
 @endsection
 @section('script')
 <script src="{{asset('web/js/Pages/Manager/Project/ListProject.js')}}" ></script>
+<script src="{{asset('web/js/Pages/Manager/Project/PushProject.js')}}" type="module"></script>
+
 @endsection
