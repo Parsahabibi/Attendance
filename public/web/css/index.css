@@ -518,6 +518,176 @@ html .header .items .b-active {
 .shift-information [data-value-month] {
   width: 80px; }
 
+.shift-date-picker body {
+  background-color: gray;
+  font-family: IRANSans; }
+  .shift-date-picker body .calender {
+    background-color: white;
+    border-radius: 8px 8px 0px 0px;
+    padding-right: 32px;
+    padding-left: 32px; }
+    .shift-date-picker body .calender .header .change .arrow {
+      border-radius: 8px;
+      background: #f9f9f9; }
+    .shift-date-picker body .calender .header .confirm {
+      border-radius: 8px;
+      background: #ff5400;
+      border: none;
+      color: #fff;
+      text-align: right;
+      font-family: IRANSans;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal; }
+  .shift-date-picker body .textOne {
+    color: #3f4256;
+    text-align: right;
+    font-family: IRANSans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; }
+  .shift-date-picker body .borderBottom {
+    width: 100%;
+    height: 1px;
+    background: #f4f4f4;
+    margin-bottom: 18px; }
+  .shift-date-picker body .input input,
+  .shift-date-picker body .input select {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-color: transparent;
+    padding: 8px; }
+    .shift-date-picker body .input input:focus,
+    .shift-date-picker body .input select:focus {
+      outline: green; }
+  .shift-date-picker body .input .label {
+    font-size: 14px;
+    padding-bottom: 8px; }
+  .shift-date-picker body .textTwo {
+    color: #181c32;
+    text-align: right;
+    font-family: IRANSans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; }
+  .shift-date-picker body .navbarCalender {
+    border-radius: 8px;
+    border-left: 1px solid #f4f4f4;
+    background: #f9f9f9; }
+  .shift-date-picker body .borderLeft {
+    width: 1px;
+    height: 35px;
+    background-color: transparent;
+    display: none; }
+    @media screen and (min-width: 797px) {
+      .shift-date-picker body .borderLeft {
+        display: block;
+        width: 1px;
+        height: 35px;
+        background-color: #f4f4f4; } }
+  .shift-date-picker body .cursor {
+    cursor: pointer; }
+  .shift-date-picker body .positionCostume {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 0;
+    z-index: 10000;
+    display: none;
+    cursor: pointer;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.25);
+    color: #7e829c;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: start; }
+  .shift-date-picker body .boxShadowDatePicker {
+    box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05) !important; }
+  .shift-date-picker body .divider {
+    width: 100%;
+    height: 1px;
+    background: #aca5bf; }
+  .shift-date-picker body .showDropDown {
+    display: block; }
+  .shift-date-picker body .HideDropDown {
+    display: none; }
+  .shift-date-picker body .dropdownText {
+    color: #7e829b;
+    font-family: IRANSans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; }
+  .shift-date-picker body .bgWhite {
+    background-color: white; }
+  .shift-date-picker body .button {
+    color: #fff;
+    text-align: right;
+    font-family: IRANSans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #ff5400;
+    border: none;
+    border-radius: 4px;
+    padding: 4px; }
+  .shift-date-picker body .emptyButton {
+    background-color: #fff6f2; }
+  .shift-date-picker body .paddingBottom {
+    padding-bottom: 35px; }
+  .shift-date-picker body .paddingRemoveItem {
+    padding-bottom: 59px; }
+  .shift-date-picker body .paste {
+    border-radius: 4px;
+    border: 1px solid #ff5400;
+    background: #ff5400;
+    color: #fff;
+    text-align: right;
+    font-family: IRANSans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; }
+  .shift-date-picker body .copy {
+    border-radius: 4px;
+    border: 1px solid #ff5400;
+    color: #ff5400;
+    text-align: right;
+    font-family: IRANSans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: transparent; }
+  .shift-date-picker body .height {
+    height: 90px; }
+
+.shift-date-picker .head-date-picker div {
+  background: #fff;
+  padding: 0.5rem 0;
+  border-left: 1px solid #f4f4f4; }
+
+.shift-date-picker .body-date-picker > div {
+  border-top: 1px solid #f4f4f4;
+  border-radius: 16px; }
+
+.shift-date-picker .container-date-picker {
+  transition: all 0.3s ease-in-out; }
+
+.shift-date-picker body::-webkit-scrollbar,
+.shift-date-picker html::-webkit-scrollbar {
+  width: 0px; }
+
+.shift-date-picker .boxDrops {
+  box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05) !important; }
+
 .data-dropdown {
   position: relative;
   cursor: pointer;

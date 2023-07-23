@@ -95,7 +95,7 @@
                                 <div class="px-4">بدون پروژه</div>
                             </div>
                         </div>
-                        <div class="item-card-container bg-green rounded-16 py-2 px-4 c-white me-2 mb-2">
+                        <div class="item-card-container bg-green rounded-16 py-2 px-4 c-white me-2 mb-2" role="button">
                             <p class="fs-6 text-nowrap">ورود</p>
                         </div>
                     </div>
