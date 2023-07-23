@@ -27,7 +27,178 @@
     ])
 @endsection
 <section class="shift-date-picker">
- 
+    <section class="modal-shift-manager col-12 col-md-11 bg-white pb-4 no-scroll-bar no-scrollbar" style="overflow-y: scroll;" data-modal>
+        <div class="d-flex  justify-content-between w-100 p-3 p-md-4 border-b-gray">
+            <h5 class="fw-bold">نوع شیفت خود را انتخاب کنید</h5>
+            <img src="{{ asset('images/remove.svg') }}" alt="" style="width: 12px"class="btn-close-modal-shift" role="button" btn-modal>
+        </div>
+        <div class="p-3 py-4 d-flex align-items-end flex-column flex-lg-row">
+            <div class="col-12 col-lg-3 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                <label for="">سال شیفت</label>
+                <input class="bg-gray rounded-16 py-2 mt-1" type="text" data-input-city="">
+            </div>
+            <div class="col-12 col-lg-3 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                <label for="">زمان شناوری</label>
+                <input class="bg-gray rounded-16 py-2 mt-1" type="text" data-input-city="">
+            </div>
+            <div class="col-12 col-lg-3 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                <label for="">سقف اضافه کاری روزانه</label>
+                <input class="bg-gray rounded-16 py-2 mt-1" type="text" data-input-city="">
+            </div>
+            <button class="btn-primary-nahira text-nowrap" btn-advanced-setting>تنظیمات پیشرفته</button>
+        </div>
+        <div class="p-3 py-4 d-flex flex-column border-t-gray d-none" content-advanced-setting>
+            <h6 class="fw-bold mb-3">تنظیمات پیشرفته</h6>
+            <div class="col-12 d-flex flex-column flex-lg-row">
+                <div class="col-12 col-lg-3 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                    <label for="">اضافه کار از ابتدای شیفت</label>
+                    <input class="bg-gray rounded-16 py-2 mt-1" type="text" data-input-city="">
+                </div>
+                <div class="col-12 col-lg-4 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                    <label for="">اضافه کار در میانه شیفت</label>
+                    <input class="bg-gray rounded-16 py-2 mt-1" type="text" data-input-city="">
+                </div>
+                <div class="col-12 col-lg-4 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                    <label for="">اضافه کار از انتهای شیفت</label>
+                    <input class="bg-gray rounded-16 py-2 mt-1" type="text" data-input-city="">
+                </div>
+            </div>
+            <div class="col-12 d-flex flex-column flex-lg-row">
+                <div class="col-12 col-lg-3 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                    <label for="">تاخیر مجاز</label>
+                    <input class="bg-gray rounded-16 py-2 mt-1" type="text" data-input-city="">
+                </div>
+                <div class="col-12 col-lg-4 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                    <label for="">تعجیل مجاز</label>
+                    <input class="bg-gray rounded-16 py-2 mt-1" type="text" data-input-city="">
+                </div>
+                <div class="col-12 col-lg-4 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
+                    <label for="">شناوری قبل شیفت</label>
+                    <input class="bg-gray rounded-16 py-2 mt-1" type="text" data-input-city="">
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 overflow-x-scroll ">
+            <table class="w-100 ">
+                <thead class="w-100 ">
+                    <th class="p-3 pb-4 text-nowrap text-center pe-3">روز کاری</th>
+                    <th class="p-3 pb-4 text-nowrap text-center">قسمت دوم روز</th>
+                    <th class="p-3 pb-4 text-nowrap text-center">زمان شروع</th>
+                    <th class="p-3 pb-4 text-nowrap text-center">زمان پایان</th>
+                    <th class="p-3 pb-4 col-2"></th>
+                    <th class="p-3 pb-4 text-nowrap text-center">قسمت دوم روز</th>
+                    <th class="p-3 pb-4 text-nowrap text-center">زمان شروع</th>
+                    <th class="p-3 pb-4 text-nowrap text-center ps-3">زمان پایان</th>
+                </thead>
+                <tbody>
+                    <tr class="border-t-gray ">
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">شنبه</td>
+                        <td class="p-3 text-nowrap text-center pe-3 c-gray-dark3 ">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3"></td>
+                        <td class=" c-gray-dark3 text-center">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center ps-3 c-gray-dark3">۰۰:۰۰</td>
+                    </tr>
+                    <tr class="border-t-gray ">
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">یکشنبه</td>
+                        <td class="p-3 text-nowrap text-center pe-3 c-gray-dark3 ">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3"></td>
+                        <td class=" c-gray-dark3 text-center">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center ps-3 c-gray-dark3">۰۰:۰۰</td>
+                    </tr>
+                    <tr class="border-t-gray ">
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">دوشنبه</td>
+                        <td class="p-3 text-nowrap text-center pe-3 c-gray-dark3 ">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3"></td>
+                        <td class=" c-gray-dark3 text-center">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center ps-3 c-gray-dark3">۰۰:۰۰</td>
+                    </tr>
+                    <tr class="border-t-gray ">
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">سه شنبه</td>
+                        <td class="p-3 text-nowrap text-center pe-3 c-gray-dark3 ">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3"></td>
+                        <td class=" c-gray-dark3 text-center">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center ps-3 c-gray-dark3">۰۰:۰۰</td>
+                    </tr>
+                    <tr class="border-t-gray ">
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">چهارشنبه</td>
+                        <td class="p-3 text-nowrap text-center pe-3 c-gray-dark3 ">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3"></td>
+                        <td class=" c-gray-dark3 text-center">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center ps-3 c-gray-dark3">۰۰:۰۰</td>
+                    </tr>
+                    <tr class="border-t-gray ">
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">پنج شنبه</td>
+                        <td class="p-3 text-nowrap text-center pe-3 c-gray-dark3 ">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3"></td>
+                        <td class=" c-gray-dark3 text-center">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center ps-3 c-gray-dark3">۰۰:۰۰</td>
+                    </tr>
+                    <tr class="border-t-gray ">
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">جمعه</td>
+                        <td class="p-3 text-nowrap text-center pe-3 c-gray-dark3 ">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3"></td>
+                        <td class=" c-gray-dark3 text-center">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="p-3 text-nowrap text-center c-gray-dark3">۰۰:۰۰</td>
+                        <td class="p-3 text-nowrap text-center ps-3 c-gray-dark3">۰۰:۰۰</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex justify-content-evenly mx-auto">
+            <button class="btn-secondary-nahira text-nowrap">مرحله قبلی</button>
+            <button class="btn-primary-nahira text-nowrap">مرحله بعدی</button>
+        </div>
+    </section>
+
     <div class="calender col-12 mx-auto p-0 mt-4">
         <div class="header d-flex align-items-baseline justify-content-between flex-wrap col-12 py-4 px-4">
             <div class="change d-flex align-items-baseline gap-3">

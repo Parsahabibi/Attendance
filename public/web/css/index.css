@@ -61,6 +61,9 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
+.no-scrollbar::-webkit-scrollbar {
+  width: 0px; }
+
 p {
   margin-bottom: 0 !important; }
 
@@ -706,6 +709,12 @@ html::-webkit-scrollbar {
 
 .boxDrops {
   box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05) !important; }
+
+.shift-date-picker .btn-close-modal-shift {
+  width: 12px !important; }
+
+.modal-shift-manager {
+  z-index: 1000000; }
 
 .data-dropdown {
   position: relative;

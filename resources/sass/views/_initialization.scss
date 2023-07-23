@@ -33,7 +33,11 @@ input::-webkit-inner-spin-button {
 }
 
 
-
+.no-scrollbar{
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+}
 p {
     margin-bottom: 0 !important;
 }

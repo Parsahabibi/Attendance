@@ -249,6 +249,7 @@ html {
         width: 0px;
     }
 }
+
 .boxDrops {
     box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05) !important;
 }
@@ -272,4 +273,10 @@ html {
 }
 .boxDrops {
     box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05) !important;
+}
+.shift-date-picker .btn-close-modal-shift{
+    width: 12px !important;
+}
+.modal-shift-manager{
+    z-index: 1000000;
 }
