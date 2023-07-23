@@ -7,250 +7,269 @@
     }
 }
 
-.shift-date-picker {
-    body {
-        background-color: gray;
-        font-family: IRANSans;
+body {
+    background-color: gray;
+    font-family: IRANSans;
 
-        .calender {
-            background-color: white;
-            border-radius: 8px 8px 0px 0px;
-            padding-right: 32px;
-            padding-left: 32px;
+    .calender {
+        background-color: white;
+        border-radius: 8px 8px 0px 0px;
+        padding-right: 32px;
+        padding-left: 32px;
 
-            .header {
-                .change {
-                    .arrow {
-                        border-radius: 8px;
-                        background: #f9f9f9;
-                    }
-                }
-
-                .confirm {
+        .header {
+            .change {
+                .arrow {
                     border-radius: 8px;
-                    background: #ff5400;
-                    border: none;
-                    color: #fff;
-                    text-align: right;
-                    font-family: IRANSans;
-                    font-size: 15px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
+                    background: #f9f9f9;
                 }
             }
-        }
 
-        .textOne {
-            color: #3f4256;
-            text-align: right;
-            font-family: IRANSans;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
-
-        .borderBottom {
-            width: 100%;
-            height: 1px;
-            background: #f4f4f4;
-            margin-bottom: 18px;
-        }
-
-        .input {
-            input,
-            select {
-                background-color: #f9f9f9;
+            .confirm {
                 border-radius: 8px;
-                border-color: transparent;
-                padding: 8px;
-
-                &:focus {
-                    outline: green;
-                }
+                background: #ff5400;
+                border: none;
+                color: #fff;
+                text-align: right;
+                font-family: IRANSans;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
             }
-
-            .label {
-                font-size: 14px;
-                padding-bottom: 8px;
-            }
-
-            // button {
-            //     background-color: #FF5400;
-            //     color: white;
-            //     border-radius: 8px;
-            //     border-color: transparent;
-            //     font-size: 14px;
-            //     font-weight: 500;
-            //     padding: 14px;
-            // }
         }
+    }
 
-        .textTwo {
-            color: #181c32;
-            text-align: right;
-            font-family: IRANSans;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
+    .textOne {
+        color: #3f4256;
+        text-align: right;
+        font-family: IRANSans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
 
-        .navbarCalender {
+    .borderBottom {
+        width: 100%;
+        height: 1px;
+        background: #f4f4f4;
+        margin-bottom: 18px;
+    }
+
+    .input {
+        input,
+        select {
+            background-color: #f9f9f9;
             border-radius: 8px;
-            border-left: 1px solid #f4f4f4;
-            background: #f9f9f9;
+            border-color: transparent;
+            padding: 8px;
+
+            &:focus {
+                outline: green;
+            }
         }
 
-        .borderLeft {
+        .label {
+            font-size: 14px;
+            padding-bottom: 8px;
+        }
+
+        // button {
+        //     background-color: #FF5400;
+        //     color: white;
+        //     border-radius: 8px;
+        //     border-color: transparent;
+        //     font-size: 14px;
+        //     font-weight: 500;
+        //     padding: 14px;
+        // }
+    }
+
+    .textTwo {
+        color: #181c32;
+        text-align: right;
+        font-family: IRANSans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .navbarCalender {
+        border-radius: 8px;
+        border-left: 1px solid #f4f4f4;
+        background: #f9f9f9;
+    }
+
+    .borderLeft {
+        width: 1px;
+        height: 35px;
+        background-color: transparent;
+        display: none;
+
+        @media screen and (min-width: 797px) {
+            display: block;
             width: 1px;
             height: 35px;
-            background-color: transparent;
-            display: none;
-
-            @media screen and (min-width: 797px) {
-                display: block;
-                width: 1px;
-                height: 35px;
-                background-color: #f4f4f4;
-            }
-        }
-
-        .cursor {
-            cursor: pointer;
-        }
-
-        .positionCostume {
-            position: absolute;
-            width: 100%;
-            top: 100%;
-            right: 0;
-            z-index: 10000;
-            display: none;
-            cursor: pointer;
-            border-radius: 16px;
-            background: #fff;
-            box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.25);
-            color: #7e829c;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            text-align: start;
-        }
-        .boxShadowDatePicker {
-            // box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.25);
-            box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05) !important;
-        }
-
-        .divider {
-            width: 100%;
-            height: 1px;
-            background: #aca5bf;
-        }
-
-        .showDropDown {
-            display: block;
-        }
-
-        .HideDropDown {
-            display: none;
-        }
-
-        .dropdownText {
-            color: #7e829b;
-            font-family: IRANSans;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        .bgWhite {
-            background-color: white;
-        }
-
-        .button {
-            color: #fff;
-            text-align: right;
-            font-family: IRANSans;
-            font-size: 10px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            background-color: #ff5400;
-            border: none;
-            border-radius: 4px;
-            //add padding
-            padding: 4px;
-        }
-
-        .emptyButton {
-            background-color: #fff6f2;
-        }
-
-        .paddingBottom {
-            padding-bottom: 35px;
-        }
-
-        .paddingRemoveItem {
-            padding-bottom: 59px;
-        }
-
-        .paste {
-            border-radius: 4px;
-            border: 1px solid #ff5400;
-            background: #ff5400;
-            // padding: 4px;
-            color: #fff;
-            text-align: right;
-            font-family: IRANSans;
-            font-size: 10px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-
-        .copy {
-            border-radius: 4px;
-            border: 1px solid #ff5400;
-            color: #ff5400;
-            text-align: right;
-            font-family: IRANSans;
-            font-size: 10px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            background-color: transparent;
-        }
-        .height {
-            height: 90px;
+            background-color: #f4f4f4;
         }
     }
-    .head-date-picker {
-        div {
-            background: #fff;
-            padding: 0.5rem 0;
-            border-left: 1px solid #f4f4f4;
-        }
+
+    .cursor {
+        cursor: pointer;
     }
-    .body-date-picker {
-        > div {
-            border-top: 1px solid #f4f4f4;
-            border-radius: 16px;
-        }
+
+    .positionCostume {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        right: 0;
+        z-index: 10000;
+        display: none;
+        cursor: pointer;
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.25);
+        color: #7e829c;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: start;
     }
-    .container-date-picker {
-        transition: all 0.3s ease-in-out;
-    }
-    body,
-    html {
-        &::-webkit-scrollbar {
-            width: 0px;
-        }
-    }
-    .boxDrops {
+    .boxShadowDatePicker {
+        // box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.25);
         box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05) !important;
     }
+
+    .divider {
+        width: 100%;
+        height: 1px;
+        background: #aca5bf;
+    }
+
+    .showDropDown {
+        display: block;
+    }
+
+    .HideDropDown {
+        display: none;
+    }
+
+    .dropdownText {
+        color: #7e829b;
+        font-family: IRANSans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .bgWhite {
+        background-color: white;
+    }
+
+    .button {
+        color: #fff;
+        text-align: right;
+        font-family: IRANSans;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        background-color: #ff5400;
+        border: none;
+        border-radius: 4px;
+        //add padding
+        padding: 4px;
+    }
+
+    .emptyButton {
+        background-color: #fff6f2;
+    }
+
+    .paddingBottom {
+        padding-bottom: 35px;
+    }
+
+    .paddingRemoveItem {
+        padding-bottom: 59px;
+    }
+
+    .paste {
+        border-radius: 4px;
+        border: 1px solid #ff5400;
+        background: #ff5400;
+        // padding: 4px;
+        color: #fff;
+        text-align: right;
+        font-family: IRANSans;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .copy {
+        border-radius: 4px;
+        border: 1px solid #ff5400;
+        color: #ff5400;
+        text-align: right;
+        font-family: IRANSans;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-color: transparent;
+    }
+    .height {
+        height: 90px;
+    }
+}
+.head-date-picker {
+    div {
+        background: #fff;
+        padding: 0.5rem 0;
+        border-left: 1px solid #f4f4f4;
+    }
+}
+.body-date-picker {
+    > div {
+        border-top: 1px solid #f4f4f4;
+        border-radius: 16px;
+    }
+}
+.container-date-picker {
+    transition: all 0.3s ease-in-out;
+}
+body,
+html {
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+}
+.boxDrops {
+    box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05) !important;
+}
+.shift-date-picker img {
+    width: auto !important;
+}
+.headerBox {
+    height: 60px;
+}
+
+.boxTable {
+    border: 1px solid #f4f4f4;
+}
+
+.month-datepicker div:nth-child(n + 7) p {
+    color: #ff0000;
+}
+.w-week {
+    width: calc(100% / 7);
+    min-width: 150px;
+}
+.boxDrops {
+    box-shadow: 2px 4px 24px 0px rgba(0, 0, 0, 0.05) !important;
 }
