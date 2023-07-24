@@ -139,6 +139,28 @@ const ContentAdvancedSetting = document.querySelector(
 const DataModal = document.querySelector("[data-modal]");
 
 const BgDark2 = document.querySelector(".bg-dark2");
+
+const BtnPutRequest = document.querySelector("[btn-put-request]");
+const RequestType = document.querySelector("[request-type]");
+const RequesstPersonel = document.querySelector("[requesst-personel]");
+const RequestDate = document.querySelector("[request-date]");
+const RequestTimeStart = document.querySelector("[request-time-start]");
+const RequestTimeEnd = document.querySelector("[request-time-end]");
+const TableRequestManager = document.querySelector("[table-request-manager]");
+const OkDeleteRowRequestManager = document.querySelector(
+    "[ok-delete-row-request-manager]"
+);
+const CloseModalRequestManager = document.querySelectorAll(
+    "[close-modal-request-manager]"
+);
+const ContainerModalRequestManager = document.querySelector(
+    "[modal-delete-request-manager]"
+);
+const NewNameWorkplace = document.querySelector("[ new-name-workplace]");
+const NewCityWorkplace = document.querySelector("[ new-city-workplace]");
+const NewLocationWorkplace = document.querySelector(
+    "[ new-location-workplace]"
+);
 export {
     NavIcon,
     ItemSidebar,
@@ -227,4 +249,17 @@ export {
     ContentAdvancedSetting,
     DataModal,
     BgDark2,
+    BtnPutRequest,
+    RequestType,
+    RequesstPersonel,
+    RequestDate,
+    RequestTimeStart,
+    RequestTimeEnd,
+    TableRequestManager,
+    OkDeleteRowRequestManager,
+    CloseModalRequestManager,
+    ContainerModalRequestManager,
+    NewNameWorkplace,
+    NewCityWorkplace,
+    NewLocationWorkplace,
 };

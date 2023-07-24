@@ -7,7 +7,11 @@
 @section('content')
     <!-- Hero Start -->
 @section('header')
-    @include('web.Layouts.header', ['H3Header' => 'محل کار ', 'CaptionHeader' => 'خانه - محل کار - ', 'TitleHeader' => 'ویرایش محل کار '])
+    @include('web.Layouts.header', [
+        'H3Header' => 'محل کار ',
+        'CaptionHeader' => 'خانه - محل کار - ',
+        'TitleHeader' => 'ویرایش محل کار ',
+    ])
 @endsection
 
 @section('sidebar')
@@ -25,27 +29,31 @@
 <section class="">
     <div class="d-flex flex-column flex-lg-row card-form bg-white rounded-24 p-2 pt-4 p-lg-5 pb-lg-3">
         <div class="col-12 col-lg-6 ps-lg-5 mb-5 mb-lg-0">
-            <h3 class="fs-5 fw-bold mb-3">ثبت محل کار جدید</h3>
+            <h3 class="fs-5 fw-bold mb-3">ویرایش محل کار جدید</h3>
             <div class="">
-                <form class="col-12 d-flex flex-column align-items-start" action="" method="post">
+                <form class="col-12 d-flex flex-column align-items-start" action="" method="">
                     <div class="col-12 d-flex mb-3">
                         <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
                             <label for="">نام محل کار </label>
-                            <input class="c-gray-dark3 fs-small-100 bg-gray rounded-16 py-2 mt-2" type="text" value="ناهیرا">
+                            <input class="c-gray-dark3 fs-small-100 bg-gray rounded-16 py-2 mt-2" new-name-workplace
+                                type="text" value="">
                         </div>
                         <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
                             <label for="">شهر</label>
-                            <input class="c-gray-dark3 fs-small-100 bg-gray rounded-16 py-2 mt-2" type="text" value="قزوین">
+                            <input class="c-gray-dark3 fs-small-100 bg-gray rounded-16 py-2 mt-2" new-city-workplace
+                                type="text" value="">
                         </div>
                     </div>
                     <div class="col-12 d-flex">
                         <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
                             <label for="">آدرس محل کار</label>
-                            <input class="c-gray-dark3 fs-small-100 bg-gray rounded-16 py-2 mt-2" type="text" value="قزوین، رستوران آرمان">
+                            <input class="c-gray-dark3 fs-small-100 bg-gray rounded-16 py-2 mt-2" new-location-workplace
+                                type="text" value="">
                         </div>
                         <div class="col-6 d-flex flex-column mx-lg-2 mb-3 mb-lg-0">
                             <label for="">شعاع(متر)</label>
-                            <input class="c-gray-dark3 fs-small-100 bg-gray rounded-16 py-2 mt-2 " type="text" value="۱۲۵ متر">
+                            <input class="c-gray-dark3 fs-small-100 bg-gray rounded-16 py-2 mt-2 " type="text"
+                                value="۱۲۵ متر">
                         </div>
                     </div>
                     <div class="mt-2">
@@ -66,4 +74,8 @@
     </div>
 </section>
 <!-- Hero End -->
+@endsection
+
+@section('script')
+    <script src="{{ asset('web/js/Pages/Manager/WorkPlace/EditWorkPlace.js') }}" type="module"></script>
 @endsection
