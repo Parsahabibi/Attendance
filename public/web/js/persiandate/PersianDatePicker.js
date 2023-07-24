@@ -12,9 +12,9 @@ const ShowDate = () => {
     month = date.toLocaleDateString("fa-IR", option).split(" ")[1];
     year = date.toLocaleDateString("fa-IR", option).split(" ")[0];
 
-    // day = "29";
-    // week = "سه‌شنبه";
-    // month = "اسفند";
+    // day = "12";
+    // week = "پنجشنبه";
+    // month = "مرداد";
     // year = "1402";
 
     const ArrMonth = [
@@ -83,6 +83,12 @@ const ShowDate = () => {
     }
 
     console.log(`${NumYear}/${NumMonth}/${NumDay}/${week}`);
+
+    let NumMonthToday = NumMonth;
+    let NumDayToday = NumDay;
+    let WeekToday = week;
+    let NumYearToday = NumYear;
+
     let NumMonthBefore = NumMonth,
         NumDayBefore = NumDay,
         NumYearBefore = NumYear,
@@ -95,7 +101,7 @@ const ShowDate = () => {
     }
     let Kabise = 365;
 
-   let KabiseConditional = 30;
+    let KabiseConditional = 30;
 
     if (ArrKabise.includes(NumYear)) {
         //برای تشخیص سال کبیسه
@@ -115,6 +121,7 @@ const ShowDate = () => {
             if (NumMonth <= 6) {
                 if (NumDay <= 31) {
                     ThisYear.push({
+                        ItemNumWeek: NumWeek,
                         ItemWeek: ArrWeek[NumWeek],
                         ItemYear: NumYear,
                         ItemMonth: NumMonth,
@@ -129,6 +136,7 @@ const ShowDate = () => {
                     NumDay = 1;
                     NumMonth++;
                     ThisYear.push({
+                        ItemNumWeek: NumWeek,
                         ItemWeek: ArrWeek[NumWeek],
                         ItemYear: NumYear,
                         ItemMonth: NumMonth,
@@ -145,6 +153,7 @@ const ShowDate = () => {
                     if (NumDay < KabiseConditional) {
                         if (NumDay === 29) {
                             ThisYear.push({
+                                ItemNumWeek: NumWeek,
                                 ItemWeek: ArrWeek[NumWeek++],
                                 ItemYear: NumYear,
                                 ItemMonth: NumMonth,
@@ -153,6 +162,7 @@ const ShowDate = () => {
                             // break;
                         } else {
                             ThisYear.push({
+                                ItemNumWeek: NumWeek,
                                 ItemWeek: ArrWeek[NumWeek],
                                 ItemYear: NumYear,
                                 ItemMonth: NumMonth,
@@ -168,6 +178,7 @@ const ShowDate = () => {
                         NumDay = 1;
                         NumMonth++;
                         ThisYear.push({
+                            ItemNumWeek: NumWeek,
                             ItemWeek: ArrWeek[NumWeek],
                             ItemYear: NumYear,
                             ItemMonth: NumMonth,
@@ -182,6 +193,7 @@ const ShowDate = () => {
                 } else {
                     if (NumDay <= 30) {
                         ThisYear.push({
+                            ItemNumWeek: NumWeek,
                             ItemWeek: ArrWeek[NumWeek],
                             ItemYear: NumYear,
                             ItemMonth: NumMonth,
@@ -196,6 +208,7 @@ const ShowDate = () => {
                         NumDay = 1;
                         NumMonth++;
                         ThisYear.push({
+                            ItemNumWeek: NumWeek,
                             ItemWeek: ArrWeek[NumWeek],
                             ItemYear: NumYear,
                             ItemMonth: NumMonth,
@@ -217,6 +230,7 @@ const ShowDate = () => {
             if (NumMonthBefore <= 7) {
                 if (NumDayBefore >= 1) {
                     ThisYear.unshift({
+                        ItemNumWeek: NumWeekBefore,
                         ItemWeek: ArrWeek[NumWeekBefore],
                         ItemYear: NumYearBefore,
                         ItemMonth: NumMonthBefore,
@@ -238,6 +252,7 @@ const ShowDate = () => {
                     NumDayBefore = 31;
                     NumMonthBefore--;
                     ThisYear.unshift({
+                        ItemNumWeek: NumWeekBefore,
                         ItemWeek: ArrWeek[NumWeekBefore],
                         ItemYear: NumYearBefore,
                         ItemMonth: NumMonthBefore,
@@ -252,6 +267,7 @@ const ShowDate = () => {
             } else {
                 if (NumDayBefore >= 1) {
                     ThisYear.unshift({
+                        ItemNumWeek: NumWeekBefore,
                         ItemWeek: ArrWeek[NumWeekBefore],
                         ItemYear: NumYearBefore,
                         ItemMonth: NumMonthBefore,
@@ -266,6 +282,7 @@ const ShowDate = () => {
                     NumDayBefore = 30;
                     NumMonthBefore--;
                     ThisYear.unshift({
+                        ItemNumWeek: NumWeekBefore,
                         ItemWeek: ArrWeek[NumWeekBefore],
                         ItemYear: NumYearBefore,
                         ItemMonth: NumMonthBefore,
@@ -285,18 +302,18 @@ const ShowDate = () => {
         JSON.parse
     );
 
-    let ArrFarvardin = ThisYear.slice(0, 31);
-    let ArrOrdibehesht = ThisYear.slice(31, 62);
-    let ArrKhordad = ThisYear.slice(62, 93);
-    let ArrTir = ThisYear.slice(93, 125);
-    let ArrMordad = ThisYear.slice(125, 156);
-    let ArrShahrivar = ThisYear.slice(156, 187);
-    let ArrMehr = ThisYear.slice(187, 217);
-    let ArrAban = ThisYear.slice(217, 247);
-    let ArrAzar = ThisYear.slice(247, 277);
-    let ArrDey = ThisYear.slice(277, 307);
-    let ArrBahman = ThisYear.slice(307, 337);
-    let ArrEsfand = ThisYear.slice(337, 366);
+    let ArrFarvardin = FinallThisYear.slice(0, 31);
+    let ArrOrdibehesht = FinallThisYear.slice(31, 62);
+    let ArrKhordad = FinallThisYear.slice(62, 93);
+    let ArrTir = FinallThisYear.slice(93, 124);
+    let ArrMordad = FinallThisYear.slice(124, 155);
+    let ArrShahrivar = FinallThisYear.slice(155, 186);
+    let ArrMehr = FinallThisYear.slice(186, 216);
+    let ArrAban = FinallThisYear.slice(216, 246);
+    let ArrAzar = FinallThisYear.slice(246, 276);
+    let ArrDey = FinallThisYear.slice(276, 306);
+    let ArrBahman = FinallThisYear.slice(306, 336);
+    let ArrEsfand = FinallThisYear.slice(336, 368);
 
     let Table = document.querySelector("#demo>tbody>tr");
     let count = 0;
@@ -305,8 +322,31 @@ const ShowDate = () => {
         FinallThisYear.pop();
     }
 
-    return FinallThisYear;
+    return [
+        {
+            Months: [
+                ArrFarvardin,
+                ArrOrdibehesht,
+                ArrKhordad,
+                ArrTir,
+                ArrMordad,
+                ArrShahrivar,
+                ArrMehr,
+                ArrAban,
+                ArrAzar,
+                ArrDey,
+                ArrBahman,
+                ArrEsfand,
+            ],
+            FinallThisYear,
+            NumMonthToday,
+            WeekToday,
+            NumDayToday,
+            NumYearToday,
+        },
+    ];
 };
 
-const ShamsiDate = ShowDate();
+const ShamsiDate = ShowDate()[0];
 console.log(ShamsiDate);
+export default ShamsiDate;

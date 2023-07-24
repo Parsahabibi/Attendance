@@ -526,7 +526,7 @@ body {
   font-family: IRANSans; }
   body .calender {
     background-color: white;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 16px 16px 0px 0px;
     padding-right: 32px;
     padding-left: 32px; }
     body .calender .header .change .arrow {
@@ -640,7 +640,8 @@ body {
     background-color: #ff5400;
     border: none;
     border-radius: 4px;
-    padding: 4px; }
+    padding: 4px;
+    padding-right: 8px; }
   body .emptyButton {
     background-color: #fff6f2; }
   body .paddingBottom {
@@ -657,7 +658,8 @@ body {
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal; }
+    line-height: normal;
+    padding: 0 0.3rem; }
   body .copy {
     border-radius: 4px;
     border: 1px solid #ff5400;
@@ -668,9 +670,13 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    background-color: transparent; }
+    background-color: transparent;
+    padding: 0 0.3rem; }
   body .height {
     height: 90px; }
+
+.date-picker {
+  border-radius: 0 0 16px 16px; }
 
 .head-date-picker div {
   background: #fff;

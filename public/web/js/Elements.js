@@ -131,6 +131,14 @@ const CloseModalManagerShift = document.querySelectorAll("[close-modal-Shift]");
 const ContainerModalShift = document.querySelector("[modal-delete-Shift]");
 
 const ItemDropDownState = document.querySelectorAll("[item-dropdown-state]");
+
+const BtnAdvancedSetting = document.querySelector("[btn-advanced-setting]");
+const ContentAdvancedSetting = document.querySelector(
+    "[content-advanced-setting]"
+);
+const DataModal = document.querySelector("[data-modal]");
+
+const BgDark2 = document.querySelector(".bg-dark2");
 export {
     NavIcon,
     ItemSidebar,
@@ -215,4 +223,8 @@ export {
     CloseModalManagerShift,
     ContainerModalShift,
     ItemDropDownState,
+    BtnAdvancedSetting,
+    ContentAdvancedSetting,
+    DataModal,
+    BgDark2,
 };

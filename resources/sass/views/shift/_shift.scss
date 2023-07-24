@@ -13,7 +13,7 @@ body {
 
     .calender {
         background-color: white;
-        border-radius: 8px 8px 0px 0px;
+        border-radius: 16px 16px 0px 0px;
         padding-right: 32px;
         padding-left: 32px;
 
@@ -183,6 +183,7 @@ body {
         border-radius: 4px;
         //add padding
         padding: 4px;
+        padding-right: 8px;
     }
 
     .emptyButton {
@@ -209,6 +210,8 @@ body {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        padding: 0 0.3rem;
+
     }
 
     .copy {
@@ -222,10 +225,14 @@ body {
         font-weight: 400;
         line-height: normal;
         background-color: transparent;
+        padding: 0 0.3rem;
     }
     .height {
         height: 90px;
     }
+}
+.date-picker {
+    border-radius: 0 0 16px 16px;
 }
 .head-date-picker {
     div {

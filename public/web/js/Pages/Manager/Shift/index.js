@@ -38,23 +38,19 @@ const GenerateBtnDropDownOperationShift = () => {
     }, 500);
 };
 const GenerateDeleteRowShift = () => {
-  setTimeout(() => {
-      let ModalDeleteShift = document.querySelector(
-          "[modal-delete-Shift]"
-      );
-      let DeleteRowShift = document.querySelectorAll(
-          "[btn-show-modal-shift]"
-      );
-      let RowTableShift = document.querySelectorAll(
-          "[table-Shift]>tr"
-      );
-      GenereateDeleteRow(
-          DeleteRowShift,
-          ModalDeleteShift,
-          OkDeleteRowShift,
-          RowTableShift
-      );
-  }, 500);
+    setTimeout(() => {
+        let ModalDeleteShift = document.querySelector("[modal-delete-Shift]");
+        let DeleteRowShift = document.querySelectorAll(
+            "[btn-show-modal-shift]"
+        );
+        let RowTableShift = document.querySelectorAll("[table-Shift]>tr");
+        GenereateDeleteRow(
+            DeleteRowShift,
+            ModalDeleteShift,
+            OkDeleteRowShift,
+            RowTableShift
+        );
+    }, 500);
 };
 const liList = document.querySelectorAll(".li");
 
@@ -193,6 +189,5 @@ button.onclick = () => {
 
     CheckEmptyTable();
     GenerateBtnDropDownOperationShift();
-GenerateDeleteRowShift();
-
+    GenerateDeleteRowShift();
 };
