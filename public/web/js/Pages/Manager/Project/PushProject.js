@@ -12,17 +12,30 @@ try {
     (function project() {
         const GenerateBtnDropDownOperationProject = () => {
             setTimeout(() => {
-                BtnDropDown = document.querySelectorAll(
+                let BtnDropDown = document.querySelectorAll(
                     "[data-btn-dropdown-operation-project]"
                 );
-                DropDown = document.querySelectorAll(
+                let DropDown = document.querySelectorAll(
                     "[data-dropdown-operation-project]"
                 );
-                TextDropDown = document.querySelectorAll(
+                let TextDropDown = document.querySelectorAll(
                     "[data-btn-dropdown-operation-project]>p"
                 );
-                ImgDropDown = document.querySelectorAll(
+                let ImgDropDown = document.querySelectorAll(
                     "[data-btn-dropdown-operation-project]>img"
+                );
+
+                let BtnDropDownStatus = document.querySelectorAll(
+                    "[data-btn-dropdown-state-project]"
+                );
+                let DropDownStatus = document.querySelectorAll(
+                    "[data-dropdown-state-project]"
+                );
+                let TextDropDownStatus = document.querySelectorAll(
+                    "[data-btn-dropdown-state-project]>p"
+                );
+                let ImgDropDownStatus = document.querySelectorAll(
+                    "[data-btn-dropdown-state-project]>img"
                 );
                 for (let i = 0; i < BtnDropDown.length; i++) {
                     BtnDropDown[i].addEventListener("click", () => {
@@ -54,16 +67,16 @@ try {
         };
         const GenerateBtnDropDownStatusProject = () => {
             setTimeout(() => {
-                BtnDropDownStatus = document.querySelectorAll(
+                let BtnDropDownStatus = document.querySelectorAll(
                     "[data-btn-dropdown-state-project]"
                 );
-                DropDownStatus = document.querySelectorAll(
+                let DropDownStatus = document.querySelectorAll(
                     "[data-dropdown-state-project]"
                 );
-                TextDropDownStatus = document.querySelectorAll(
+                let TextDropDownStatus = document.querySelectorAll(
                     "[data-btn-dropdown-state-project]>p"
                 );
-                ImgDropDownStatus = document.querySelectorAll(
+                let ImgDropDownStatus = document.querySelectorAll(
                     "[data-btn-dropdown-state-project]>img"
                 );
                 for (let i = 0; i < BtnDropDownStatus.length; i++) {
@@ -89,6 +102,22 @@ try {
                     OkDeleteRowProject,
                     RowTableProject
                 );
+            }, 500);
+        };
+        const GeneratePutStateProject = () => {
+            setTimeout(() => {
+                let ItemDataBtnDropdownStateProject = document.querySelectorAll(
+                    "[data-btn-dropdown-state-Project]>div"
+                );
+                let DataBtnDropdownStateProject = document.querySelectorAll(
+                    "[data-btn-dropdown-state-Project]>p"
+                );
+                for (let i = 0; i < ItemDataBtnDropdownStateProject.length; i++) {
+                    ItemDataBtnDropdownStateProject[i].onclick=(e)=>{
+                        console.log(e.target.innerHTML)
+                        DataBtnDropdownStateProject[i].innerHTML=e.target.innerHTML;
+                    }
+                }
             }, 500);
         };
         const DataProject = [
@@ -125,7 +154,7 @@ try {
               <div class="" data-dropdown data-btn-dropdown-operation-project>
               <p class="ps-1">عملیات</p>
 
-                <img src="../../images/Frame 134.svg" alt="" />
+                <img src="../../images/Frame 134.svg" alt="" style="width:18px" />
                 <div class="dropdown dropdown-operation"data-dropdown-operation-project>
                   <div>ویرایش</div>
                   <div delete-row-project>حذف</div>
@@ -135,7 +164,7 @@ try {
             <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
               <div class="text-nowrap" data-dropdown-state data-btn-dropdown-state-project>
                 <p class="ps-1">وضعیت</p>
-                <img src="../../images/Frame 134.svg" alt="" />
+                <img src="../../images/Frame 134.svg" alt="" style="width:18px"/>
                 <div class="dropdown dropdown-state" data-dropdown-state-project>
                   <div item-dropdown-state>فعال</div>
                   <div delete-row2 class="text-nowrap" item-dropdown-state>غیر فعال</div>
@@ -150,6 +179,7 @@ try {
             GenerateBtnDropDownOperationProject();
             GenerateBtnDropDownStatusProject();
             GenerateDeleteRowProject();
+            GeneratePutStateProject();
         }
         if (BtnSearchProject !== null) {
             BtnSearchProject.addEventListener("click", (e) => {
@@ -171,7 +201,7 @@ try {
             <td class=" fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
               <div class="" data-dropdown data-btn-dropdown-operation-project>
                 <p class="ps-1">عملیات</p>
-                <img src="../../images/Frame 134.svg" alt="" />
+                <img src="../../images/Frame 134.svg" alt=""  style="width:18px"/>
                 <div class="dropdown dropdown-operation" data-dropdown-operation-project>
                   <div>ویرایش</div>
                   <div delete-row-project>حذف</div>
@@ -181,7 +211,7 @@ try {
             <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
               <div class="text-nowrap" data-btn-dropdown-state-project>
                 <p class="ps-1">وضعیت</p>
-                <img src="../../images/Frame 134.svg" alt="" />
+                <img src="../../images/Frame 134.svg" alt=""  style="width:18px"/>
                 <div class="dropdown dropdown-state" data-dropdown-state-project>
                   <div item-dropdown-state>فعال</div>
                   <div delete-row2 class="text-nowrap" item-dropdown-state>غیر فعال</div>
@@ -196,6 +226,8 @@ try {
                 GenerateBtnDropDownOperationProject();
                 GenerateBtnDropDownStatusProject();
                 GenerateDeleteRowProject();
+            GeneratePutStateProject();
+
             });
         }
     })();

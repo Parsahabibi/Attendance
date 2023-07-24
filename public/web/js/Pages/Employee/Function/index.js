@@ -1,3 +1,5 @@
+import CheckEmptyTable from "../../../Validations/Table.js";
+
 jalaliDatepicker.startWatch();
 
 let button = document.getElementById("SearchButtonFunction");
@@ -188,5 +190,34 @@ button.onclick = () => {
         `)
     );
     console.log(check, "gf");
-   
+    if (inputTo.value === "" && inputFrom.value === "") {
+        row.innerHTML = "";
+        da.map(
+            (item) =>
+                (row.innerHTML += `
+                            <tr class="border-b-gray d-flex align-items-center justify-content-between borderTable">
+                            <td class="fs-small-100 c-gray-dark3 py-2 w-100 text-center border-0">${item.date}</td>
+                            <td class="fs-small-100 c-gray-dark3 py-2 w-100 text-center border-0">${item.day}</td>
+                            <td
+                                class="py-2 w-100 text-center border-0 d-flex align-items-center justify-content-center gap-3">
+                                <div class="d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="enter">ورود</h6>
+                                    <p class="clockEnter fs-small-100 c-gray-dark3 ">${item.clock}</p>
+                                </div>
+                                <div class="d-flex flex-column align-items-center justify-content-center gap-1">
+                                    <h6 class="enter">خروج</h6>
+                                    <p class="clockEnter fs-small-100 c-gray-dark3 ">${item.clock}</p>
+                                </div>
+                            </td>
+                            <td class="fs-small-100 c-gray-dark3 py-2 w-100 text-center border-0">${item.clock}</td>
+                            <td class="fs-small-100 c-gray-dark3 py-2 w-100 text-center border-0">${item.clock}</td>
+                            <td class="fs-small-100 c-gray-dark3 py-2 w-100 text-center border-0">${item.clock}</td>
+                            <td class="fs-small-100 c-gray-dark3 py-2 w-100 text-center border-0">${item.clock}</td>
+                            <td class="fs-small-100 c-gray-dark3 py-2 w-100 text-center border-0">${item.clock}</td>
+                            <td class="fs-small-100 c-gray-dark3 py-2 w-100 text-center border-0">${item.clock}</td>
+                        </tr>
+            `)
+        );
+    }
+    CheckEmptyTable();
 };

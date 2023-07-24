@@ -91,7 +91,22 @@ try {
                 );
             }, 500);
         };
-       
+        const GeneratePutStatePersonel = () => {
+            setTimeout(() => {
+                let ItemDataBtnDropdownStatePersonel = document.querySelectorAll(
+                    "[data-btn-dropdown-state-personel]>div"
+                );
+                let DataBtnDropdownStatePersonel = document.querySelectorAll(
+                    "[data-btn-dropdown-state-personel]>p"
+                );
+                for (let i = 0; i < ItemDataBtnDropdownStatePersonel.length; i++) {
+                    ItemDataBtnDropdownStatePersonel[i].onclick=(e)=>{
+                        // console.log(e.target.innerHTML)
+                        DataBtnDropdownStatePersonel[i].innerHTML=e.target.innerHTML;
+                    }
+                }
+            }, 500);
+        };
         const DataPersonel = [
             {
                 id: "۱",
@@ -163,7 +178,7 @@ try {
     <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
       <div class="text-nowrap" data-btn-dropdown-state-personel>
         <p>وضعیت</p>
-        <img src="../../images/Frame 134.svg" alt="" />
+        <img src="../../images/Frame 134.svg" alt=""  style="width:18px"/>
         <div class="dropdown dropdown-state"data-dropdown-state-personel>
           <div item-dropdown-state>فعال</div>
           <div delete-row2 class="text-nowrap" item-dropdown-state>غیر فعال</div>
@@ -178,6 +193,7 @@ try {
             GenerateBtnDropDownOperationPersonel();
             GenerateBtnDropDownStatePersonel();
             GenerateDeleteRowPersonel();
+            GeneratePutStatePersonel();
         }
         let SearchPersonel = [];
         if (BtnSearchPersonel !== null && TablePersonel !== null) {
@@ -217,7 +233,7 @@ try {
     <td class="fs-small-100 text-center data-dropdown c-gray-dark3 px-2">
       <div class="text-nowrap" data-btn-dropdown-state-personel>
         <p>وضعیت</p>
-        <img src="../../images/Frame 134.svg" alt="" />
+        <img src="../../images/Frame 134.svg" alt="" style="width:18px" />
         <div class="dropdown dropdown-state"data-dropdown-state-personel>
           <div item-dropdown-state>فعال</div>
           <div delete-row2 class="text-nowrap" item-dropdown-state>غیر فعال</div>
@@ -232,6 +248,8 @@ try {
                 GenerateBtnDropDownOperationPersonel();
                 GenerateBtnDropDownStatePersonel();
                 GenerateDeleteRowPersonel();
+            GeneratePutStatePersonel();
+
             });
         }
     })();
